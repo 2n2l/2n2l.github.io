@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>BM reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/dm.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900,900i|Merriweather:400,400i&display=swap" rel="stylesheet">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style>
+			.reveal .slides-wrapper .container-flexbox .item-2 h2.h2-large { line-height: 1.5; font-size: 68px }
+
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides-wrapper">
+                <div class="top-bar-wrapper">
+                    <h4>DIGITAL MARKETING</h4>
+                </div>
+    
+                <div class="slides">
+
+                    <section>
+
+                        <div class="container-flexbox">
+                            <div class="item-1">
+                                <h1>Slides</h1>
+                                <p><a href="index-dm-0.html">Overview</a></p> 
+                                <p><a href="index-dm-1.html">Resources</a></p> 
+                                <p><a href="index-dm-3.html">Marketing Channels</a></p> 
+                                <p><a href="index-dm-5.html">Buyer's Jounrey</a></p> 
+                               </div>
+                            
+                        </div><!-- End parent flexbox container -->
+
+                    </section>
+
+                    
+                </div>
+            </div>    
+		</div>
+
+		<script src="js/dm.js"></script>
+
+		<script>
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
