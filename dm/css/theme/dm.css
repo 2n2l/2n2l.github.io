@@ -337,7 +337,7 @@ body {
 	top:0;
 	right: 0;
 	background-color: #b90303;
-	width: 260px; height: 42px;
+	width: 310px; height: 42px;
 	padding: 11px 12px 0 12px;
 	text-align: center;
 	z-index: 99;
@@ -354,6 +354,14 @@ body {
 }
 
 .reveal .slides-wrapper .top-bar-wrapper h4 span { font-weight: 700 }
+
+.reveal .slides-wrapper .top-bar-wrapper i { padding-left: 12px }
+
+.reveal .slides-wrapper .top-bar-wrapper a:link,
+.reveal .slides-wrapper .top-bar-wrapper a:visited {color: #fff }
+.reveal .slides-wrapper .top-bar-wrapper a:hover,
+.reveal .slides-wrapper .top-bar-wrapper a:active {color: #E8E8E8 }
+
 
 /* ============== FLEXBOX MULTI-COLUMN LAYOUTS ================== */
 
