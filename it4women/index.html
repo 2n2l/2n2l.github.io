@@ -35,32 +35,6 @@
 	font-size: calc(15px + (20 - 15) * ((100vw - 320px)/(1600 - 320));
 	line-height: 1.1;
 }
-
-	/* =======INNER FLEXBOX COLUMNS: 3 COLUMNS ON DESKTOPS, 1 COLUMN ON MOBILES ===== */
-
-	.container-flexbox { 
-	   display: flex; 
-	   justify-content: space-between; 
-	   flex-wrap: wrap; 
-	}
-
-	/* Desktops - 3 columns */
-	@media all and (min-width:768px) { 
-		.container-flexbox { width:100%; padding:0 }
-		.container-flexbox .item-3 { width: 30% }
-		.container-flexbox .item-3 img { width: 100%; height: auto }
-		.container-flexbox.sample-pages .item-3 { padding: 12px 0 }
-	}
-
-	/* Mobiles - 1 column */
-	@media all and (max-width:767px) { 
-		.container-flexbox { width:100%; padding:0 }
-		.container-flexbox .item-3 { width: 100% }
-		.container-flexbox .item-3 { margin-bottom: 8% }
-		.container-flexbox .item-3 img { }
-	}
-
-	
 </style>
 
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -174,7 +148,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="flex-grid">
 
 
-
 		<div class="item-3">
 			<a href="exercises/styling-css.html">
 				<img src="assets/img/toc-styling.png" class="img-shadow" alt="portfolio all the light">
@@ -202,74 +175,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<p>Understanding images, resetting browser defaults, discovering sources of free images, and adding images to your web pages.</p>
 			<a class="btn-solid btn-rounded" href="exercises/intro-images.html">View Tutorial<i class="fas fa-arrow-right"></i></a>
 		</div>
-
-
 	</div><!--- /flex-grid -->
+
 </section>
 
 
 <section class="container-wide">
 
+	<h2>Google Fonts and Google Analytics</h2>
 
-	<h2>Sample personal websites</h2>
 	<div class="flex-grid">
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://inakisoria.com/">https://inakisoria.com/</a>
+		<div class="item-3">
+			 <a href="exercises/intro-google-fonts.html">
+				<img src="assets/img/toc-fonts.png" class="img-shadow" alt="portfolio all the light">
+			</a>
+			<h3><a href="exercises/intro-google-fonts.html">Working with Google Fonts</a></h3>
+			<p>Linking your web pages to Google Fonts and formatting text elements by adding Google Font names to your stylesheets.</p>
+			<a class="btn-solid btn-rounded" href="exercises/intro-google-fonts.html">View Tutorial<i class="fas fa-arrow-right"></i></a>
 		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://gerireid.com">https://gerireid.com</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://thierrychopain.com">https://thierrychopain.com</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://marisachentakul.co">https://marisachentakul.co</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://www.britnor.codes">https://www.britnor.codes</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://rebwill.github.io">https://rebwill.github.io</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://nikokoneko.com/">https://nikokoneko.com/</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://samanthaming.com">https://samanthaming.com</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://robbowen.digital">https://robbowen.digital</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://css-irl.info">https://css-irl.info</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="http://luciebajgart.com">https://luciebajgart.com</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://victorkaiwong.com">https://victorkaiwong.com</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://devinford.dev">https://devinford.dev</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://jason.af">https://jason.af</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://pierrickcalvez.com">https://pierrickcalvez.com</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://vanschneider.com">https://vanschneider.com</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://areoladaniel.com">https://areoladaniel.com</a>
-		</div>
-		<div class="item-3" style="padding-bottom:14px">
-			<a target="_blank" href="https://karriebriscoe.com/">https://karriebriscoe.com/</a>
-		</div>
-	</div>
 
+
+		<div class="item-3">
+			<a href="exercises/setting-up-google-analytics.html">
+				<img src="assets/img/toc-ga.png" class="img-shadow" alt="portfolio all the light">
+			</a>
+			<h3><a href="exercises/setting-up-google-analytics.html">Setting Up Google Analytics</a></h3>
+			<p>Monitoring your website visitors with Google Analytics and adding the unique tracking code to your web pages.</p>
+			<a class="btn-solid btn-rounded" href="exercises/setting-up-google-analytics.html">View Tutorial<i class="fas fa-arrow-right"></i></a>
+		</div>
+
+		<div class="item-3">&nbsp;
+		</div>
+
+	</div><!--- /flex-grid -->
 </section>
+
+
 
 
 
