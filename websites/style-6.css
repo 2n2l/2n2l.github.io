@@ -1,5 +1,5 @@
-/* Browser resets */
-img { display: block; width: 100%; height: auto }  
+/* ==== BROWSER RESETS  ==== */
+img { display: block; width: 100%; height: auto }
 
 /* Web page */
 body { 
@@ -11,7 +11,7 @@ body {
 /* Main heading */
 h1 {
 	font-family: sans-serif;
-	font-weight: 800;
+	font-weight: bold;
     font-size: 72px;
     color: #008000;
     line-height: 1.2;    
@@ -37,4 +37,11 @@ p {
    color: #455C80;
    line-height: 1.6;
    margin-bottom: 20px;
+}
+
+/* Images */
+img {
+    margin-bottom: 32px;
+    /* Soften corners of images */
+    border-radius: 15px;
 }

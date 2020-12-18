@@ -1,5 +1,6 @@
-/* Browser resets */
-img { display: block; width: 100%; height: auto }  
+/* ==== Browser resets  ==== */
+img { display: block; width: 100%; height: auto }
+
 
 /* Web page */
 body { 
@@ -51,3 +52,7 @@ p {
    margin-bottom: 20px;
 }
 
+/* Images */
+img { 
+    margin-bottom: 32px
+}
