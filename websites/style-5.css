@@ -1,18 +1,17 @@
-/* ==== Browser resets  ==== */
-img { display: block; width: 100%; height: auto }
-
+/* Browser resets */
+img { display: block; width: 100%; height: auto }  
 
 /* Web page */
 body {
     background-color: #FFFFBD;
     padding-left: 20%;
     padding-right: 20%;
-    padding-bottom:40px
+    padding-bottom:40px;
 }
 
 /* Main heading */
 h1 {
-    font-family: serif;    
+    font-family: 'Merriweather', serif;    
     font-size: 84px;
     font-weight: normal;
     color: #3434B0;
@@ -23,7 +22,7 @@ h1 {
 
 /* Small headings */
 h2 {
-    font-family: serif;    
+    font-family: 'Merriweather', serif;    
     font-size: 26px;
     color:#3434B0;
     line-height: 1.4;
@@ -32,7 +31,7 @@ h2 {
 
 /* Smaller headings */
 h3 {
-    font-family: serif;    
+    font-family: 'Merriweather', serif;    
     font-size: 42px;
     color: #000;
     letter-spacing:-2px;
@@ -42,7 +41,7 @@ h3 {
 
 /* Text paragraphs */
 p {
-    font-family: serif;
+    font-family: 'Merriweather', serif;
     font-size: 22px;
     color: #455C80;
     line-height: 1.6;
@@ -50,11 +49,7 @@ p {
     margin-bottom: 22px;
 }
 
-/* Images */
-img { 
-    margin-bottom: 42px;
-    /* Drop shadow effect at right and bottom of image */
-    box-shadow: 8px 10px 8px #888;    
+img {
+    margin-bottom: 32px;
+    box-shadow: 8px 10px 8px #888
 }
-
-
