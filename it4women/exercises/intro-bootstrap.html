@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Introduction to Bootstrap | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Introduction to the Box Model: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<meta property="og:site_name" content="https://www.munnelly.com/" />
+
+	<style>
+		.comment-html { color: #6da246 }
+		span.string { color: #fff }
+
+	</style>
+
+	<link href="../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N54G36T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="jumbotron tutorial">
+	<h3><a href="../index.html" title="All HTML projects">Contents&nbsp;&nbsp;&gt;</a></h3>
+	<h1>Introduction to Bootstrap</h1>
+</div>
+
+<section id="learning-goals" class="wrapper-content">
+	<h2>Learning Goals</h2>
+	<p>At the end of this Tutorial you will be able to:</p>
+	<ul>
+		<li>Create a basic Bootstrap web page.</li>
+	</ul>
+
+
+
+
+</section>
+
+
+
+
+
+<section id="box-about" class="wrapper-content">
+<h2>Creating a basic Bootstrap web page</h2>
+	<p>Let&#8217;s create a new web page &#8211; that is, an HTML file. Here are the steps:</p>
+
+	<ol>
+		<li>Start Microsoft Visual Studio Code.</li>
+		<li>Choose the <b>File | New File</b> command.
+		<img src="assets/img/intro-bootstrap/file-new.png" alt="Introduction to HTML">
+		VS Code creates a new, empty file in a new tab within your VS Code window.
+		<span class="inside-ol">&nbsp;</span>
+		It suggests the name of <b>Untitled-1</b> for your new file.
+		<img src="assets/img/intro-bootstrap/file-new-untitled.png" alt="Introduction to HTML">
+		Let&#8217;s give your file a new name and save it as an HTML file.</li>
+	
+		<li>Choose the <b>File | Save As...</b> command. 
+		<img src="assets/img/intro-bootstrap/file-save-as.png" alt="Introduction to HTML"></li>
+		<li>In the dialog box now displayed, save your file in your <b>websites</b> folder with this name:
+		<span class="inside-ol">&nbsp;</span>
+		<b>bootstrap.html</b>
+		<img src="assets/img/intro-bootstrap/file-save-as-name-3.png" alt="Introduction to HTML">
+		Because you have included the filename extension (<b>.html</b>), you can ignore the second box named <b>Save as type</b>.
+		<span class="inside-ol">&nbsp;</span>
+		After typing the name of your file, click the <b>Save</b> button.
+		<span class="inside-ol">&nbsp;</span>
+		VS Code displays the name of your <b>bootstrap.html</b> file at the top of the screen.
+		<img src="assets/img/intro-bootstrap/file-save-as-name-result.png" alt="Introduction to HTML"></li>
+
+		<li>In VS Code, click anywhere in your empty web page and type the exclamation mark <b>!</b> (<b>SHIFT</b> key and <b>1</b> key).
+
+		<img src="assets/img/intro-bootstrap/keyboard.png" alt="Introduction to HTML">
+
+		After one or a few seconds, the Emmet Abbreviation menu appears. Click on the first option from the menu. Or press the <b>ENTER</b> key.
+
+		<img src="assets/img/intro-bootstrap/file-new-emmet.png" alt="Introduction to HTML">
+		
+		VS Code now fills your new file with the basic HTML structure.
+		<img src="assets/img/intro-bootstrap/file-new-emmet-result.png" alt="Introduction to HTML"></li>
+		
+		<li>To make your web page easier to read and edit, add some blank lines after the closing <span class="syn">&lt;/head&gt;</span> tag and before the opening <span class="syn">&lt;body&gt;</span> tag.
+		<span class="inside-ol">&nbsp;</span>
+		Click just before the <span class="syn">&lt;body&gt;</span> tag and press the <b>ENTER</b> key one, two or three times.
+
+		<img src="assets/img/intro-bootstrap/head-body.png"  alt="Introduction to HTML">
+
+		When you look at the HTML of your web page on the VS Code screen, you can now see visually &#8216;at a glance&#8216; where the <span class="syn">&lt;head&gt;</span> ends and the <span class="syn">&lt;body&gt;</span> begins.
+
+		<img src="assets/img/intro-bootstrap/head-body-result.png"  alt="Introduction to HTML"></li>
+		<li>Save your HTML file. You can choose the <b>File | Save</b> command from the menu. Or simply press <b>Ctrl</b> key (Windows) or <b>Command &#8984;</b> key (Apple) and press the <b>s</b> (for Save) key.</li>
+	</ol>
+
+	<p>That&#8217;s it. You have successfully created a basic, empty web page.</p>
+
+	<h3 id="first-web-page-title">Adding a title to the &lt;head&gt; of your web page</h3>
+	<p>Now you will update the title to your web page.</p>
+	
+	<ol>
+		<li>In the <span class="syn">&lt;head&gt;</span> of your <b>bootstrap.html</b> file, you can see that VS Code has given your page a default title of <b>Document</b>.
+		<span class="inside-ol">&nbsp;</span>
+		This text is located between the opening <span class="syn">&lt;title&gt;</span> and closing <span class="syn">&lt;/title&gt;</span> tags.
+		
+	<pre class="language-html" style="padding-bottom:0">
+  &lt;<span class="blue-dark">title</span>&gt;<span class="white">Document</span>&lt;<span class="blue-dark">/title</span>&gt;
+	</pre>
+		</li>
+		<li>Replace this with the following new text:
+
+	<pre class="language-html" style="padding-bottom:0">
+  &lt;<span class="blue-dark">title</span>&gt;<span class="white">Bootstrap Template</span>&lt;<span class="blue-dark">/title</span>&gt;
+	</pre>
+		</li>
+		<li>When finished, save your HTML file.</li>
+	
+	</ol>
+
+	<h3 id="first-web-page-description">Adding a description to the &lt;head&gt; of your web page</h3>
+	<p>Now you will add a summary description of the contents of your web page.</p>
+
+	<ol>
+		<li>In the <span class="syn">&lt;head&gt;</span> of your web page, at the end of the line that contains the <span class="syn">&lt;title&gt;</span> ... <span class="syn">&lt;/title&gt;</span> tag pair, click with the mouse and then press the <b>Enter</b> key to open a new, blank line.
+		<img src="assets/img/intro-bootstrap/meta-description-1.png" alt="Introduction to HTML">
+		Your web page should now look as shown below.
+		<img src="assets/img/intro-bootstrap/meta-description-1a.png" alt="Introduction to HTML"></li>
+		<li>Copy the following line:
+
+<pre class="language-html">
+  &lt;<span class="blue-dark">meta</span> <span class="blue-light">name</span>=<span class="brown">"description"</span> <span class="blue-light">content</span>=<span class="brown">"A basic Bootstrap web page."</span>&gt;   
+</pre></li>
+		<li>Paste the copied text in your web page, on the new, blank line you created under the <span class="syn">&lt;title&gt;</span> ... <span class="syn">&lt;/title&gt;</span> tag pair.
+		<span class="inside-ol">&nbsp;</span>
+		See below.
+		<img src="assets/img/intro-bootstrap/meta-description-2.png" alt="Introduction to HTML"></li>
+		<li>Save your <b>bootstrap.html</b> file.</li>
+	</ol>
+
+	<p>All done. You are now provided a title and description to your basic web page.</p>
+
+
+	<h3 id="first-web-page-css">Adding the Bootstrap CSS link</h3>
+	<p>Now you will add a link to the Bootstrap stylesheet CSS file (version 4).</p>
+
+	<ol>
+		<li>In the <span class="syn">&lt;head&gt;</span> of your web page, at the end of the line that contains the web page description, click with the mouse and then press the <b>Enter</b> key to open a new, blank line. 
+		<span class="inside-ol">&nbsp;</span>
+		Your web page should now look as shown below.
+		<img src="assets/img/intro-bootstrap/file-bootstrap-css-before.png" alt="Introduction to HTML"></li>
+		<li>Copy the following line and comment:
+
+<pre class="language-html" style="font-size:14px">
+<span class="comment-html">&lt;!-- Bootstrap CSS --&gt;</span>
+&lt;<span class="blue-dark">link</span> <span class="blue-light">rel</span>=<span class="brown">"stylesheet"</span> <span class="blue-light">href</span>=<span class="brown">"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"</span>&gt;   
+</pre></li>
+		<li>Paste the copied CSS link and comment in the new, blank line you created under the description.
+		<span class="inside-ol">&nbsp;</span>
+		See below.
+		<img src="assets/img/intro-bootstrap/file-bootstrap-css.png" alt="Introduction to HTML"></li>
+		<li>Save your <b>bootstrap.html</b> file.</li>
+	</ol>
+
+	<p>You can also add one or more other CSS stylesheets to the <span class="syn">&lt;head&gt;</span> of a Bootstrap web page. </p>
+
+	
+	<p>When you do, you will always add the CSS file(s) <i>after</i> the Bootstrap CSS file. See the example below.</p>
+
+	<img src="assets/img/intro-bootstrap/file-bootstrap-css-my.png" alt="Introduction to HTML">
+	
+
+
+
+	<h3 id="first-web-page-js">Adding the Bootstrap JavaScript links</h3>
+	<p>Finally, you will add the links to the JavaScript files required by Bootstrap to work.</p>
+
+	<ol>
+		<li>In the <span class="syn">&lt;body&gt;</span> of your web page, just after the opening <span class="syn">&lt;body&gt;</span> tag, copy-and-paste the placeholder text below.
+<pre class="language-html">
+&lt;<span class="blue-dark">h1</span>&gt;<span class="string">Hello, world!</span>&lt;/<span class="blue-dark">h1</span>&gt;
+&lt;<span class="blue-dark">p</span>&gt;<span class="string">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!</span>&lt;/<span class="blue-dark">p</span>&gt;  
+</pre>
+		See below.
+<img src="assets/img/intro-bootstrap/file-bootstrap-hello-world.png" alt="Introduction to HTML"></li>
+
+<li>After the placeholder text, press the <b>Enter</b> key a few times to open up some blank lines. These blank lines will help you distingush between the content of your web page and the links to the JavaScript files required by Bootstrap.
+
+<img src="assets/img/intro-bootstrap/file-bootstrap-hello-world-2.png" alt="Introduction to HTML"></li>
+
+<li>On a blank line just before the closing <span class="syn">&lt;/body&gt;</span> tag, copy-and-paste the links (with comments) to the three JavaScript files needed by Bootstrap.
+<pre class="language-html" style="font-size:14px">
+<span class="comment-html">&lt;!-- jQuery library --&gt;</span>
+&lt;<span class="blue-dark">script</span> <span class="blue-light">src</span>=<span class="brown">"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"</span>&gt;&lt;/<span class="blue-dark">script</span>&gt;
+<span class="comment-html">&lt;!-- Popper JS --&gt;</span>
+&lt;<span class="blue-dark">script</span> <span class="blue-light">src</span>=<span class="brown">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"</span>&gt;&lt;/<span class="blue-dark">script</span>&gt;
+<span class="comment-html">&lt;!-- Latest compiled JavaScript --&gt;</span>
+&lt;<span class="blue-dark">script</span> <span class="blue-light">src</span>=<span class="brown">"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"</span>&gt;&lt;/<span class="blue-dark">script</span>&gt;
+</pre>
+
+		Your web page should now look as shown below.
+		<img src="assets/img/intro-bootstrap/file-bootstrap-js.png" alt="Introduction to HTML"></li>
+
+		<li>Save your <b>bootstrap.html</b> file.</li>
+	</ol>
+
+	<p>That&#8217;s it. You have now created a basic Bootstrap page that you can use as a foundation for building a wide range of web pages with various layouts and styles.</p>
+
+	<p>If you display your bootstrap.html web page in your web browser, it should look as shown below.</p>
+	<img src="assets/img/intro-bootstrap/bootstrap-browser.png" alt="Introduction to HTML">
+
+</section>
+
+
+
+
+<section id="further-resources" class="wrapper-content">
+
+	<div class="box-toc">
+		<h2>Further resources</h2>
+		<p><a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank" rel="noopener"  class="further-title">Introduction: Getting started with Bootstrap 4.</a></p>
+
+		<p><a href="https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp" target="_blank" rel="noopener"  class="further-title">Bootstrap 4: Get Started</a></p>
+
+	</div>
+	<p><br><br>Return to <a href="../index.html">Contents</a>.</p>
+
+	<p>&nbsp;</p>
+</section>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+	</script>
+</body>
+</html>

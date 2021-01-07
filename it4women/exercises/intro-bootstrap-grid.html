@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>The Bootstrap Grid | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Introduction to the Box Model: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<meta property="og:site_name" content="https://www.munnelly.com/" />
+
+	<style>
+		.comment-html { color: #6da246 }
+		span.string { color: #fff }
+
+	</style>
+
+	<link href="../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N54G36T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="jumbotron tutorial">
+	<h3><a href="../index.html" title="All HTML projects">Contents&nbsp;&nbsp;&gt;</a></h3>
+	<h1>The Bootstrap Grid</h1>
+</div>
+
+<section id="learning-goals" class="wrapper-content">
+	<h2>Learning Goals</h2>
+	<p>At the end of this Tutorial you will be able to:</p>
+	<ul>
+		<li>Create and use responsive one, two, three and four-column grds with Bootstrap.</li>
+	</ul>
+
+
+</section>
+
+
+<section id="box-about" class="wrapper-content">
+<h2>Creating a single-column layout in Bootstrap</h2>
+	<p>Let&#8217;s create a simple, single-column web page with Bootstrap. Here are the steps:</p>
+
+	<ol>
+		<li>In VS Code, open the <b>bootstrap.html</b> web page from your <b>bootstrap</b> sub-folder.</li>
+
+		<li>Use the <b>File | Save As</b> command to save the file with the following new name:
+		<span class="inside-ol">&nbsp;</span>
+		<b>bootstrap-grid.html</b></li>
+		
+		<li>Enclose the placeholder text, of a heading and a paragraph, within a pair of opening and closing  <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags. See below.
+
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div.png" alt="Introduction to HTML"></li>
+		
+		
+		<li>Use the mouse to drag over and select the placeholder text. See below.
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-2.png" alt="Introduction to HTML"></li>
+
+		<li>Press the <b>Tab</b> key to <i>indent</i> the placeholder text. See below.
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-3.png" alt="Introduction to HTML">
+		
+		Visual Studio Code displays vertical lines called <i>indentation guides</i> to help you visually organise blocks of indented text.
+		<span class="inside-ol">&nbsp;</span>
+		Indented text is text that is &#8216;pushed in&#8216; from the left margin, typically by pressing the <b>Tab</b> key.
+		Visual Studio Code displays vertical lines called <i>indentation guides</i> to help you visually organise blocks of indented text.
+		<span class="inside-ol">&nbsp;</span>
+		Indentation guides help you identify errors such as missing (or extra) opening or closing HTML tags. In the example below, you can see that the opening and closing <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags line up correctly.
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-4.png" alt="Introduction to HTML"></li>
+
+	
+		<li>Give your opening <span class="syn">&lt;div&gt;</span> tag a class name of <b>container</b>, as shown below.
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-5.png" alt="Introduction to HTML"></li>
+		<li>Save your <b>bootstrap-grid.html</b> file. In your web browser, it should look as shown below.
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-browser-1.png" alt="Introduction to HTML"></li>
+	</ol>
+
+	<p>That&#8217;s it. You have successfully created a basic, empty web page.</p>
+
+</section>
+
+
+<section id="box-about" class="wrapper-content">
+<h2>Creating a two-column layout in Bootstrap</h2>
+	<p>Let&#8217;s create a basic two-column layout in Bootstrap. Here are the steps:</p>
+
+	<ol>
+		<li>In the <b>bootstrap-grid.html</b> web page, copy-and-paste the following placeholder text.
+
+<pre class="language-html">
+ &lt;div class="container"&gt;
+    &lt;h2&gt;Sub-heading&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!&lt;/p&gt;
+
+    &lt;h2&gt;Sub-heading&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!&lt;/p&gt;    
+&lt;/div&gt;
+</pre>
+
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-6.png" alt="Introduction to HTML">Ensure your pasted text 'lines up' as shown above. Use the <b>Tab</b> key or <b>Spacebar</b> to do this.</li>
+
+		<li>Save your <b>bootstrap-grid.html</b> file and view it in your web browser. It should look as shown below.
+
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-browser-2.png" alt="Introduction to HTML">
+
+		You can see the two sub-headings and their text paragraphs appear one <i>above</i> the other. Our task is to display them <b>side-by-side</b> in a two-column layout.</li>
+
+		<li>In VS Code, add a new pair of opening and closing  <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags with a class name of <b>row</b> inside the <b>container</b> div tags as shown below.
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-7.png" alt="Introduction to HTML">
+		Ensure your text 'lines up' as shown above. Use the <b>Tab</b> key or <b>Spacebar</b> to do this.
+		<span class="inside-ol">&nbsp;</span>
+		
+		In effect, you have now created two 'boxes': an outer or parent box and an inner or child box.
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-8.png" alt="Introduction to HTML"></li>
+		
+		<li>Your final step is to create the two columns. Add a new pair of opening and closing  <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags with a class name of <b>col</b> around the content for each column as shown below.
+
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-9.png" alt="Introduction to HTML"></li>
+		
+
+		<li>Save your <b>bootstrap-grid.html</b> file. In your web browser, it should look as shown below.
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-browser-3.png" alt="Introduction to HTML"></li>
+	</ol>
+
+	<p>That&#8217;s it. You have successfully created a basic, <i>two-column</i> web page.</p>
+
+
+
+	<h3 id="first-web-page-title">Making your Bootstrap columns responsive</h3>
+	<p>In Bootstrap, columns you create with the class of <b>col</b> are not responsive to the size of the user's display device. </p>
+	<p>For example, the layout you created above will appear as two columns on both mobile and desktop/laptop screens.</p>
+
+		<img src="assets/img/intro-bootstrap-grid/flex-cols-before.png" alt="Introduction to HTML">
+
+	<p>Typically, you will want your layouts of content to appear as:</p>
+	
+	<ul>
+		<li>Two, three or four  columns on wide screens (<b>768px</b> or wider)</li>
+		<li>Single columns on narrow screens (less than <b>768px</b>).</li>
+	</ul>
+	
+	
+	<p>The Bootstrap grid system is based on <i>12 columns</i>. This means:</p>
+
+	<ul>
+		<li>A <b>two-column</b> layout is really two sets of six Bootstrap columns (2 x 6 = 12).</li>
+		<li>A <b>three-column</b> layout is really three sets of four Bootstrap columns (3 x 4 = 12).</li>
+		<li>A <b>four-column</b> layout is really four sets of three Bootstrap columns (4 x 3 = 12).</li>
+	</ul>
+
+	<p>To make the above two-column layout responsive, replace the <b>col</b> class names with the <b>col-md-6</b> names as shown below.
+
+	<img src="assets/img/intro-bootstrap-grid/bootstrap-div-10.png" alt="Introduction to HTML">
+
+	<p>Save your <b>bootstrap-grid.html</b> file. In your web browser, it should display as shown below on large and small-sized screens.
+		<img src="assets/img/intro-bootstrap-grid/flex-cols-after.png" alt="Introduction to HTML">
+	
+
+</section>
+
+
+<section id="box-about" class="wrapper-content">
+	<h2>Creating a three-column layout in Bootstrap</h2>
+
+	<p>Next, we will create a responsive three-columnn layout in Bootstrap. Here are the steps:</p>
+
+	<ol>
+		<li>In the <b>bootstrap-grid.html</b> web page, under the two-column layout, copy-and-paste the following:
+
+<pre class="language-html">
+ &lt;div class="container"&gt;
+   &lt;div class="row"&gt;
+      &lt;div class="col-md-4"&gt;
+         &lt;h2&gt;Sub-heading&lt;/h2&gt;
+         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-md-4"&gt;
+         &lt;h2&gt;Sub-heading&lt;/h2&gt;
+         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-md-4"&gt;
+         &lt;h2&gt;Sub-heading&lt;/h2&gt;
+         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!&lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre></li>
+
+		<li>Save your <b>bootstrap-grid.html</b> file and view it in your web browser. It should look as shown below.
+
+		<img src="assets/img/intro-bootstrap-grid/flex-cols-after-1.png" alt="Introduction to HTML">
+
+
+	</ol>
+
+	<p>That&#8217;s it. You have successfully created a responsive, <i>three-column</i> web page.</p>
+
+</section>
+
+<section id="box-about" class="wrapper-content">
+	<h2>Creating a four-column layout in Bootstrap</h2>
+
+	<p>Next, we will create a responsive four-column layout in Bootstrap. Here are the steps:</p>
+
+	<ol>
+		<li>In the <b>bootstrap-grid.html</b> web page, under the three-column layout, copy-and-paste the following:
+
+<pre class="language-html">
+ &lt;div class="container"&gt;
+   &lt;div class="row"&gt;
+      &lt;div class="col-md-3"&gt;
+         &lt;h2&gt;Sub-heading&lt;/h2&gt;
+         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos?&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-md-3"&gt;
+         &lt;h2&gt;Sub-heading&lt;/h2&gt;
+         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos?!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-md-3"&gt;
+         &lt;h2&gt;Sub-heading&lt;/h2&gt;
+         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos?&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-md-3"&gt;
+         &lt;h2&gt;Sub-heading&lt;/h2&gt;
+         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos?&lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre></li>
+
+		<li>Save your <b>bootstrap-grid.html</b> file and view it in your web browser. It should look as shown below.
+
+		<img src="assets/img/intro-bootstrap-grid/flex-cols-after-2.png" alt="Introduction to HTML">
+
+
+	</ol>
+
+	<p>That&#8217;s it. You have successfully created a responsive, <i>four-column</i> web page.</p>
+
+
+
+
+
+	<p><br><br>Return to <a href="../index.html">Contents</a>.</p>
+
+	<p>&nbsp;</p>
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+	</script>
+</body>
+</html>
