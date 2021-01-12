@@ -64,6 +64,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
+
+<section id="box-about" class="wrapper-content">
+
+<h2>Creating a sub-folder for your Bootstrap files</h2>
+
+	<p>Before working with Bootstrap-based web pages, let's begin by creating a sub-folder on your computer for holding your Bootstrap-related files. Here are the steps:</p>
+
+	<ol>
+		<li>In File/Windows Explorer, display your <b>websites</b> folder. This is your 'main' folder where your store all your web design and development files.</li>
+		<li>In this folder, create a new sub-folder named <b>bootstrap</b>.</li>
+		<li>Later, you will be using some other CSS files and images with your Bootstrap projects. So let's create a sub-folder structure for those files too.
+		<span class="inside-ol">&nbsp;</span>
+		Inside your new <b>bootstrap</b> sub-folder</b>, create a sub-folder named <b>assets</b>.</li>
+		<li>Next, inside the <b>assets</b> sub-folder, create two new sub-folders, named <b>css</b> and <b>img</b>.</li>
+	</ol>
+	<p>Your complete folder and sub-folder structure should now look as shown below.</p>
+
+		<img src="assets/img/intro-bootstrap/file-explorer-full.png" alt="Introduction to HTML">
+
+
+	<p>That's it. You have now created an organised, tidy folder structure for holding your Bootstrap-related files.</p>
+
+</section>
+
+
 <section id="box-about" class="wrapper-content">
 <h2>Creating a basic Bootstrap web page</h2>
 	<p>Let&#8217;s create a new web page &#8211; that is, an HTML file. Here are the steps:</p>
@@ -80,7 +105,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
 		<li>Choose the <b>File | Save As...</b> command. 
 		<img src="assets/img/intro-bootstrap/file-save-as.png" alt="Introduction to HTML"></li>
-		<li>In the dialog box now displayed, save your file in your <b>websites</b> folder with this name:
+		<li>In the dialog box now displayed, save your file in the <b>bootstrap</b> sub-folder of your main <b>websites</b> folder with this name:
 		<span class="inside-ol">&nbsp;</span>
 		<b>bootstrap.html</b>
 		<img src="assets/img/intro-bootstrap/file-save-as-name-3.png" alt="Introduction to HTML">
@@ -91,11 +116,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		VS Code displays the name of your <b>bootstrap.html</b> file at the top of the screen.
 		<img src="assets/img/intro-bootstrap/file-save-as-name-result.png" alt="Introduction to HTML"></li>
 
-		<li>In VS Code, click anywhere in your empty web page and type the exclamation mark <b>!</b> (<b>SHIFT</b> key and <b>1</b> key).
+		<li>In VS Code, click anywhere in your empty web page and type the exclamation mark <b>!</b> (<b>Shift</b> key and <b>1</b> key).
 
 		<img src="assets/img/intro-bootstrap/keyboard.png" alt="Introduction to HTML">
 
-		After one or a few seconds, the Emmet Abbreviation menu appears. Click on the first option from the menu. Or press the <b>ENTER</b> key.
+		After one or a few seconds, the Emmet Abbreviation menu appears. Click on the first option from the menu. Or press the <b>Enter</b> key.
 
 		<img src="assets/img/intro-bootstrap/file-new-emmet.png" alt="Introduction to HTML">
 		
@@ -104,7 +129,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 		<li>To make your web page easier to read and edit, add some blank lines after the closing <span class="syn">&lt;/head&gt;</span> tag and before the opening <span class="syn">&lt;body&gt;</span> tag.
 		<span class="inside-ol">&nbsp;</span>
-		Click just before the <span class="syn">&lt;body&gt;</span> tag and press the <b>ENTER</b> key one, two or three times.
+		Click just before the <span class="syn">&lt;body&gt;</span> tag and press the <b>Enter</b> key one, two or three times.
 
 		<img src="assets/img/intro-bootstrap/head-body.png"  alt="Introduction to HTML">
 
@@ -158,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<li>Save your <b>bootstrap.html</b> file.</li>
 	</ol>
 
-	<p>All done. You are now provided a title and description to your basic web page.</p>
+	<p>All done. You have now provided a title and description to your basic web page.</p>
 
 
 	<h3 id="first-web-page-css">Adding the Bootstrap CSS link</h3>
@@ -196,7 +221,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<p>Finally, you will add the links to the JavaScript files required by Bootstrap to work.</p>
 
 	<ol>
-		<li>In the <span class="syn">&lt;body&gt;</span> of your web page, just after the opening <span class="syn">&lt;body&gt;</span> tag, copy-and-paste the placeholder text below.
+		<li>In the body of your web page, just after the opening <span class="syn">&lt;body&gt;</span> tag, copy-and-paste the placeholder text below.
 <pre class="language-html">
 &lt;<span class="blue-dark">h1</span>&gt;<span class="string">Hello, world!</span>&lt;/<span class="blue-dark">h1</span>&gt;
 &lt;<span class="blue-dark">p</span>&gt;<span class="string">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!</span>&lt;/<span class="blue-dark">p</span>&gt;  
@@ -204,7 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		See below.
 <img src="assets/img/intro-bootstrap/file-bootstrap-hello-world.png" alt="Introduction to HTML"></li>
 
-<li>After the placeholder text, press the <b>Enter</b> key a few times to open up some blank lines. These blank lines will help you distingush between the content of your web page and the links to the JavaScript files required by Bootstrap.
+<li>After the placeholder text, press the <b>Enter</b> key a few times to open up some blank lines. These blank lines will help you distinguish between the content of your web page and the links to the JavaScript files required by Bootstrap.
 
 <img src="assets/img/intro-bootstrap/file-bootstrap-hello-world-2.png" alt="Introduction to HTML"></li>
 
@@ -226,8 +251,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<p>That&#8217;s it. You have now created a basic Bootstrap page that you can use as a foundation for building a wide range of web pages with various layouts and styles.</p>
 
-	<p>If you display your bootstrap.html web page in your web browser, it should look as shown below.</p>
+	<p>If you display your <b>bootstrap.html</b> web page in your web browser, it should look as shown below.</p>
 	<img src="assets/img/intro-bootstrap/bootstrap-browser.png" alt="Introduction to HTML">
+
+	<p>Click the link below to see an example of the finished version of the basic Bootstrap web page.</p>
+
+	<p><a target="_blank" href="final-bootstrap-intro/bootstrap.html">bootstrap.html</a></p>
+
+	<p>Below you can see where your basic <b>bootstrap.hml</b> file is stored within the folder structure on your computer. </p>
+	<img src="assets/img/intro-bootstrap/file-explorer-full-2.png" alt="Introduction to HTML">
+
+
+	<p>Note that you do not need any other files on your computer to create a basic Bootstrap-based web page.</p>
+
+	<p>The Bootstrap CSS file and three Javascript files are all hosted online on another web server.</p>
 
 </section>
 
