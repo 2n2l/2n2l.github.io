@@ -60,63 +60,106 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <section id="box-about" class="wrapper-content">
-<h2>Creating a single-column layout in Bootstrap</h2>
-	<p>Let&#8217;s create a simple, single-column web page with Bootstrap. Here are the steps:</p>
+<h2>Creating your Bootstrap grid web page</h2>
+	<p>Let&#8217;s create a Bootstrap-based web page for working with multi-column layout grids. Here are the steps:</p>
 
 	<ol>
-		<li>In VS Code, open the <b>bootstrap.html</b> web page from your <b>bootstrap</b> sub-folder.</li>
+		<li>In VS Code, open the <b>bootstrap.html</b> web page from your <b>bootstrap</b> sub-folder. your created this file and its folder structure in the <a href="intro-bootstrap.html">previous Tutorial</a>.</li>
 
 		<li>Use the <b>File | Save As</b> command to save the file with the following new name:
 		<span class="inside-ol">&nbsp;</span>
 		<b>bootstrap-grid.html</b></li>
-		
+
+		<li>Update the web page title and description as shown below.
+		<img src="assets/img/intro-bootstrap-grid/title-description.png" alt="Introduction to HTML"></li>
+	</ol>
+	
+	This new file is located within your folder structure as shown below.</p>
+	<img src="assets/img/intro-bootstrap-grid/file-explorer-full.png" alt="Introduction to HTML"></li>
+
+</section>
+
+
+<section id="box-about" class="wrapper-content">
+	<h2>Adding the Bootstrap container class</h2>
+
+	<p>Column layout in Bootstrap is based upon a CSS class named  <span class="syn">container</span> that is set inside the Bootstrap stylesheet file. Let's add this CSS class to your web page.</p>
+	<ol>
+
 		<li>Enclose the placeholder text, of a heading and a paragraph, within a pair of opening and closing  <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags. See below.
 
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div.png" alt="Introduction to HTML"></li>
 		
+		<li>Give your opening <span class="syn">&lt;div&gt;</span> tag a class name of <b>container</b>, as shown below.
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-2n.png" alt="Introduction to HTML"></li>
+		<li>Save your <b>bootstrap-grid.html</b> file. In your web browser, it should look as shown below.
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-browser-1.png" alt="Introduction to HTML"></li>
+
+	</ol>
+
+	<p>Note how the layout of your web page content has changed by adding the Bootstrap CSS class of <span class="syn">container</span>.</p>
+
+	<p>Bootstrap has added some blank spacing around the four edges of your content. As a result, text, images or other content inside the <span class="syn">container</span> no longer push directly against the sides of the web browser window.</p>
+	<p>To help you visualise this extra spacing, it is highlighted in pink below.</p>
+	
+	<img src="assets/img/intro-bootstrap-grid/before-after.png" alt="Introduction to HTML">
+	
+	<p>Boostrap will adjust this extra spacing responsively according to the wide of the screen.</p>
+
+	<p>Without the need to add any further layout tags to a web page or extra classes to a stylesheet, the Bootstrap <span class="syn">container</span> provides a convenient way of creating single-column layouts on web pages.</p>
+
+	<p>While the <span class="syn">container</span> class takes care of content layout or 'positioning', you will, of course, still need to add further CSS classes in the your own stylesheet to set fonts and colours.</p>
+
+</section>
+
+
+<section id="box-about" class="wrapper-content">
+	<h2>Using the VS Code visual indentation guides</h2>
 		
-		<li>Use the mouse to drag over and select the placeholder text. See below.
+	<p>Visual Studio Code displays vertical lines called <i>indentation guides</i> to help you visually organise blocks of content in your web pages.</p>
+
+	<p>Indented text is text that is &#8216;pushed in&#8216; from the left margin, typically by pressing the <b>Tab</b> key.</p>
+
+	<p>Indentation guides help you identify errors such as missing (or extra) opening or closing HTML tags. In the example below, you can see that the opening and closing <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags line up correctly.</p>
+	<img src="assets/img/intro-bootstrap-grid/bootstrap-div-4.png" alt="Introduction to HTML"></li>
+
+	<p>Always use indentation when working with Bootstrap web pages. Here are the steps.</p>
+	
+	<ol>
+		<li>In your <b>bootstrap-grid.html</b> file, use the mouse to drag over and select the placeholder text inside the <span class="syn">container</span> tag pair. See below.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-2.png" alt="Introduction to HTML"></li>
 
 		<li>Press the <b>Tab</b> key to <i>indent</i> the placeholder text. See below.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-3.png" alt="Introduction to HTML">
 		
-		Visual Studio Code displays vertical lines called <i>indentation guides</i> to help you visually organise blocks of indented text.
-		<span class="inside-ol">&nbsp;</span>
-		Indented text is text that is &#8216;pushed in&#8216; from the left margin, typically by pressing the <b>Tab</b> key.
-		Visual Studio Code displays vertical lines called <i>indentation guides</i> to help you visually organise blocks of indented text.
-		<span class="inside-ol">&nbsp;</span>
-		Indentation guides help you identify errors such as missing (or extra) opening or closing HTML tags. In the example below, you can see that the opening and closing <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags line up correctly.
-		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-4.png" alt="Introduction to HTML"></li>
-
-	
-		<li>Give your opening <span class="syn">&lt;div&gt;</span> tag a class name of <b>container</b>, as shown below.
-		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-5.png" alt="Introduction to HTML"></li>
-		<li>Save your <b>bootstrap-grid.html</b> file. In your web browser, it should look as shown below.
-		<img src="assets/img/intro-bootstrap-grid/bootstrap-browser-1.png" alt="Introduction to HTML"></li>
+		<li>Save your <b>bootstrap-grid.html</b> file.</li>
 	</ol>
-
-	<p>That&#8217;s it. You have successfully created a basic, empty web page.</p>
 
 </section>
 
 
 <section id="box-about" class="wrapper-content">
 <h2>Creating a two-column layout in Bootstrap</h2>
-	<p>Let&#8217;s create a basic two-column layout in Bootstrap. Here are the steps:</p>
+
+	<p>When creating a single-column layout in Bootstrap, it is enough to use the <span class="syn">container</span> class.</p>
+
+	<p>To create multi-column layouts of two, three or more columns, however, you need to use another Bootstrap CSS class called <span class="syn">row</span>.</p>
+
+	<p>The following exercise provides an example.</p>
 
 	<ol>
-		<li>In the <b>bootstrap-grid.html</b> web page, copy-and-paste the following placeholder text.
-
+		<li>Copy the following placeholder text.
 <pre class="language-html">
- &lt;div class="container"&gt;
-    &lt;h2&gt;Sub-heading&lt;/h2&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!&lt;/p&gt;
-
-    &lt;h2&gt;Sub-heading&lt;/h2&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!&lt;/p&gt;    
-&lt;/div&gt;
+ &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"container"</span>&gt;
+    &lt;<span class="blue-dark">h2</span>&gt;<span class="string">Sub-heading</span>&lt;/<span class="blue-dark">h2</span>&gt;
+    &lt;<span class="blue-dark">p</span>&gt;<span class="string">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!</span>&lt;/<span class="blue-dark">p</span>&gt;
+   
+    &lt;<span class="blue-dark">h2</span>&gt;<span class="string">Sub-heading</span>&lt;/<span class="blue-dark">h2</span>&gt;
+    &lt;<span class="blue-dark">p</span>&gt;<span class="string">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!</span>&lt;/<span class="blue-dark">p&gt;    
+&lt;/<span class="blue-dark">div</span>&gt;
 </pre>
+	
+		In your <b>bootstrap-grid.html</b> page, paste this new content under the already existing placeholder text. Your web page should look as shown below.
 
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-6.png" alt="Introduction to HTML">Ensure your pasted text 'lines up' as shown above. Use the <b>Tab</b> key or <b>Spacebar</b> to do this.</li>
 
@@ -124,8 +167,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-browser-2.png" alt="Introduction to HTML">
 
-		You can see the two sub-headings and their text paragraphs appear one <i>above</i> the other. Our task is to display them <b>side-by-side</b> in a two-column layout.</li>
+		You can see the two sub-headings and their text paragraphs appear one <i>above</i> the other. Our task is to display them <i>side-by-side</i> in a two-column layout.</li>
 
+	<h3>Adding the Bootstrap row class</h3>
+	<p>Next, let's add the new Bootstrap class of <span class="syn">row</span> to enable a multi-column web page layout.</p>
+
+	<ol>
 		<li>In VS Code, add a new pair of opening and closing  <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags with a class name of <b>row</b> inside the <b>container</b> div tags as shown below.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-7.png" alt="Introduction to HTML">
 		Ensure your text 'lines up' as shown above. Use the <b>Tab</b> key or <b>Spacebar</b> to do this.
@@ -133,10 +180,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 		In effect, you have now created two 'boxes': an outer or parent box and an inner or child box.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-8.png" alt="Introduction to HTML"></li>
-		
-		<li>Your final step is to create the two columns. Add a new pair of opening and closing  <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags with a class name of <b>col</b> around the content for each column as shown below.
 
-		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-9.png" alt="Introduction to HTML"></li>
+		
+	<h3>Adding the Bootstrap col classes</h3>
+		<p>Your final step is to create the two columns. You will use the Bootstrap class of <span class="syn">col</span>.</p>
+		
+		<p>Here are the steps.</p>
+
+		<ol>
+			<li>Add a new pair of opening and closing  <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags with a class name of <b>col</b> around the content for each column as shown below.
+
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-9.png" alt="Introduction to HTML">
+		
+		The layout structure of your web page now is as shown below.
+
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-8n.png" alt="Introduction to HTML">
+
+		</li>
 		
 
 		<li>Save your <b>bootstrap-grid.html</b> file. In your web browser, it should look as shown below.
@@ -144,7 +204,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</ol>
 
 	<p>That&#8217;s it. You have successfully created a basic, <i>two-column</i> web page.</p>
-
 
 
 	<h3 id="first-web-page-title">Making your Bootstrap columns responsive</h3>
@@ -156,7 +215,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<p>Typically, you will want your layouts of content to appear as:</p>
 	
 	<ul>
-		<li>Two, three or four  columns on wide screens (<b>768px</b> or wider)</li>
+		<li>Two, three or four columns on wide screens (<b>768px</b> or wider)</li>
 		<li>Single columns on narrow screens (less than <b>768px</b>).</li>
 	</ul>
 	
@@ -174,8 +233,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<img src="assets/img/intro-bootstrap-grid/bootstrap-div-10.png" alt="Introduction to HTML">
 
 	<p>Save your <b>bootstrap-grid.html</b> file. In your web browser, it should display as shown below on large and small-sized screens.
-		<img src="assets/img/intro-bootstrap-grid/flex-cols-after.png" alt="Introduction to HTML">
+	<img src="assets/img/intro-bootstrap-grid/flex-cols-after.png" alt="Introduction to HTML">
 	
+	
+	<p>You can see an example of the finished web page below.</p>
+	
+	<p><a href="final-bootstrap-grid/bootstrap-grid-2-col.html" target="_blank">Bootstrap one and two-column web page</a>.</p>
 
 </section>
 
@@ -183,38 +246,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="box-about" class="wrapper-content">
 	<h2>Creating a three-column layout in Bootstrap</h2>
 
-	<p>Next, we will create a responsive three-columnn layout in Bootstrap. Here are the steps:</p>
+	<p>Next, we will create a responsive three-column layout in Bootstrap. Here are the steps:</p>
 
 	<ol>
-		<li>In the <b>bootstrap-grid.html</b> web page, under the two-column layout, copy-and-paste the following:
+		<li>In the <b>bootstrap-grid.html</b> web page, under the existing content, copy-and-paste the following:
 
 <pre class="language-html">
- &lt;div class="container"&gt;
-   &lt;div class="row"&gt;
-      &lt;div class="col-md-4"&gt;
-         &lt;h2&gt;Sub-heading&lt;/h2&gt;
-         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="col-md-4"&gt;
-         &lt;h2&gt;Sub-heading&lt;/h2&gt;
-         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="col-md-4"&gt;
-         &lt;h2&gt;Sub-heading&lt;/h2&gt;
-         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!&lt;/p&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/div&gt;
+ &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"container"</span>&gt;
+   &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"row"</span>&gt;
+      &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"col-md-4"</span>&gt;
+         &lt;<span class="blue-dark">h2</span>&gt;<span class="string">Sub-heading</span>&lt;/<span class="blue-dark">h2</span>&gt;
+         &lt;<span class="blue-dark">p</span>&gt;<span class="string">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!</span>&lt;/<span class="blue-dark">p</span>&gt;
+      &lt;/<span class="blue-dark">div</span>&gt;
+      &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"col-md-4"</span>&gt;
+         &lt;<span class="blue-dark">h2</span>&gt;<span class="string">Sub-heading</span>&lt;/<span class="blue-dark">h2</span>&gt;
+         &lt;<span class="blue-dark">p</span>&gt;<span class="string">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!</span>&lt;/<span class="blue-dark">p</span>&gt;
+      &lt;/<span class="blue-dark">div</span>&gt;
+      &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"col-md-4"</span>&gt;
+         &lt;<span class="blue-dark">h2</span>&gt;<span class="string">Sub-heading</span>&lt;/<span class="blue-dark">h2</span>&gt;
+         &lt;<span class="blue-dark">p</span>&gt;<span class="string">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!</span>&lt;/<span class="blue-dark">p</span>&gt;
+      &lt;/<span class="blue-dark">div</span>&gt;
+   &lt;/<span class="blue-dark">div</span>&gt;
+&lt;/<span class="blue-dark">div</span>&gt;
 </pre></li>
 
 		<li>Save your <b>bootstrap-grid.html</b> file and view it in your web browser. It should look as shown below.
 
 		<img src="assets/img/intro-bootstrap-grid/flex-cols-after-1.png" alt="Introduction to HTML">
 
-
 	</ol>
 
 	<p>That&#8217;s it. You have successfully created a responsive, <i>three-column</i> web page.</p>
+
+	<p>You can see an example of the finished web page below.</p>
+	
+	<p><a href="final-bootstrap-grid/bootstrap-grid-3-col.html" target="_blank">Bootstrap one, two and three-column web page</a>.</p>
+
 
 </section>
 
@@ -227,26 +294,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<li>In the <b>bootstrap-grid.html</b> web page, under the three-column layout, copy-and-paste the following:
 
 <pre class="language-html">
- &lt;div class="container"&gt;
-   &lt;div class="row"&gt;
-      &lt;div class="col-md-3"&gt;
-         &lt;h2&gt;Sub-heading&lt;/h2&gt;
-         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos?&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="col-md-3"&gt;
-         &lt;h2&gt;Sub-heading&lt;/h2&gt;
-         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos?!&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="col-md-3"&gt;
-         &lt;h2&gt;Sub-heading&lt;/h2&gt;
-         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos?&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class="col-md-3"&gt;
-         &lt;h2&gt;Sub-heading&lt;/h2&gt;
-         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos?&lt;/p&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/div&gt;
+ &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"container"</span>&gt;
+   &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"row"</span>&gt;
+      &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"col-md-3"</span>&gt;
+         &lt;<span class="blue-dark">h2</span>&gt;<span class="string">Sub-heading</span>&lt;/<span class="blue-dark">h2</span>&gt;
+         &lt;<span class="blue-dark">p</span>&gt;<span class="string">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!</span>&lt;/<span class="blue-dark">p</span>&gt;
+      &lt;/<span class="blue-dark">div</span>&gt;
+      &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"col-md-3"</span>&gt;
+         &lt;<span class="blue-dark">h2</span>&gt;<span class="string">Sub-heading</span>&lt;/<span class="blue-dark">h2</span>&gt;
+         &lt;<span class="blue-dark">p</span>&gt;<span class="string">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!</span>&lt;/<span class="blue-dark">p</span>&gt;
+      &lt;/<span class="blue-dark">div</span>&gt;
+      &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"col-md-3"</span>&gt;
+         &lt;<span class="blue-dark">h2</span>&gt;<span class="string">Sub-heading</span>&lt;/<span class="blue-dark">h2</span>&gt;
+         &lt;<span class="blue-dark">p</span>&gt;<span class="string">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!</span>&lt;/<span class="blue-dark">p</span>&gt;
+      &lt;/<span class="blue-dark">div</span>&gt;
+      &lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"col-md-3"</span>&gt;
+         &lt;<span class="blue-dark">h2</span>&gt;<span class="string">Sub-heading</span>&lt;/<span class="blue-dark">h2</span>&gt;
+         &lt;<span class="blue-dark">p</span>&gt;<span class="string">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem ipsum enim natus soluta rem eos? In dicta eius, reprehenderit illo odit mollitia nulla ex et odio minus expedita numquam!</span>&lt;/<span class="blue-dark">p</span>&gt;
+      &lt;/<span class="blue-dark">div</span>&gt;
+   &lt;/<span class="blue-dark">div</span>&gt;
+&lt;/<span class="blue-dark">div</span>&gt;
 </pre></li>
 
 		<li>Save your <b>bootstrap-grid.html</b> file and view it in your web browser. It should look as shown below.
@@ -258,6 +325,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<p>That&#8217;s it. You have successfully created a responsive, <i>four-column</i> web page.</p>
 
+	<p>You can see an example of the finished web page below.</p>
+	
+	<p><a href="final-bootstrap-grid/bootstrap-grid-4-col.html" target="_blank">Bootstrap one, two, three and four-column web page</a>.</p>
 
 
 
