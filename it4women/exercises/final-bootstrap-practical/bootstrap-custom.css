@@ -1,0 +1,2 @@
+/* Add visual borders to your Bootstrap layout divs */
+.container { border: solid red 2px !important }
