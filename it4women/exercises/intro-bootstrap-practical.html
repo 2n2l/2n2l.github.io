@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Practical Bootstrap Layouts | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Introduction to the Box Model: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<meta property="og:site_name" content="https://www.munnelly.com/" />
+
+	<style>
+		.comment-html { color: #6da246 }
+		span.string { color: #fff }
+
+	/* =======INNER FLEXBOX COLUMNS: 3 COLUMNS ON DESKTOPS, 1 COLUMN ON MOBILES ===== */
+
+	.container-flexbox { 
+	   display: flex; 
+	   justify-content: space-between; 
+	   flex-wrap: wrap; 
+	}
+	/* Desktops - 3 columns */
+	@media all and (min-width:768px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 30% }
+		.container-flexbox .item-3 img { width: 100%; height: auto }
+	}
+
+	/* Mobiles - 1 column */
+	@media all and (max-width:767px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 100% }
+		.container-flexbox .item-3 { margin-bottom: 8% }
+		.container-flexbox .item-3 img { }
+	}
+	pre.language-css { color: rgb(128,128,128) }
+	pre.language-css .blue-dark { color: rgb(86,156,202 ) }
+	
+
+	</style>
+<link rel="stylesheet" href="assets/css/bootstrap-custom.css">
+
+	<link href="../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N54G36T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="jumbotron tutorial">
+	<h3><a href="../index.html" title="All HTML projects">Contents&nbsp;&nbsp;&gt;</a></h3>
+	<h1>Practical Bootstrap Layouts</h1>
+</div>
+
+<section id="learning-goals" class="wrapper-content">
+	<h2>Learning Goals</h2>
+	<p>At the end of this Tutorial you will be able to:</p>
+	<ul>
+		<li>Add coloured borders to div tags to guide your web design tasks when working with grid layouts</li>
+
+		<li>Add a custom stylesheet that adjusts the default Bootstrap grid so that it becomes a more practical starting point for designing modern-looking web pages.</li>
+
+		<li>Update the background colours of Broostrap grid elemts, and add images to grid rows and columns.</li>
+	</ul>
+
+
+</section>
+
+
+<section id="box-about" class="wrapper-content">
+<h2>Creating your Bootstrap layout web page</h2>
+	<p>Let&#8217;s create a Bootstrap-based web page for working with multi-column layout grids. Here are the steps:</p>
+
+	<ol>
+		<li>In VS Code, open the <b>bootstrap-grid.html</b> web page from your <b>bootstrap</b> sub-folder. You created this file and its folder structure in the <a href="intro-bootstrap-grid.html">previous Tutorial</a>.</li>
+
+		<li>Use the <b>File | Save As</b> command to save the file with the following new name:
+		<span class="inside-ol">&nbsp;</span>
+		<b>bootstrap-practical-layouts.html</b></li>
+
+		<li>Update the web page title and description as shown below.
+		<img src="assets/img/intro-bootstrap-practical/title-description.png" alt="Introduction to HTML"></li>
+	</ol>
+	
+	<p>This new web page is located within your folder structure as shown below.</p>
+	<img src="assets/img/intro-bootstrap-practical/file-explorer-full.png" alt="Introduction to HTML">
+
+</section>
+
+
+<section id="box-about" class="wrapper-content">
+	<h2>Downloading sample images</h2>
+
+	<p>You will need some sample images to work with. Right-click on the images below, choose <b>Save Image As</b> from the context menu, and download them to your <b>C:/websites/bootstrap/assets/img</b> sub-folder.</p>
+
+	<div class="container-flexbox">
+		<div class="item-3">
+			<img src="assets/img/intro-bootstrap-practical/bambam-700x400.jpg"  alt="Project: Smooth Smoothies">
+		</div>
+		<div class="item-3">
+			<img src="assets/img/intro-bootstrap-practical/bambam-700x450.jpg"  alt="Project: Smooth Smoothies">
+		</div>
+		<div class="item-3">
+			<img src="assets/img/intro-bootstrap-practical/bambam-1200x300.jpg"  alt="Project: Smooth Smoothies">
+		</div>
+	</div><!-- End parent flexbox container -->
+
+	<p>Your folder structure should now look as shown below.</p>
+	<img src="assets/img/intro-bootstrap-practical/file-explorer-pics.png" alt="Introduction to HTML"></li>
+
+</section>
+
+
+<section id="box-about" class="wrapper-content">
+	<h2>Adding visual guides to your web page</h2>
+		
+	<p>When creating web pages, designers often add coloured borders to div tags to guide their actions. Let's do this with the new web page you have created.</p>
+
+	<p>For simplicity, we will add this new coloured border CSS class directly to the web page instead of to a separate stylesheet file.</p>
+	
+	<ol>
+		<li>In VS Code, add the following to the head section of your <b>bootstrap-practical-layouts.html</b> file, just before the closing <span class="syn">&lt;/head&gt;</span> tag.
+<pre class="language-css">
+&lt;<span class="blue-dark">style</span>&gt;
+   <span class="token class">.container</span> { <span class="token property">border</span>: <span class="token value-text">solid</span> <span class="token number">2px</span> <span class="token value-text">red</span> }
+&lt;/<span class="blue-dark">style</span>&gt;</pre>
+		Your head section should now look as shown below.
+		<img src="assets/img/intro-bootstrap-practical/file-css-inline.png"></li>
+
+		<li>Save your <b>bootstrap-practical-layouts.html</b> file.</li>
+	</ol>
+
+	<p>View your <b>bootstrap-practical-layouts.html</b> web page in your browser. As you can see, all the <span class="syn">container</span> div blocks are now highlighted with a  two pixel-wide red border.</p>
+	<img src="assets/img/intro-bootstrap-practical/red-border-1.png"  alt="Project: Smooth Smoothies">
+
+</section>
+
+
+<section id="box-about" class="wrapper-content">
+
+	<h2>Downloading the custom stylesheet</h2>
+	<p>Next, we will download a custom stylesheet that adjusts the default Bootstrap grid so that it becomes a more practical starting point for designing modern-looking web pages.</p>
+	
+	<ol>
+		<li>In your web browser, display the following stylesheet.
+		<span class="inside-ol">&nbsp;</span>
+		<a href="bootstrap-custom.css" target="-blank">bootstrap-custom.css</a></li>
+
+		<li>Right-click on the file, choose <b>Save Page As</b> from the context menu, and save the stylesheet in your <b>bootstrap/assets/css</b> sub-folder.</li>
+
+	</ol>
+
+	<p>Your folder structure should now look as shown below.</p>
+	<img src="assets/img/intro-bootstrap-practical/file-explorer-full-more.png" alt="Introduction to HTML">
+
+
+</section>
+
+<section id="box-about" class="wrapper-content">
+
+	<h2>Linking to the custom CSS file</h2>
+	
+	<p>Your next task is to add the custom stylrsheet to your web page.</p>
+	
+	<ol>
+		<li>Copy the following line stylesheet link
+<pre class="language-html">
+  &lt;<span class="token comment">!-- Customise Bootstrap for practical grid layouts --</span>&gt;
+  &lt;<span class="blue-dark">link</span> <span class="blue-light">rel</span>=<span class="brown">"stylesheet"</span> <span class="blue-light">href</span>=<span class="brown">"assets/css/bootstrap-custom.css"<span class="brown">&gt;   
+</pre></li>
+		
+		<li>In your <b>bootstrap-practical-layouts.html</b> file, paste this link to the head of the page, just after the link to the main Bootstrap file.
+		<span class="inside-ol">&nbsp;</span>
+		Your head section should look as shown below. 
+		<img src="assets/img/intro-bootstrap-practical/file-stylesheet-custom.png" alt="Introduction to HTML"></li>
+
+		<li>Save your <b>bootstrap-practical-layouts.html</b> file.</li>
+
+	</ol>
+
+	<p>In your browser, your web page should look as shown below.</p>
+	<img src="assets/img/intro-bootstrap-practical/red-border-2.png"  alt="Project: Smooth Smoothies">
+	<p>As you can see, there is now much more spacing around the rows and columns of content.</p>
+
+	<p>You can see an example of the finished web page below.</p>
+	
+	<p><a href="final-bootstrap-practical/bootstrap-practical-layouts-1.html" target="_blank">Bootstrap page with custom grid</a>.</p>
+
+</section>
+
+
+
+<section id="box-about" class="wrapper-content">
+
+	<h2>Adding background colours to grid columns</h2>
+	
+	<p>In additoon to styles that increase the spacing around the Bootstrap grid elements, the <b>bootstrap/assets/css</b> stylesheet also includes some sample background colours to work with.</p>
+
+	<img src="assets/img/intro-bootstrap-practical/css-some-colors.png" alt="Introduction to HTML">
+
+	<p>Let's experiment with some of these by adding them to your <b>bootstrap-practical-layouts.html</b> web page.</p>
+
+	<ol>
+		<li>In VS Code, add the <b>bg-beige-light</b> CSS class to the first of the two, 50% wide-columns near the top of your web page.
+		<span class="inside-ol">&nbsp;</span>
+		To the second of the two, 50% wide-columns, add the <b>bg-salmon-light</b> CSS class.
+		<img src="assets/img/intro-bootstrap-practical/bg-beige-salmon.png"  alt="Project: Smooth Smoothies">
+
+		When you save your page, these columns will display in your browser as shown below.
+		<img src="assets/img/intro-bootstrap-practical/bg-final-two.png"  alt="Project: Smooth Smoothies"></li>
+
+		<li>To all three columns of the three-column layout, add the same <b>bg-gray-light</b> CSS class.
+		<img src="assets/img/intro-bootstrap-practical/bg-gray-light.png"  alt="Project: Smooth Smoothies">
+
+		When you save your page, these columns will display in your browser as shown below.
+		<img src="assets/img/intro-bootstrap-practical/bg-final-three.png"  alt="Project: Smooth Smoothies"></li>
+
+		<li>Lastly, to each of the four columns near of the bottom of the web page, add one of these four CSS classes:  <b>bg-purple-dark</b>, <b>bg-crimson-dark</b>, <b>bg-blue-dark</b> and <b>bg-black-dark</b>.
+		<img src="assets/img/intro-bootstrap-practical/bg-four.png"  alt="Project: Smooth Smoothies">
+		When you save your page, these columns will display in your browser as shown below.</li>
+		<img src="assets/img/intro-bootstrap-practical/bg-final-four.png"  alt="Project: Smooth Smoothies"></li>
+	</ol>
+
+	<p>Notice that, when you added a dark background to a column, the text inside that column changed to white. This is the result of the following line in the <b>bootstrap-custom.css</b> stylesheet.</p>
+
+	<img src="assets/img/intro-bootstrap-practical/css-reverse-text.png"  alt="Project: Smooth Smoothies">
+
+	<p>This style rule states that: if the column contains a class whose name includes "-dark", set the colour of the font inside that column to white.
+</section>
+
+
+<section id="box-about" class="wrapper-content">
+
+	<h2>Adding background colours to grid rows</h2>
+	<p>Next, let's add a background to an entire horizontal row, so that the background colour covers the full width of the browser screen.</p>
+	<ol>
+		<li>In your <b>bootstrap-practical-layouts.html</b> web page, wrap the entire first row inside a new div with a class of <b>bg-green-light</b> as shown below.
+		<img src="assets/img/intro-bootstrap-practical/bg-full-column.png" alt="Introduction to HTML"></li>
+		<li>Save your page. The first row at the top should now display in your browser as shown below.
+		<img src="assets/img/intro-bootstrap-practical/bg-final-full.png"  alt="Project: Smooth Smoothies"></li>
+	</ol>
+
+	<p>You can see an example of the finished web page below.</p>
+	
+	<p><a href="final-bootstrap-practical/bootstrap-practical-layouts-2.html" target="_blank">Bootstrap page with background colours</a>.</p>
+</section>
+
+
+<section id="box-about" class="wrapper-content">
+
+	<h2>Adding images to grid rows and columns</h2>
+
+	<p>In this next exercise you will add some sample images to your <b>bootstrap-practical-layouts.html</b> web page.</p>
+
+	<ol>
+		<li>In VS Code, to the first column at the top of the web page, copy-and-paste the link to the <b>bambam-1200x300.jpg</b> image
+<pre class="language-html">
+ &lt;<span class="blue-dark">img</span> <span class="blue-light">src</span>=<span class="brown">"assets/img/bambam-1200x300.jpg"</span> <span class="blue-light">alt</span>=<span class="brown">"Bambam"</span>&gt;</pre>
+		Position the image to just above the h1 heading as shown below.
+		<img src="assets/img/intro-bootstrap-practical/file--bambam-1.png"  alt="Project: Smooth Smoothies">
+
+		When you save your page, you can see that the image is not displaying correctly.
+		<img src="assets/img/intro-bootstrap-practical/bambam-distorted.png"  alt="Project: Smooth Smoothies">
+
+		To ensure your images display correctly inside a Boostrap grid, you need always to add the <b>img-fluid</b> class to the image as shown below.
+		<img src="assets/img/intro-bootstrap-practical/file-img-fluid.png"  alt="Project: Smooth Smoothies">
+		Resave your web page and verify that the image now displays correctly in your web browser.
+
+		<img src="assets/img/intro-bootstrap-practical/bambam-correct.png"  alt="Project: Smooth Smoothies"></li>
+
+		<li>In the second row of your web page, in each of the two columns, add the following image.
+<pre class="language-html">
+ &lt;<span class="blue-dark">img</span> <span class="blue-light">src</span>=<span class="brown">"assets/img/bambam-700x450.jpg"</span> <span class="blue-light">class</span>=<span class="brown">"img-fluid"</span> <span class="blue-light">alt</span>=<span class="brown">"Bambam"</span>&gt; </pre>
+		Position the image to just above the h2 sub-headings as shown below.
+		<img src="assets/img/intro-bootstrap-practical/file-pic-col-2.png"  alt="Project: Smooth Smoothies"></li>
+
+		<li>In the third row of your web page, in each of the three columns, add the following image.
+<<pre class="language-html">
+ &lt;<span class="blue-dark">img</span> <span class="blue-light">src</span>=<span class="brown">"assets/img/bambam-700x400.jpg"</span> <span class="blue-light">class</span>=<span class="brown">"img-fluid"</span> <span class="blue-light">alt</span>=<span class="brown">"Bambam"</span>&gt;</pre>
+		Position the image to just above the h2 sub-headings as shown below.
+		<img src="assets/img/intro-bootstrap-practical/file-pic-col-3.png"  alt="Project: Smooth Smoothies"></li>
+
+		<li>In the fourth row of your web page, in each of the three columns, add the same image again.
+<pre class="language-html">
+ &lt;<span class="blue-dark">img</span> <span class="blue-light">src</span>=<span class="brown">"assets/img/bambam-700x400.jpg"</span> <span class="blue-light">class</span>=<span class="brown">"img-fluid"</span> <span class="blue-light">alt</span>=<span class="brown">"Bambam"</span>&gt;</pre>
+		Position the image to just above the h2 sub-headings as shown below.
+		<img src="assets/img/intro-bootstrap-practical/file-pic-col-4.png"  alt="Project: Smooth Smoothies"></li>
+
+	</ol>
+
+	<p>Save your web page and verify the images all display correctly in your web browser.</p>
+
+	<p>You can see an example of the finished web page below.</p>
+	
+	<p><a href="final-bootstrap-practical/bootstrap-practical-layouts-3.html" target="_blank">Bootstrap page with images</a>.</p>
+
+
+
+
+	<p><br><br>Return to <a href="../index.html">Contents</a>.</p>
+
+
+
+</section>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+	</script>
+</body>
+</html>
