@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Hero Blocks with Images | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Working with Hero Blocks, Single-column: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<meta property="og:site_name" content="https://www.munnelly.com/" />
+
+	<link href="../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N54G36T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="jumbotron tutorial">
+	<h3><a href="../index.html" title="All HTML projects">All Tutorials&nbsp;&nbsp;&gt;</a></h3>
+	<h1>Hero Blocks with Images</h1>
+</div>
+
+<section id="learning-goals" class="wrapper-content">
+	<h2>Learning Goals</h2>
+	<p>At the end of this Tutorial you will be able to:</p>
+	<ul>
+		<li>Style the layout and appearance of four hero sections in a sample web page.</li>
+		<li>Add background images to the hero blocks.</li>
+		<li>Add a shadow effect to the hero text.</li>
+		<li>Add a tinted overlay behind the hero text and in front of the background image.</li>
+		<li>Add different background images for desktop/laptop and mobile screens.</li>
+	</ul>
+
+
+
+	<p>You can view a finished version of the sample web page you will update in this Tutorial by clicking the link below. The finished sample will open in a new tab of your web browser.</p>
+
+	<div class="four-samples">
+		<div>
+			<a href="final-hero/hero-images/after/hero-images.html" target="_blank"><img src="assets/img/hero-blocks/example-two-browser.png" alt="Sample image"></a>
+			<a href="final-hero/hero-images/after/hero-images.html" class="link-exercise"  target="_blank">hero-bg-image.html</a>
+		</div>
+	</div>
+
+</section>
+
+
+<section class="wrapper-content">
+	<div class="box-toc">
+		<h2>Contents</h2>
+		<p><a href="#hero-about">About hero block images</a></p>
+		<p><a href="#sample-files">Working with your sample files</a></p>
+		<p><a href="#hero-one">Hero block: sample six</a></p>
+		<p><a href="#hero-two">Hero block: sample seven</a></p>
+		<p><a href="#hero-three">Hero block: sample eight</a></p>
+		<p><a href="#hero-four">Hero block: sample nine</a></p>
+		<p><a href="#upload-github">Uploading your files to GitHub</a></p>
+	</div>
+</section>
+
+
+<section id="hero-about" class="wrapper-content bg-white">
+
+	<h2>About hero block images</h2>
+
+	<p>So-called <i>hero blocks</i> (sometimes known as <i>jumbotrons</i>) are large and typically rectangular areas at the very top of a web page.</p>
+	
+	<p>They are the first item seen by users, and are intended to capture their attention and engage their interest in the web page.</p>
+
+</section>
+
+
+<section id="sample-files" class="wrapper-content bg-white">
+
+	<h2>Downloading your sample files</h2>
+	<p>In this exercise, you will work with the following web page and a stylesheet:</p>
+	
+	<ul>
+		<li><b><a href="final-hero/hero-images/before/hero-images.html" target="_blank">hero-images.html</a></b>: Click this link to open the web page in a new tab of your web browser.
+		<span class="inside-ol">&nbsp;</span>
+		Right-click anywhere in the web page and choose <b>Save as...</b> (Chrome) or <b>Save Page As...</b> (Firefox) from the context menu displayed.
+		<span class="inside-ol">&nbsp;</span>
+		Save the web page in the <b>bootstrap</b> sub-folder of your <b>websites</b> folder with the name <b>hero-images.html</b>
+		<span class="inside-ol">&nbsp;</span>
+		Ensure the <b>Save as type:</b> dropdown list is set to <b>Webpage, HTML only (*.HTML, *.htm)</b>.
+		<img src="assets/img/hero-blocks/hero-basic-html-2.png" alt="Working with Internal Hyperlinks">
+		You can close the browser tab containing the <b>hero-images.html</b> web page.
+		<span class="inside-ol">&nbsp;</span>
+		Your <b>websites/bootstrap</b> sub-folder shown now look as shown below.
+		<img src="assets/img/hero-blocks/file-explorer-html-2.png" alt="Working with Internal Hyperlinks"></li>
+
+		<li><b><a href="final-hero/hero-basic/before/assets/css/hero-basic.css" target="_blank">hero-images.css</a></b>: Click this link to open the stylesheet file in a new tab of your web browser.
+		<span class="inside-ol">&nbsp;</span>
+		Right-click anywhere in the browser window, and from the context menu, choose <b>Save as... (Chrome)</b> or <b>Save Page As...</b> (Firefox).
+		<span class="inside-ol">&nbsp;</span>
+		Save the <b>hero-images.css</b> stylesheet file to your <b>websites/bootstrap/assets/css</b> sub-folder.
+		<span class="inside-ol">&nbsp;</span>
+		Ensure the <b>Save as type:</b> dropdown list is set to the correct file type.
+		<img src="assets/img/hero-blocks/hero-basic-css-2.png" alt="Working with Internal Hyperlinks" >
+		<span class="inside-ol">&nbsp;</span>
+		You can close the browser tab containing the <b>hero-images.css</b> stylesheet.
+		<span class="inside-ol">&nbsp;</span>
+		Your <b>websites/bootstrap/assets/css</b> sub-folder shown now look as shown below.
+		<img src="assets/img/hero-blocks/file-explorer-css-2.png" alt="Working with Internal Hyperlinks"></li>
+	</ul>
+
+	<p>You have now saved the two files you need for this exercise.</p>
+
+</section>
+
+
+
+<section id="sample-files" class="wrapper-content bg-white">
+
+	<h2>Downloading your sample images</h2>
+
+	<p>You will need some sample images to work with. Right-click on the images below, choose <b>Save Image As</b> from the context menu, and download them to your <b>C:/websites/bootstrap/assets/img</b> sub-folder.
+
+	<img src="final-hero/hero-images/before/assets/img/hotel-dark.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+	<a href="" target="_blank">Link</a>
+	<img src="final-hero/hero-images/before/assets/img/bike-tours.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+	<a href="" target="_blank">Link</a>
+	<img src="final-hero/hero-images/before/assets/img/meeting.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+	<a href="" target="_blank">Link</a>
+	<img src="final-hero/hero-images/before/assets/img/hook-head.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+	<a href="" target="_blank">Link</a>
+	<img src="final-hero/hero-images/before/assets/img/hook-head-mobile.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+	<a href="" target="_blank">Link</a>
+	<p>You have now saved the all the files you need for this exercise.</p>
+
+</section>
+
+
+<section id="hero-one" class="wrapper-content bg-white">
+
+
+	<h2>Hero block: sample six</h2>
+	<p>In this section, you will add a background image to the <b>hero-6</b> block within your sample files.</p>
+
+	<ol>
+		<li>In your browser, display the <b>hero-images.html</b> web page. You can see it that all the hero sections have a gray-coloured background.</li>
+
+		<li>In VS Code, open the <b>hero-images.css</b> stylesheet.</li>
+
+		<li>For the <b>hero-6</b> styles, replace the current <b>background-color</b> property and value with the following:
+<pre class="language-css">
+   <span class="token class">.hero-6 </span> {
+      <span class="token property">background-image</span>: <span class="yellow">url</span><span class="token value-text">('../img/hotel-dark.jpg')</span>;
+      <span class="token property">background-position</span>: <span class="token value-text">center center</span>;
+      <span class="token property">background-size</span>: <span class="token value-text">cover</span>;
+      <span class="token property">background-repeat</span>: <span class="token value-text">no-repeat</span>;
+  }</pre>
+
+	<li>Save the stylesheet and view the effect on the web page in your web browser.<br><br></li>
+
+	</ol>
+
+</section>
+
+
+<section id="hero-two" class="wrapper-content bg-white">
+
+	<h2>Hero block: sample seven</h2>
+	<p>In this section, you will add a background image to the <b>hero-7</b> block within your sample files.</p>
+
+	<ol>
+		<li>For the <b>hero-7</b> styles, replace the current <b>background-color</b> property and value with the following:
+<pre class="language-css">
+   <span class="token class">.hero-7 </span> {
+      <span class="token property">background-image</span>: <span class="yellow">url</span><span class="token value-text">(''../img/bike-tours.jpg')</span>;
+      <span class="token property">background-position</span>: <span class="token value-text">center center</span>;
+      <span class="token property">background-size</span>: <span class="token value-text">cover</span>;
+      <span class="token property">background-repeat</span>: <span class="token value-text">no-repeat</span>;
+  }</pre></li>
+
+		<li>Save the stylesheet and view the effect on the web page in your web browser.<br><br></li>
+
+	</ol>
+
+	<h3>Adding a shadow effect to the hero text</h3>
+	<p>To make the text easier to read against the background image, let's add a shadow effect to the heading and sub-heading.</p>
+	<p>Note: The three dots <b>...</b> simply refers to all the other styles for the CSS selector.</p>
+
+	<ol>
+		<li>In the stylesheet, add the following new style rules for the heading and sub-heading.
+<pre class="language-css">
+   <span class="token class">.hero-7 h1 </span> {
+      ...
+      <span class="token property">text-shadow</span>: <span class="token number">2px</span> <span class="token number">2px</span> <span class="token value-text">#222</span>;
+  }</pre>
+  
+ <pre class="language-css">
+   <span class="token class">.hero-7 h2 </span> {
+      ...
+      <span class="token property">text-shadow</span>: <span class="token number">2px</span> <span class="token number">2px</span> <span class="token value-text">#222</span>;
+  }</pre></li>
+
+		<li>Save the stylesheet and view the effect on the web page in your web browser.<br><br></li>
+
+	</ol>
+
+
+	<h3>Adding an overlay to the background image</h3>
+	<p>To make the text even easier to read against the background image, let's add a semi-opaque overlay in front of the image and behind the heading and sub-heading.</p>
+
+
+	<ol>
+
+		<li>In the stylesheet, add the following new style rule for the hero-7 hero block.
+<pre class="language-css">
+<span class="token property">background-image</span>: <span class="yellow">linear-gradient</span>(<span class="yellow">rgba</span>(0,0,0,0.3),<span class="yellow">rgba</span>(0,0,0,0.3)),<span class="yellow">url</span><span class="token value-text">('../img/bike-tours.jpg')</span>;   
+</pre>
+
+		</li>
+
+		<li>Save the stylesheet and view the effect on the web page in your web browser.<br><br></li>
+
+	</ol>
+
+</section>
+
+
+<section id="hero-three" class="wrapper-content bg-white">
+
+	<h2>Hero block: sample eight</h2>
+	<p>In this section, you will add a background image to the <b>hero-8</b> block within your sample files.</p>
+
+	<ol>
+		<li>For the <b>hero-8</b> styles, replace the current <b>background-color</b> property and value with the following:
+<pre class="language-css">
+   <span class="token class">.hero-8 </span> {
+      <span class="token property">background-image</span>: <span class="yellow">url</span><span class="token value-text">(''../img/meeting.jpg')</span>;
+      <span class="token property">background-position</span>: <span class="token value-text">center center</span>;
+      <span class="token property">background-size</span>: <span class="token value-text">cover</span>;
+      <span class="token property">background-repeat</span>: <span class="token value-text">no-repeat</span>;
+  }</pre></li>
+
+		<li>Save the stylesheet and view the effect on the web page in your web browser.<br><br></li>
+
+	</ol>
+
+	<h3>Adding a shadow effect to the hero text</h3>
+	<p>To make the text easier to read against the background image, let's add a shadow effect to the heading and sub-heading.</p>
+
+	<ol>
+		<li>In the stylesheet, add the following new style rules for the heading and sub-heading.
+<pre class="language-css">
+   <span class="token class">.hero-8 h1 </span> {
+      ...
+      <span class="token property">text-shadow</span>: <span class="token number">2px</span> <span class="token number">2px</span> <span class="token value-text">#222</span>;
+  }</pre>
+  
+ <pre class="language-css">
+   <span class="token class">.hero-8 h2 </span> {
+      ...
+      <span class="token property">text-shadow</span>: <span class="token number">2px</span> <span class="token number">2px</span> <span class="token value-text">#222</span>;
+  }</pre></li>
+
+		<li>Save the stylesheet and view the effect on the web page in your web browser.<br><br></li>
+
+	</ol>
+
+
+	<h3>Adding a tinted overlay to the background image</h3>
+	<p>To make the text even easier to read against the background image, let's add a blue-tinted semi-opaque overlay in front of the image and behind the heading and sub-heading.</p>
+
+
+	<ol>
+
+		<li>In the stylesheet, add the following new style rule for the hero-8 hero block.
+<pre class="language-css">
+<span class="token property">background-image</span>: <span class="yellow">linear-gradient</span>(<span class="yellow">rgba</span>(0,0,255,0.5),<span class="yellow">rgba</span>(0,0,255,0.5)),<span class="yellow">url</span><span class="token value-text">('../img/meeting.jpg')</span>;   
+</pre>
+
+		</li>
+
+		<li>Save the stylesheet and view the effect on the web page in your web browser.<br><br></li>
+
+	</ol>
+
+</section>
+
+
+
+
+
+
+
+
+
+<section id="hero-four" class="wrapper-content bg-white">
+
+	<h2>Hero block: sample nine</h2>
+	<p>In this section, you will add a background image to the <b>hero-9</b> block within your sample files.</p>
+
+	<ol>
+		<li>For the <b>hero-9</b> styles, replace the current <b>background-color</b> property and value with the following:
+<pre class="language-css">
+   <span class="token class">.hero-9 </span> {
+      <span class="token property">background-image</span>: <span class="yellow">url</span><span class="token value-text">(''../img/hook-head.jpg')</span>;
+      <span class="token property">background-position</span>: <span class="token value-text">center center</span>;
+      <span class="token property">background-size</span>: <span class="token value-text">cover</span>;
+      <span class="token property">background-repeat</span>: <span class="token value-text">no-repeat</span>;
+  }</pre></li>
+
+		<li>Save the stylesheet and view the effect on the web page in your web browser.<br><br></li>
+
+	</ol>
+
+	<h3>Adding a different image for mobile screens</h3>
+	<p>To offer a different image for mobile screens, follow these steps.</p>
+
+	<ol>
+		<li>In the stylesheet, add the following new style rules for the <b>hero-9</b> block.
+<pre class="language-css">
+
+<span class="token comment">/* Desktop - Background image  */</span>
+<span class="purple">@media</span> (min-width:768px) {
+    <span class="token class">.hero-9</span> { <span class="token property">background-image</span>: <span class="yellow">url</span>(<span class="token value-text">''../img/hook-head.jpg'</span>); 
+}
+
+<span class="token comment">/* Mobile - Background image  */</span>
+<span class="purple">@media</span> (max-width:767px) {
+    <span class="token class">.hero-9</span> { <span class="token property">background-image</span>: <span class="yellow">url</span>(<span class="token value-text">''../img/hook-head-mobile.jpg'</span>); 
+}
+</pre></li>
+
+		<li>Save the stylesheet and view the effect on the web page on desktop/laptop and mobile size screens.<br><br></li>
+
+	</ol>
+
+	<p>Click <a href="final-hero/hero-images/after/hero-images.html" target="_blank">hero-images.html</a> to view a finished sample of this web page in a new tab of your web browser.</p>
+
+<p>&nbsp;</p>
+	<p><br><br>Return to <a href="../index.html">Contents</a>.</p>
+</section>
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+	</script>
+
+</body>
+</html>
+
