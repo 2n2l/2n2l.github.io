@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Hero Blocks with Videos | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Working with Hero Blocks, Single-column: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<meta property="og:site_name" content="https://www.munnelly.com/" />
+
+	<link href="../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N54G36T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="jumbotron tutorial">
+	<h3><a href="../index.html" title="All HTML projects">All Tutorials&nbsp;&nbsp;&gt;</a></h3>
+	<h1>Hero Blocks with Videos</h1>
+</div>
+
+
+
+<section id="learning-goals" class="wrapper-content">
+	<h2>Learning Goals</h2>
+	<p>At the end of this Tutorial you will be able to:</p>
+	<ul>
+		<li>Add a backgound video to the hero block in a web page.</li>
+	</ul>
+</section>
+
+<section class="wrapper-content bg-white">
+	<div class="box-toc">
+		<h2>Contents</h2>
+		<p><a href="#introduction">Introduction</a></p>
+		<p><a href="#project-folder-files">Downloading the sample files</a></p>
+		<p><a href="#background-video">Downloading the background video</a></p>
+		<p><a href="#embed-video">Embedding the video in the HTML page</a></p>
+	</div>
+</section>
+
+
+<section id="sample-files" class="wrapper-content bg-white">
+
+	<h2>Downloading the sample files</h2>
+	<p>In this exercise, you will work with the following two files, a web page and a stylesheet:</p>
+	
+	<ul>
+		<li><b><a href="final-hero/hero-video/before/hero-video.html" target="_blank">hero-video.html</a></b>: Click this link to open the web page in a new tab of your web browser.
+		<span class="inside-ol">&nbsp;</span>
+		Right-click anywhere in the web page and choose <b>Save as...</b> (Chrome) or <b>Save Page As...</b> (Firefox) from the context menu displayed.
+		<span class="inside-ol">&nbsp;</span>
+		Save the web page in the <b>bootstrap</b> sub-folder of your <b>websites</b> folder with the name <b>hero-video.html</b>
+		<span class="inside-ol">&nbsp;</span>
+		Ensure the <b>Save as type:</b> dropdown list is set to <b>Webpage, HTML only (*.HTML, *.htm)</b>.
+		You can close the browser tab containing the <b>hero-video.html</b> web page.</li>
+
+		<li><b><a href="final-hero/hero-video/before/assets/css/hero-video.css" target="_blank">hero-video.css</a></b>: Click this link to open the stylesheet file in a new tab of your web browser.
+		<span class="inside-ol">&nbsp;</span>
+		Right-click anywhere in the browser window, and from the context menu, choose <b>Save as... (Chrome)</b> or <b>Save Page As...</b> (Firefox).
+		<span class="inside-ol">&nbsp;</span>
+		Save the <b>hero-basic.css</b> stylesheet file to your <b>websites/bootstrap/assets/css</b> sub-folder.
+		<span class="inside-ol">&nbsp;</span>
+		Ensure the <b>Save as type:</b> dropdown list is set to the correct file type.
+		<span class="inside-ol">&nbsp;</span>
+		You can close the browser tab containing the <b>hero-video.css</b> stylesheet.</li>
+	</ul>
+
+	<p>You have now saved the two files you need for this exercise.</p>
+
+	<p>Next, in your <b>bootstrap/assets</b> sub-folder, create a new sub-folder named <b>videos</b>.</p>
+</section>
+
+
+
+<section id="background-video" class="wrapper-content">
+
+	<h2>Downloading the background video</h2>
+	<p>Your next step is to download a free-to-use video from the <a href="https://www.pexels.com/" target="_blank">Pexels</a> website.</p>
+
+	<ol>
+		<li>Click the link below to open a new web browser tab that offers a video for download.
+		
+		<a href="https://www.pexels.com/video/girl-writing-on-her-notebook-2086113/" target="_blank">Girl Writing on Her Notebook</a></li>
+
+		<li>At the top right of the screen, click the arrow at the right of the <b>Free Download</b> button.
+		
+		<img src="assets/img/hero-blocks/video-download.png" alt="project in web browser"><li>
+
+		<li>For the video resolution, click the <b>Original (1920 x 1080)</b> option.
+		
+		<img src="assets/img/hero-blocks/video-resolution.png" alt="project in web browser">
+		
+		And then click the <b>Free Download</b> button.</li>
+		
+		<li>Copy the downloaded video to your <b>bootstrap/assets/videos</b> sub-folder.</li>
+
+		<li>In File/Windows Explorer, you can see the video file is named <b>Pexels Videos 2086113.mp4</b>.
+
+		<span class="inside-ol">&nbsp;</span>
+
+		This is the so-called <i>full name</i> of the file. It consists of the <i>base file name</i> (<b>Pexels Videos 2086113</b>), a full stop and the <i>file name extension</i> (<b>mp4</b>).
+		<img src="assets/img/hero-blocks/video-file-rename.png" alt="project in web browser">
+		
+		If you are using Windows 10, by default you will only see the base file name of <b>Pexels Videos 2086113</b>.
+		
+		<span class="inside-ol">&nbsp;</span>
+		To change this for all files in your <b>websites</b> folder, follow these steps:
+		
+			<ul>
+				<li>In File/Windows Explorer, display all the sub-folders and files in your <b>websites</b> folder.</li>
+				<li>In the menu at the top of the screen, click the <b>View</b> option.
+				<img src="assets/img/hero-blocks/file-name-1.png" alt="project in web browser"></li>
+				<li>You are now shown a new ribbon of options. Check the box named <b>File name extensions</b>. 
+				<img src="assets/img/hero-blocks/file-name-2.png" alt="project in web browser">
+				For all files in your websites folder, you will in future be shown the full file name that includes the filename extension.</li>
+			</ul>
+		</li>
+
+		<li>As a final step, rename the video file to <b>hero-video.mp4</b>.
+		<img src="assets/img/hero-blocks/video-file-rename-2.png" alt="project in web browser"></li>
+
+	</ol>
+
+	<p>You are now ready to work with the downloaded and renamed video.</p>
+
+</section>
+
+
+<section id="embed-video" class="wrapper-content">
+
+	<h2>Embedding the video in the HTML page</h2>
+	
+	<p>Follow these steps to embed the video file in your web page.</p>
+	
+	<ol>
+		<li>In VS Code, display the <b>hero-video.html</b> file.</li>
+		<li>Scroll down to the end.
+
+		<span class="inside-ol">&nbsp;</span>
+		
+		In the <span class="syn">&lt;div&gt;</span> block named <b>hero-10</b>, you can see three comment lines to guide you in working with the hero block content, overlay and background video.</li>
+		
+		<li>Under the first comment line of &#8220;Background video&#8221;, copy-and-paste the following HTML.
+
+<pre class="language-html">
+&lt;<span class="blue-dark">video</span> <span class="blue-light">loop muted autoplay poster</span>=<span class="brown">"assets/img/hero-still.jpg"</span> <span class="blue-light">class</span>=<span class="brown">"background-video"</span>&gt;  
+    &lt;<span class="blue-dark">source</span> <span class="blue-light">src</span>=<span class="brown">"assets/videos/hero-video.mp4"</span> <span class="blue-light">type</span>=<span class="brown">"video/mp4"</span>&gt;
+&lt;/<span class="blue-dark">video</span>&gt;
+</pre>
+	Here you set the file name and folder location of the video you want to use as a background, along with some other properties and values.</li>
+
+	<li>Under the second comment line of &#8220;Optional overlay&#8221;, copy-and-paste the following HTML.
+
+<pre class="language-html">
+&lt;<span class="blue-dark">div</span> <span class="blue-light">class</span>=<span class="brown">"bg-overlay"</span>&gt;&lt;/<span class="blue-dark">div</span>&gt;
+</pre>
+This allows you to include a tinted overlay, if required, to make the text content easier-to-read against the video background.
+<span class="inside-ol">&nbsp;</span>
+		If you open the <b>hero-video.html</b> file for this project in VS Code, you can see the following values has been set for the overlay:
+
+		<img src="assets/img/hero-blocks/linear-gradient.png" alt="project in web browser">
+
+		<ul>
+			<li>The overlay colour changes from blue (RGB of <b>29,38,113</b>) at the top to brown (RGB of <b>195,55,100</b>) at the bottom.</li>
+			<li>The opacity of the overlay, represented by the letter A (for Alpha channel) decreases from <b>0.7</b> at the top to <b>0.3</b> at the bottom.</li>
+		</ul>
+	</li>
+
+	<li>Under the third comment line of &#8220;Hero block content&#8221; is the text the text content that appears in front of the background video (and also in front of the optional overlay). It typically includes a heading, sub-heading and one or two buttons.</li>
+
+	<li>When finished, save your <b>hero-video.html</b> file.
+	<span class="inside-ol">&nbsp;</span>
+
+	Your web page file should now look as shown below.
+	<img src="assets/img/hero-blocks/hero-10.png" alt="project in web browser"></li>
+
+	</ol>
+
+	<p>In your web browser, reload and view your <b>hero-video.html</b> web page on desktop/laptop and mobile screens. The background video should play continuously.</p>
+
+	<p>That&#8217;s it. You have now completed this exercise.</p>
+
+
+	<p><br><br>Return to <a href="../../index.html">Contents</a>.</p>
+
+
+</section>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+</script>
+
+
+
+</body>
+</html>
+
