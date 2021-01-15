@@ -104,7 +104,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="box-about" class="wrapper-content">
 	<h2>Adding the Bootstrap container class</h2>
 
-	<p>Column layout in Bootstrap is based upon a CSS class named  <span class="syn">container</span> that is set inside the Bootstrap stylesheet file. Let's add this CSS class to your web page.</p>
+	<p>Column layout in Bootstrap is based upon a CSS class named  <span class="syn">container</span>. This class is set inside the Bootstrap stylesheet file. So you don't need to create it in your own stylesheet.</p>
+	
+	<img src="assets/img/intro-bootstrap-grid/grids-supplied.png" alt="Introduction to HTML">
+	
+	<p>Let's add this Bootstrap-provided CSS class to your web page.</p>
 	<ol>
 
 		<li>Enclose the placeholder text, of a heading and a paragraph, within a pair of opening and closing  <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags. See below.
@@ -118,38 +122,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	</ol>
 
-	<p>Note how the layout of your web page content has changed by adding the Bootstrap CSS class of <span class="syn">container</span>.</p>
+	<p>Notice how adding the Bootstrap CSS class of <span class="syn">container</span> has changed the layout of your web page content.</p>
 
-	<p>Bootstrap has added some blank spacing around the four edges of your content. As a result, text, images or other content inside the <span class="syn">container</span> no longer push directly against the sides of the web browser window.</p>
-	<p>To help you visualise this extra spacing, it is highlighted in pink below.</p>
-	
+	<p>The <span class="syn">container</span> class has added some blank spacing around the four edges of your content, so that the content no longer pushes directly against the sides of the web browser window.</p>
+
 	<img src="assets/img/intro-bootstrap-grid/before-after.png" alt="Introduction to HTML">
+
+	<p>To help you visualise this extra spacing, it is highlighted in pink above.</p>
 	
-	<p>Boostrap will adjust this extra spacing responsively according to the wide of the screen.</p>
+	
+	<p>Boostrap will adjust this extra spacing responsively according to the width of the screen.</p>
 
-	<ul>
-		<li>Without the need to add any further layout tags to a web page or extra classes to a stylesheet, the Bootstrap <span class="syn">container</span> provides a convenient way of creating single-column layouts on web pages.</li>
+	<p>You can use the <span class="syn">container</span> class to create single-column layouts such as those shown below.</p>
 
-		<li>While the <span class="syn">container</span> class takes care of content layout or 'positioning', you will, of course, still need to add further CSS classes in the your own stylesheet to set fonts and colours.</li>
-	</ul>
+	<img src="assets/img/intro-bootstrap-grid/col-one-samples.png" alt="Introduction to HTML">
+
+	<p>By default, all content in a Bootstrap <span class="syn">container</span> is <i>left-aligned</i>, as in the two examples above.</p>
+
+	<p>To <i>centre-align</i> your content, simply add the Bootstrap class of <span class="syn">text-center</span> alongside the <span class="syn">container</span>. See the two examples below.</p>
+
+	<img src="assets/img/intro-bootstrap-grid/col-one-center-samples.png" alt="Introduction to HTML">
+
+	<p>The <span class="syn">container</span> class controls only the layout or 'positioning' of your content. To set fonts, colours and images, you will need to create your own CSS classes in your stylesheet file.</p>
+
 
 </section>
 
 
 <section id="box-about" class="wrapper-content">
-	<h2>Using the VS Code visual indentation guides</h2>
-		
-	<p>Visual Studio Code displays vertical lines called <i>indentation guides</i> to help you visually organise blocks of content in your web pages.</p>
+	<h2>Using the VS Code indentation guides</h2>
+	
+	<p>Always use the <i>indentation guides</i> provided with VS Code when working with the Bootstrap grid. Indentation guides are vertical lines that will help you visually organise the blocks of content in your web pages.</p>
 
-	<p>Indented text is text that is &#8216;pushed in&#8216; from the left margin, typically by pressing the <b>Tab</b> key.</p>
+	<p>In particular, they will help see when you have:</p>
+	<ul>
+		<li>Not matched an opening <span class="syn">&lt;div&gt;</span> tag with a closing <span class="syn">&lt;/div&gt;</span> tag.</li>
+	</ul>
+	<p>&#8212;Or&#8212;</p>
+	<ul>
+		<li>Entered a closing <span class="syn">&lt;/div&gt;</span> tag that does not have a corresponding opening <span class="syn">&lt;div&gt;</span> tag.</li>
+	</ul>
 
-	<p>Indentation guides help you identify errors such as missing (or extra) opening or closing HTML tags. In the example below, you can see that the opening and closing <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags line up correctly.</p>
+	<p>You can make the VS Code indentation guides visible by pressing the <b>Tab</b> key or <b>Spacebar</b> to indent or 'push' content blocks with matching opening tag pairs in from the left of the screen.</p>
+	
+	<p>See the example below.<p>
 	<img src="assets/img/intro-bootstrap-grid/bootstrap-div-4.png" alt="Introduction to HTML"></li>
 
-	<p>Always use indentation when working with Bootstrap web pages. Here are the steps.</p>
+	<p>If you forget a closing <span class="syn">&lt;/div&gt;</span> tag, the indentation guide is left hanging in space and goes nowhere, as you can see below.</p>
+	<img src="assets/img/intro-bootstrap-grid/bootstrap-div-4-missing.png" alt="Introduction to HTML">
+
+	<p>And if you include an extra closing <span class="syn">&lt;/div&gt;</span> tag, you can immediately see no matching opening tag exists. See below.</p>
+	<img src="assets/img/intro-bootstrap-grid/bootstrap-div-4-extra.png" alt="Introduction to HTML">
+
+	<p>The <a href="https://2n2l.com/it4women/exercises/working-with-text-editors.html#htmlhint">HTMLHint extension</a> to VS Code will help you locate any such errors in your web pages.</p>
 	
+	<p>If you open a div with a <span class="syn">&lt;div&gt;</span> tag but forget to close it with a matching <span class="syn">&lt;/div&gt;</span> tag, you will see an error such as the following.
+	<img src="assets/img/intro-bootstrap-grid/htmlhint-missing.png" alt="Introduction to HTML">
+
+	And if you enter a closing <span class="syn">&lt;/div&gt;</span> tag that has no opening <span class="syn">&lt;div&gt;</span> tag to match it, HTMLHint will display this message.
+	<img src="assets/img/intro-bootstrap-grid/htmlhint-extra.png" alt="Introduction to HTML">
+
+	<p>In VS Code, let's display an indentation guide for our sample web page.</p>
 	<ol>
-		<li>In your <b>bootstrap-grid.html</b> file, use the mouse to drag over and select the placeholder text inside the <span class="syn">container</span> tag pair. See below.
+		<li>In your <b>bootstrap-grid.html</b> file, use the mouse to drag over and select the placeholder text inside the opening and closing <span class="syn">container</span> tag pair. See below.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-2.png" alt="Introduction to HTML"></li>
 
 		<li>Press the <b>Tab</b> key to <i>indent</i> the placeholder text. See below.
@@ -166,7 +201,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<p>When creating a single-column layout in Bootstrap, it is enough to use the <span class="syn">container</span> class.</p>
 
-	<p>To create multi-column layouts of two, three or more columns, however, you need to use another Bootstrap CSS class called <span class="syn">row</span>.</p>
+	<p>To create multi-column layouts of two, three or more columns, however, you need to use two other Bootstrap CSS class:</p>
+	
+	<ol>
+		<li>The <span class="syn">row</span> class, and</li>
+		<li>The <span class="syn">col</span> class (which has different versions).</li>
+	</ol>
+
 
 	<p>The following exercise provides an example.</p>
 
@@ -184,13 +225,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
 		In your <b>bootstrap-grid.html</b> page, paste this new content under the already existing placeholder text. Your web page should look as shown below.
 
-		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-6.png" alt="Introduction to HTML">Ensure your pasted text 'lines up' as shown above. Use the <b>Tab</b> key or <b>Spacebar</b> to do this.</li>
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-6.png" alt="Introduction to HTML">
+		
+		Ensure your pasted content 'lines up' as shown above. Use the <b>Tab</b> key or <b>Spacebar</b> to do this.</li>
 
 		<li>Save your <b>bootstrap-grid.html</b> file and view it in your web browser. It should look as shown below.
 
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-browser-2.png" alt="Introduction to HTML">
 
 		You can see the two sub-headings and their text paragraphs appear one <i>above</i> the other. Our task is to display them <i>side-by-side</i> in a two-column layout.</li>
+	</ol>
 
 	<h3>Adding the Bootstrap row class</h3>
 	<p>Next, let's add the new Bootstrap class of <span class="syn">row</span> to enable a multi-column web page layout.</p>
@@ -198,15 +242,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<ol>
 		<li>In VS Code, add a new pair of opening and closing  <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags with a class name of <b>row</b> inside the <b>container</b> div tags as shown below.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-7.png" alt="Introduction to HTML">
-		Ensure your text 'lines up' as shown above. Use the <b>Tab</b> key or <b>Spacebar</b> to do this.
+		Again, ensure your content 'lines up' as shown above. Use the <b>Tab</b> key or <b>Spacebar</b> to do this.
 		<span class="inside-ol">&nbsp;</span>
 		
 		In effect, you have now created two 'boxes': an outer or parent box and an inner or child box.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-8.png" alt="Introduction to HTML"></li>
 
-		
+		<p>Notice that you now have <i>two</i> closing <span class="syn">&lt;/div&gt;</span> tags. The first one closes the <span class="syn">row</span> block and the second closes the <span class="syn">container</span> block.</p>
+
+
 	<h3>Adding the Bootstrap col classes</h3>
-		<p>Your final step is to create the two columns. You will use the Bootstrap class of <span class="syn">col</span>.</p>
+		<p>Your final task is to create the two columns. You will use the Bootstrap class of <span class="syn">col</span>.</p>
 		
 		<p>Here are the steps.</p>
 
@@ -229,7 +275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<p>That&#8217;s it. You have successfully created a basic, <i>two-column</i> web page.</p>
 
 
-	<h3 id="first-web-page-title">Making your Bootstrap columns responsive</h3>
+	<h2 id="first-web-page-title">Making your Bootstrap columns responsive</h2>
 	<p>In Bootstrap, columns you create with the class of <b>col</b> are not responsive to the size of the user's display device. </p>
 	<p>For example, the layout you created above will appear as two columns on both mobile and desktop/laptop screens.</p>
 
