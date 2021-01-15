@@ -139,15 +139,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<p>You will need some sample images to work with. Right-click on the images below, choose <b>Save Image As</b> from the context menu, and download them to your <b>C:/websites/bootstrap/assets/img</b> sub-folder.
 
 	<img src="final-hero/hero-images/before/assets/img/hotel-dark.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
-	<a href="" target="_blank">Link</a>
+	<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/hotel-dark.jpg" target="_blank">Link</a>
 	<img src="final-hero/hero-images/before/assets/img/bike-tours.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
-	<a href="" target="_blank">Link</a>
+	<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/bike-tours.jpg" target="_blank">Link</a>
 	<img src="final-hero/hero-images/before/assets/img/meeting.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
-	<a href="" target="_blank">Link</a>
+	<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/meeting.jpg" target="_blank">Link</a>
 	<img src="final-hero/hero-images/before/assets/img/hook-head.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
-	<a href="" target="_blank">Link</a>
+	<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/hook-head.jpg" target="_blank">Link</a>
 	<img src="final-hero/hero-images/before/assets/img/hook-head-mobile.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
-	<a href="" target="_blank">Link</a>
+	<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/hook-head-mobile.jpg" target="_blank">Link</a>
 	<p>You have now saved the all the files you need for this exercise.</p>
 
 </section>
@@ -189,7 +189,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<li>For the <b>hero-7</b> styles, replace the current <b>background-color</b> property and value with the following:
 <pre class="language-css">
    <span class="token class">.hero-7 </span> {
-      <span class="token property">background-image</span>: <span class="yellow">url</span><span class="token value-text">(''../img/bike-tours.jpg')</span>;
+      <span class="token property">background-image</span>: <span class="yellow">url</span><span class="token value-text">('../img/bike-tours.jpg')</span>;
       <span class="token property">background-position</span>: <span class="token value-text">center center</span>;
       <span class="token property">background-size</span>: <span class="token value-text">cover</span>;
       <span class="token property">background-repeat</span>: <span class="token value-text">no-repeat</span>;
@@ -251,7 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<li>For the <b>hero-8</b> styles, replace the current <b>background-color</b> property and value with the following:
 <pre class="language-css">
    <span class="token class">.hero-8 </span> {
-      <span class="token property">background-image</span>: <span class="yellow">url</span><span class="token value-text">(''../img/meeting.jpg')</span>;
+      <span class="token property">background-image</span>: <span class="yellow">url</span><span class="token value-text">('../img/meeting.jpg')</span>;
       <span class="token property">background-position</span>: <span class="token value-text">center center</span>;
       <span class="token property">background-size</span>: <span class="token value-text">cover</span>;
       <span class="token property">background-repeat</span>: <span class="token value-text">no-repeat</span>;
@@ -319,7 +319,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<li>For the <b>hero-9</b> styles, replace the current <b>background-color</b> property and value with the following:
 <pre class="language-css">
    <span class="token class">.hero-9 </span> {
-      <span class="token property">background-image</span>: <span class="yellow">url</span><span class="token value-text">(''../img/hook-head.jpg')</span>;
+      <span class="token property">background-image</span>: <span class="yellow">url</span><span class="token value-text">('../img/hook-head.jpg')</span>;
       <span class="token property">background-position</span>: <span class="token value-text">center center</span>;
       <span class="token property">background-size</span>: <span class="token value-text">cover</span>;
       <span class="token property">background-repeat</span>: <span class="token value-text">no-repeat</span>;
@@ -337,13 +337,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <pre class="language-css">
 
 <span class="token comment">/* Desktop - Background image  */</span>
-<span class="purple">@media</span> (min-width:768px) {
-    <span class="token class">.hero-9</span> { <span class="token property">background-image</span>: <span class="yellow">url</span>(<span class="token value-text">''../img/hook-head.jpg'</span>); 
+<span class="purple">@media</span> (<span class="token property">min-width</span>: <span class="token number">768px</span>) {
+    <span class="token class">.hero-9</span> { <span class="token property">background-image</span>: <span class="yellow">url</span>(<span class="token value-text">'../img/hook-head.jpg'</span>); 
+    }
 }
 
 <span class="token comment">/* Mobile - Background image  */</span>
-<span class="purple">@media</span> (max-width:767px) {
-    <span class="token class">.hero-9</span> { <span class="token property">background-image</span>: <span class="yellow">url</span>(<span class="token value-text">''../img/hook-head-mobile.jpg'</span>); 
+<span class="token purple">@media</span> (<span class="token property">max-width</span>: <span class="token number">767px</span>) { 
+    <span class="token class">.hero-9</span> { <span class="token property">background-image</span>: <span class="yellow">url</span>(<span class="token value-text">'../img/hook-head-mobile.jpg'</span>); 
+    }
 }
 </pre></li>
 
