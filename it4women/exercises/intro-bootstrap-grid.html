@@ -115,7 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div.png" alt="Introduction to HTML"></li>
 		
-		<li>Give your opening <span class="syn">&lt;div&gt;</span> tag a class name of <b>container</b>, as shown below.
+		<li>Give your opening <span class="syn">&lt;div&gt;</span> tag a class name of <span class="syn">container</span>, as shown below.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-2n.png" alt="Introduction to HTML"></li>
 		<li>Save your <b>bootstrap-grid.html</b> file. In your web browser, it should look as shown below.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-browser-1.png" alt="Introduction to HTML"></li>
@@ -152,9 +152,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="box-about" class="wrapper-content">
 	<h2>Using the VS Code indentation guides</h2>
 	
-	<p>Always use the <i>indentation guides</i> provided with VS Code when working with the Bootstrap grid. Indentation guides are vertical lines that will help you visually organise the blocks of content in your web pages.</p>
+	<p>Always use the <i>indentation guides</i> provided with VS Code when working with the Bootstrap grid.</p>
 
-	<p>In particular, they will help see when you have:</p>
+	<p>You can make the VS Code indentation guides visible by pressing the <b>Tab</b> key or <b>Spacebar</b> to indent or 'push' content blocks with matching opening tag pairs in from the left of the screen. See the example below.<p>
+	<img src="assets/img/intro-bootstrap-grid/bootstrap-div-4.png" alt="Introduction to HTML"></li>
+
+	<p>Indentation guides will help you visually organise the blocks of content in your web pages.</p>
+
+	<p>In particular, they will help see if you have:</p>
 	<ul>
 		<li>Not matched an opening <span class="syn">&lt;div&gt;</span> tag with a closing <span class="syn">&lt;/div&gt;</span> tag.</li>
 	</ul>
@@ -163,23 +168,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<li>Entered a closing <span class="syn">&lt;/div&gt;</span> tag that does not have a corresponding opening <span class="syn">&lt;div&gt;</span> tag.</li>
 	</ul>
 
-	<p>You can make the VS Code indentation guides visible by pressing the <b>Tab</b> key or <b>Spacebar</b> to indent or 'push' content blocks with matching opening tag pairs in from the left of the screen.</p>
-	
-	<p>See the example below.<p>
-	<img src="assets/img/intro-bootstrap-grid/bootstrap-div-4.png" alt="Introduction to HTML"></li>
-
 	<p>If you forget a closing <span class="syn">&lt;/div&gt;</span> tag, the indentation guide is left hanging in space and goes nowhere, as you can see below.</p>
 	<img src="assets/img/intro-bootstrap-grid/bootstrap-div-4-missing.png" alt="Introduction to HTML">
 
-	<p>And if you include an extra closing <span class="syn">&lt;/div&gt;</span> tag, you can immediately see no matching opening tag exists. See below.</p>
+	<p>Or if you include an extra closing <span class="syn">&lt;/div&gt;</span> tag, you can immediately see no matching opening tag exists. See below.</p>
 	<img src="assets/img/intro-bootstrap-grid/bootstrap-div-4-extra.png" alt="Introduction to HTML">
 
 	<p>The <a href="https://2n2l.com/it4women/exercises/working-with-text-editors.html#htmlhint">HTMLHint extension</a> to VS Code will help you locate any such errors in your web pages.</p>
 	
-	<p>If you open a div with a <span class="syn">&lt;div&gt;</span> tag but forget to close it with a matching <span class="syn">&lt;/div&gt;</span> tag, you will see an error such as the following.
+	<p>If you forget to enter a closing <span class="syn">&lt;/div&gt;</span> tag, you will see an error such as the following.
 	<img src="assets/img/intro-bootstrap-grid/htmlhint-missing.png" alt="Introduction to HTML">
 
-	And if you enter a closing <span class="syn">&lt;/div&gt;</span> tag that has no opening <span class="syn">&lt;div&gt;</span> tag to match it, HTMLHint will display this message.
+	And if you enter an extra closing <span class="syn">&lt;/div&gt;</span> tag, HTMLHint will display a message like this.
 	<img src="assets/img/intro-bootstrap-grid/htmlhint-extra.png" alt="Introduction to HTML">
 
 	<p>In VS Code, let's display an indentation guide for our sample web page.</p>
@@ -189,7 +189,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		<li>Press the <b>Tab</b> key to <i>indent</i> the placeholder text. See below.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-3.png" alt="Introduction to HTML">
-		
+		You should now see the VSCode indentation guide as shown below.
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-3n.png" alt="Introduction to HTML">		
 		<li>Save your <b>bootstrap-grid.html</b> file.</li>
 	</ol>
 
@@ -231,21 +232,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		<li>Save your <b>bootstrap-grid.html</b> file and view it in your web browser. It should look as shown below.
 
-		<img src="assets/img/intro-bootstrap-grid/bootstrap-browser-2.png" alt="Introduction to HTML">
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-browser-2.png" alt="Introduction to HTML"></li>
 
-		You can see the two sub-headings and their text paragraphs appear one <i>above</i> the other. Our task is to display them <i>side-by-side</i> in a two-column layout.</li>
-	</ol>
+		</ol>
+		
+	<p>You can see the two sub-headings and their text paragraphs appear one <i>above</i> the other. Our task is to display them <i>side-by-side</i> in a two-column layout.</p>
 
 	<h3>Adding the Bootstrap row class</h3>
 	<p>Next, let's add the new Bootstrap class of <span class="syn">row</span> to enable a multi-column web page layout.</p>
 
 	<ol>
-		<li>In VS Code, add a new pair of opening and closing  <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags with a class name of <b>row</b> inside the <b>container</b> div tags as shown below.
+		<li>In VS Code, add a new pair of opening and closing <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags with a class name of <span class="syn">row</span> inside the <span class="syn">container</span> div tags as shown below.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-7.png" alt="Introduction to HTML">
 		Again, ensure your content 'lines up' as shown above. Use the <b>Tab</b> key or <b>Spacebar</b> to do this.
 		<span class="inside-ol">&nbsp;</span>
 		
-		In effect, you have now created two 'boxes': an outer or parent box and an inner or child box.
+		In effect, you have now created two 'boxes': an outer or parent <span class="syn">container</span> box and an inner or child <span class="syn">row</span> box.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-8.png" alt="Introduction to HTML"></li>
 
 		<p>Notice that you now have <i>two</i> closing <span class="syn">&lt;/div&gt;</span> tags. The first one closes the <span class="syn">row</span> block and the second closes the <span class="syn">container</span> block.</p>
@@ -263,11 +265,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 		The layout structure of your web page now is as shown below.
 
-		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-8n.png" alt="Introduction to HTML">
-
-		</li>
-		
-
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-8n.png" alt="Introduction to HTML">	</li>
+	
 		<li>Save your <b>bootstrap-grid.html</b> file. In your web browser, it should look as shown below.
 		<img src="assets/img/intro-bootstrap-grid/bootstrap-browser-3.png" alt="Introduction to HTML"></li>
 	</ol>
@@ -276,38 +275,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 	<h2 id="first-web-page-title">Making your Bootstrap columns responsive</h2>
-	<p>In Bootstrap, columns you create with the class of <b>col</b> are not responsive to the size of the user's display device. </p>
-	<p>For example, the layout you created above will appear as two columns on both mobile and desktop/laptop screens.</p>
+	<p>Bootstrap columns you create with the class of <b>col</b> are not responsive to the size of the user's display device. For example, the layout you created above will appear as two columns on both mobile and tablet/desktop/laptop screens.</p>
 
-		<img src="assets/img/intro-bootstrap-grid/flex-cols-before.png" alt="Introduction to HTML">
+	<img src="assets/img/intro-bootstrap-grid/flex-cols-before.png" alt="Introduction to HTML">
 
-	<p>Typically, you will want your layouts of content to appear as:</p>
-	
-	<ul>
-		<li>Two, three or four columns on wide screens (<b>768px</b> or wider)</li>
-		<li>Single columns on narrow screens (less than <b>768px</b>).</li>
-	</ul>
-	
-	
-	<p>The Bootstrap grid system is based on <i>12 columns</i>. This means:</p>
+	<p>Typically, you will want your layout that appears in multiple columns on bigger screens to 'collapse' into a single-column on small screens. See the example below.</p>
+
+	<img src="assets/img/intro-bootstrap-grid/responsive-columns-example.png" alt="Introduction to HTML">
+
+	<p>To achieve this, you need to understand two important concepts:</p>
 
 	<ul>
-		<li>A <b>two-column</b> layout is really two sets of six Bootstrap columns (2 x 6 = 12).</li>
-		<li>A <b>three-column</b> layout is really three sets of four Bootstrap columns (3 x 4 = 12).</li>
-		<li>A <b>four-column</b> layout is really four sets of three Bootstrap columns (4 x 3 = 12).</li>
+		<li>The Bootstrap <b>12-column</b> grid system.</li>
+		<li>The Bootstrap <b>md</b> (for medium or 768px) breakpoint.</li>
+	</ul>
+	
+	<h3>About the Bootstrap <b>12-column</b> grid system</h3>
+	<p>The grid system supplied with the Bootstrap CSS stylesheet is actually based on a total of 12 columns. See below.</p>
+
+	<img src="assets/img/intro-bootstrap-grid/grid-12-cols.png" alt="Introduction to HTML">
+
+	<p>In practice, however, you would never want to layout a web page in 12 columns from left to right across the screen. To create more realistic layouts of two, three and four columns, you need to group together or 'bundle' Bootstrap's built-in columns. See below.</p>
+
+	<img src="assets/img/intro-bootstrap-grid/bootstrap-grid-column-converson.png" alt="Introduction to HTML">
+
+	<p>In summary:</p>
+
+	<ul>
+		<li>What displays on screen as a <b>two-column</b> layout is really two sets of six Bootstrap columns (2 x 6 = 12).</li>
+		<li>What displays on screen as a <b>three-column</b> layout is really three sets of four Bootstrap columns (3 x 4 = 12).</li>
+		<li>What displays on screen as A <b>four-column</b> layout is really four sets of three Bootstrap columns (4 x 3 = 12).</li>
 	</ul>
 
-	<p>To make the above two-column layout responsive, replace the <b>col</b> class names with the <b>col-md-6</b> names as shown below.
 
-	<img src="assets/img/intro-bootstrap-grid/bootstrap-div-10.png" alt="Introduction to HTML">
+	<h3>About the Bootstrap <b>md</b> (768px) breakpoint</h3>
+	<p>In a previous Tutorial about <a href="https://2n2l.com/it4women/exercises/intro-media-queries.html">Media Queries</a> you learnt about <b>breakpoints</b> in responsive web design.</p>
+	
+	<p>A breakpoint is a screen width at which the appearance of a web page (such as columns, colours or other CSS property) can change. Media queries are written in a stylesheet as follows.</p>
 
-	<p>Save your <b>bootstrap-grid.html</b> file. In your web browser, it should display as shown below on large and small-sized screens.
+	<img src="assets/img/intro-bootstrap-grid/breakpoint-768.png" alt="Introduction to HTML">
+
+	<p>The breakpoint most commonly used by web designers is <b>768px</b>. In simple terms, any screen less than 768 pixels wide is regarded as a 'small' screen. And any screen that is 768 pixels wide or wider is a 'big' screen.</p>
+
+	<p>In Bootstrap, this 768 pixels breakpoint is known by the two letters <b>md</b> (for medium).</p>
+
+	<p>Here are the CSS classes provided by the Bootstrap stylesheet for creating responsive multi-column grid layouts:</p>
+	<ul>
+		<li><span class="syn">col-md-6</span> :  For two-column layouts (<b>2</b> x 6 Bootstrap columns = 12).</li>
+		<li><span class="syn">col-md-4</span> :  For three-column layouts (<b>3</b> x 4 Bootstrap columns = 12).</li>
+		<li><span class="syn">col-md-3</span> :  For four-column layouts (<b>4</b> x 3 Bootstrap columns = 12).</li>
+
+	</ul>
+	
+	<p>In every case, the content of columns with these Bootstrap classes will display on mobile-sized screens in a single column.</p>
+	
+
+	<p>Let's return to our sample web page and make the two-column layout responsive.</p>
+
+	<ol>
+		<li>In VS Code, in the <b>bootstrap-grid.html</b> file, replace the <span class="syn">col</span> class names with the <span class="syn">col-md-6</span> names as shown below.
+
+		<img src="assets/img/intro-bootstrap-grid/bootstrap-div-10.png" alt="Introduction to HTML"></li>
+
+		<li>Save your <b>bootstrap-grid.html</b> file.</li>
+		
+	</ol>
+	In your web browser, the web page should display as shown below on large and small-sized screens.
 	<img src="assets/img/intro-bootstrap-grid/flex-cols-after.png" alt="Introduction to HTML">
 	
-	
+	<p>Success!</p>
 	<p>You can see an example of the finished web page below.</p>
 	
-	<p><a href="final-bootstrap-grid/bootstrap-grid-2-col.html" target="_blank">Bootstrap one and two-column web page</a>.</p>
+	<p><a href="final-bootstrap-grid/bootstrap-grid-2-col.html" target="_blank">Bootstrap web page with one and two-column layouts</a>.</p>
 
 </section>
 
@@ -345,11 +384,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	</ol>
 
-	<p>That&#8217;s it. You have successfully created a responsive, <i>three-column</i> web page.</p>
+	<p>That&#8217;s it. You have successfully created a responsive, <i>three-column</i> grid.</p>
 
 	<p>You can see an example of the finished web page below.</p>
 	
-	<p><a href="final-bootstrap-grid/bootstrap-grid-3-col.html" target="_blank">Bootstrap one, two and three-column web page</a>.</p>
+	<p><a href="final-bootstrap-grid/bootstrap-grid-3-col.html" target="_blank">Bootstrap web page with one, two and three-column layouts</a>.</p>
 
 
 </section>
@@ -392,11 +431,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	</ol>
 
-	<p>That&#8217;s it. You have successfully created a responsive, <i>four-column</i> web page.</p>
+	<p>More success! You have created a responsive, <i>four-column</i> grid.</p>
 
 	<p>You can see an example of the finished web page below.</p>
 	
-	<p><a href="final-bootstrap-grid/bootstrap-grid-4-col.html" target="_blank">Bootstrap one, two, three and four-column web page</a>.</p>
+	<p><a href="final-bootstrap-grid/bootstrap-grid-4-col.html" target="_blank">Bootstrap web page with one, two, three and four-column layouts</a>.</p>
 
 </section>
 
