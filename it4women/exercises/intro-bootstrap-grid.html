@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>The Bootstrap Grid | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<title>Bootstrap Grid | Web Design & Development Tutorials | Brendan Munnelly</title>
 	<meta name="description" content="Introduction to the Box Model: A Web Design and Development Tutorial from Brendan Munnelly">
 
 	<meta property="og:locale" content="en_US" />
@@ -64,8 +64,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </section>
 
+<section class="wrapper-content">
+	<div class="box-toc">
+		<h2>Contents</h2>
+		<p><a href="#grid-about">About the Bootstrap grid system</a></p>
+		<p><a href="#page-creating">Creating your Bootstrap grid web page</a></p>
+		<p><a href="#container-add">Adding the Bootstrap container class</a></p>
+		<p><a href="#indent-guide">Using the VS Code indentation guides</a></p>
+		<p><a href="#two-col">Creating a two-column layout in Bootstrap</a></p>
+		<p class="toc-indent"><a href="#add-row">Adding the Bootstrap row class</a></p>
+		<p class="toc-indent"><a href="#add-col">Adding the two Bootstrap col classes</a></p>
+		<p><a href="#col-responsive">Making your Bootstrap columns responsive</a></p>
+		<p class="toc-indent"><a href="#12-grid-about">About the Bootstrap 12-column grid system</a></p>
+		<p class="toc-indent"><a href="#md-about">About the Bootstrap md (768px) breakpoint</a></p>
+		<p><a href="#three-col">Creating a three-column layout in Bootstrap</a></p>
+		<p><a href="#four-col">Creating a four-column layout in Bootstrap</a></p>
+		<p><a href="#github-upload">Uploading your Bootstrap folder to GitHub</a></p>
+		<p><a href="#further-resources">Further resources</a></p>
+	</div>
+</section>
 
-<section id="box-about" class="wrapper-content">
+
+<section id="grid-about" class="wrapper-content">
 <h2>About the Bootstrap grid system</h2>
 	<p>When designing web pages, it is sometimes enough to arrange or layout content in a single column that stretches across the full width of the screen.</p>
 
@@ -80,7 +100,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<section id="box-about" class="wrapper-content">
+<section id="page-creating" class="wrapper-content">
 <h2>Creating your Bootstrap grid web page</h2>
 	<p>Let&#8217;s create a Bootstrap-based web page for working with multi-column layout grids. Here are the steps:</p>
 
@@ -101,7 +121,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<section id="box-about" class="wrapper-content">
+<section id="container-add" class="wrapper-content">
 	<h2>Adding the Bootstrap container class</h2>
 
 	<p>Column layout in Bootstrap is based upon a CSS class named  <span class="syn">container</span>. This class is set inside the Bootstrap stylesheet file. So you don't need to create it in your own stylesheet.</p>
@@ -149,7 +169,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<section id="box-about" class="wrapper-content">
+<section id="indent-guide" class="wrapper-content">
 	<h2>Using the VS Code indentation guides</h2>
 	
 	<p>Always use the <i>indentation guides</i> provided with VS Code when working with the Bootstrap grid.</p>
@@ -197,7 +217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<section id="box-about" class="wrapper-content">
+<section id="two-col" class="wrapper-content">
 <h2>Creating a two-column layout in Bootstrap</h2>
 
 	<p>When creating a single-column layout in Bootstrap, it is enough to use the <span class="syn">container</span> class.</p>
@@ -238,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 	<p>You can see the two sub-headings and their text paragraphs appear one <i>above</i> the other. Our task is to display them <i>side-by-side</i> in a two-column layout.</p>
 
-	<h3>Adding the Bootstrap row class</h3>
+	<h3 id="add-row">Adding the Bootstrap row class</h3>
 	<p>Next, let's add the new Bootstrap class of <span class="syn">row</span> to enable a multi-column web page layout.</p>
 
 	<ol>
@@ -253,7 +273,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<p>Notice that you now have <i>two</i> closing <span class="syn">&lt;/div&gt;</span> tags. The first one closes the <span class="syn">row</span> block and the second closes the <span class="syn">container</span> block.</p>
 
 
-	<h3>Adding the Bootstrap col classes</h3>
+	<h3 id="add-col">Adding the two Bootstrap col classes</h3>
 		<p>Your final task is to create the two columns. You will use the Bootstrap class of <span class="syn">col</span>.</p>
 		
 		<p>Here are the steps.</p>
@@ -274,7 +294,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<p>That&#8217;s it. You have successfully created a basic, <i>two-column</i> web page.</p>
 
 
-	<h2 id="first-web-page-title">Making your Bootstrap columns responsive</h2>
+	<h2 id="col-responsive">Making your Bootstrap columns responsive</h2>
 	<p>Bootstrap columns you create with the class of <b>col</b> are not responsive to the size of the user's display device. For example, the layout you created above will appear as two columns on both mobile and tablet/desktop/laptop screens.</p>
 
 	<img src="assets/img/intro-bootstrap-grid/flex-cols-before.png" alt="Introduction to HTML">
@@ -290,7 +310,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<li>The Bootstrap <b>md</b> (for medium or 768px) breakpoint.</li>
 	</ul>
 	
-	<h3>About the Bootstrap <b>12-column</b> grid system</h3>
+	<h3 id="12-grid-about">About the Bootstrap <b>12-column</b> grid system</h3>
 	<p>The grid system supplied with the Bootstrap CSS stylesheet is actually based on a total of 12 columns. See below.</p>
 
 	<img src="assets/img/intro-bootstrap-grid/grid-12-cols.png" alt="Introduction to HTML">
@@ -308,7 +328,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</ul>
 
 
-	<h3>About the Bootstrap <b>md</b> (768px) breakpoint</h3>
+	<h3 id="md-about">About the Bootstrap <b>md</b> (768px) breakpoint</h3>
 	<p>In a previous Tutorial about <a href="https://2n2l.com/it4women/exercises/intro-media-queries.html">Media Queries</a> you learnt about <b>breakpoints</b> in responsive web design.</p>
 	
 	<p>A breakpoint is a screen width at which the appearance of a web page (such as columns, colours or other CSS property) can change. Media queries are written in a stylesheet as follows.</p>
@@ -351,7 +371,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<section id="box-about" class="wrapper-content">
+<section id="three-col" class="wrapper-content">
 	<h2>Creating a three-column layout in Bootstrap</h2>
 
 	<p>Next, we will create a responsive three-column layout in Bootstrap. Here are the steps:</p>
@@ -393,7 +413,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </section>
 
-<section id="box-about" class="wrapper-content">
+<section id="four-col" class="wrapper-content">
 	<h2>Creating a four-column layout in Bootstrap</h2>
 
 	<p>Next, we will create a responsive four-column layout in Bootstrap. Here are the steps:</p>
@@ -439,7 +459,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </section>
 
-<section id="upload-github" class="wrapper-content bg-white">
+<section id="github-upload" class="wrapper-content bg-white">
 	<h2>Uploading your Bootstrap folder to GitHub</h2>
 
 	<p>Follow these steps below to upload your <i>entire</i> Bootstrap folder to your website on GitHub.</p>
