@@ -46,7 +46,7 @@
     flex-direction: column;
     justify-content: center;
     z-index: 2;
-    height: 500px;
+    height: 100%;
 }
 
 .hero-10 .background-video { 
@@ -63,11 +63,10 @@
 .hero-10 video[poster] { object-fit: cover; width: 100%; height: 100% }
 
 /* Desktop - height */
-@media (min-width:768px) { .hero-10 .background-video-content { height: 520px } }
+@media (min-width:768px) { .hero-10 .background-video-content { height: 300px } }
 
 /* Mobiles - height  */
-@media (max-width:767px) { .hero-10 .background-video-content { height: 520px } }
-
+@media (max-width:767px) { .hero-10 .background-video-content { height: 380px } }
 
 /* === Heading and sub-heading ====*/
 
@@ -100,9 +99,19 @@
 }
 
 /* Desktop - Space beneath main heading  */
-@media (min-width:768px) { .hero-10 .background-video-content h1 { margin-bottom: 1% } }
+@media (min-width:768px) { 
+    .hero-10 .background-video-content h1 { margin-bottom: 1% }
+}
 
 /* Mobiles - Space beneath main heading */
-@media (max-width:767px) { .hero-10 .background-video-content h1 { margin-bottom: 8% } }
+@media (max-width:767px) { .hero-10 .background-video-content h1 { 
+    margin-bottom: 8% }
+}
+
+/* Desktop - button positioning  */
+@media (min-width:768px) { 
+    .hero-10 .col-md-6.col-xs-12:nth-child(1) { text-align: right }
+    .hero-10 .col-md-6.col-xs-12:nth-child(2) { text-align: left }
+}
 
 
