@@ -21,6 +21,29 @@
 
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
+	<style>
+	/* =======INNER FLEXBOX COLUMNS: 3 COLUMNS ON DESKTOPS, 1 COLUMN ON MOBILES ===== */
+
+	.container-flexbox { 
+	   display: flex; 
+	   justify-content: space-between; 
+	   flex-wrap: wrap; 
+	}
+	/* Desktops - 3 columns */
+	@media all and (min-width:768px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 30% }
+		.container-flexbox .item-3 img { width: 100%; height: auto }
+	}
+
+	/* Mobiles - 1 column */
+	@media all and (max-width:767px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 100% }
+		.container-flexbox .item-3 { margin-bottom: 8% }
+		.container-flexbox .item-3 img { }
+	}
+
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -29,6 +52,7 @@
 	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
 	<!-- End Google Tag Manager -->
 
+	</style>
 </head>
 
 <body>
@@ -95,7 +119,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="sample-files" class="wrapper-content bg-white">
 
 	<h2>Downloading your sample files</h2>
-	<p>In this exercise, you will work with the following web page and a stylesheet:</p>
+	<p>Your first task is to download the following web page and a stylesheet:</p>
 	
 	<ul>
 		<li><b><a href="final-hero/hero-images/before/hero-images.html" target="_blank">hero-images.html</a></b>: Click this link to open the web page in a new tab of your web browser.
@@ -105,11 +129,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		Save the web page in the <b>bootstrap</b> sub-folder of your <b>websites</b> folder with the name <b>hero-images.html</b>
 		<span class="inside-ol">&nbsp;</span>
 		Ensure the <b>Save as type:</b> dropdown list is set to <b>Webpage, HTML only (*.HTML, *.htm)</b>.
-		<img src="assets/img/hero-blocks/hero-basic-html-2.png" alt="Working with Internal Hyperlinks">
+		<img src="assets/img/hero-blocks/file-images-save-as-html.png" alt="Working with Internal Hyperlinks">
 		You can close the browser tab containing the <b>hero-images.html</b> web page.
 		<span class="inside-ol">&nbsp;</span>
 		Your <b>websites/bootstrap</b> sub-folder shown now look as shown below.
-		<img src="assets/img/hero-blocks/file-explorer-html-2.png" alt="Working with Internal Hyperlinks"></li>
+		<img src="assets/img/hero-blocks/file-explorer-images-html.png" alt="Working with Internal Hyperlinks"></li>
 
 		<li><b><a href="final-hero/hero-images/before/assets/css/hero-images.css" target="_blank">hero-images.css</a></b>: Click this link to open the stylesheet file in a new tab of your web browser.
 		<span class="inside-ol">&nbsp;</span>
@@ -118,15 +142,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		Save the <b>hero-images.css</b> stylesheet file to your <b>websites/bootstrap/assets/css</b> sub-folder.
 		<span class="inside-ol">&nbsp;</span>
 		Ensure the <b>Save as type:</b> dropdown list is set to the correct file type.
-		<img src="assets/img/hero-blocks/hero-basic-css-2.png" alt="Working with Internal Hyperlinks" >
+		<img src="assets/img/hero-blocks/file-images-save-as-css.png" alt="Working with Internal Hyperlinks" >
 		<span class="inside-ol">&nbsp;</span>
 		You can close the browser tab containing the <b>hero-images.css</b> stylesheet.
 		<span class="inside-ol">&nbsp;</span>
 		Your <b>websites/bootstrap/assets/css</b> sub-folder shown now look as shown below.
-		<img src="assets/img/hero-blocks/file-explorer-css-2.png" alt="Working with Internal Hyperlinks"></li>
+		<img src="assets/img/hero-blocks/file-explorer-images-css.png" alt="Working with Internal Hyperlinks"></li>
 	</ul>
 
-	<p>You have now saved the two files you need for this exercise.</p>
 
 </section>
 
@@ -138,16 +161,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<p>You will need some sample images to work with. Right-click on the images below, choose <b>Save Image As</b> from the context menu, and download them to your <b>C:/websites/bootstrap/assets/img</b> sub-folder.
 
-	<img src="final-hero/hero-images/before/assets/img/hotel-dark.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
-	<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/hotel-dark.jpg" target="_blank">Link</a>
-	<img src="final-hero/hero-images/before/assets/img/bike-tours.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
-	<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/bike-tours.jpg" target="_blank">Link</a>
-	<img src="final-hero/hero-images/before/assets/img/meeting.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
-	<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/meeting.jpg" target="_blank">Link</a>
-	<img src="final-hero/hero-images/before/assets/img/hook-head.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
-	<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/hook-head.jpg" target="_blank">Link</a>
-	<img src="final-hero/hero-images/before/assets/img/hook-head-mobile.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
-	<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/hook-head-mobile.jpg" target="_blank">Link</a>
+	<div class="container-flexbox" style="margin-bottom:22px">
+		<div class="item-3">
+			<img src="final-hero/hero-images/before/assets/img/hotel-dark.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+			<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/hotel-dark.jpg" target="_blank">Link</a>
+		</div>
+
+		<div class="item-3">
+			<img src="final-hero/hero-images/before/assets/img/bike-tours.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+			<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/bike-tours.jpg" target="_blank">Link</a>
+		</div>
+
+		<div class="item-3">
+			<img src="final-hero/hero-images/before/assets/img/meeting.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+			<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/meeting.jpg" target="_blank">Link</a>
+		</div>
+
+		<div class="item-3">
+			<img src="final-hero/hero-images/before/assets/img/hook-head.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+			<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/hook-head.jpg" target="_blank">Link</a>
+		</div>
+
+		<div class="item-3">
+			<img src="final-hero/hero-images/before/assets/img/hook-head-mobile.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+			<a href="https://2n2l.com/it4women/exercises/final-hero/hero-images/before/assets/img/hook-head-mobile.jpg" target="_blank">Link</a>
+		</div>
+
+		<div class="item-3">&nbsp;</div>
+	
+	</div><!-- End parent flexbox container -->
+	
 	<p>You have now saved the all the files you need for this exercise.</p>
 
 </section>
