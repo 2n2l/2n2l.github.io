@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Bootstrap Privacy Page | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Working with Hero Blocks, Single-column: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<meta property="og:site_name" content="https://www.munnelly.com/" />
+
+	<link href="../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N54G36T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="jumbotron tutorial">
+	<h3><a href="../index.html" title="All HTML projects">All Tutorials&nbsp;&nbsp;&gt;</a></h3>
+	<h1>Bootstrap Privacy Page</h1>
+</div>
+
+<section id="learning-goals" class="wrapper-content">
+	<h2>Learning Goals</h2>
+	<p>At the end of this Tutorial you will be able to:</p>
+	<ul>
+		<li>Download a sample privacy page for including on your websites.</li>
+		<li>Use the online service from Insites to generate a privacy and cookie consent 'pop-up' message in JavaScript.</li>
+		<li>Add the JavaScript code from Insites to your sample privacy web page.</li>
+	</ul>
+
+	<p>You can view the template privacy web page you will work in this Tutorial by clicking the link below.</p>
+
+	<div class="four-samples">
+		<div>
+			<a href="final-bootstrap-privacy/after/bootstrap-privacy-template.html" target="_blank"><img src="assets/img/intro-bootstrap-privacy/final-privacy.png" alt="Sample image"></a>
+			<a href="final-bootstrap-privacy/after/bootstrap-privacy-template.html" class="link-exercise"  target="_blank">bootstrap-privacy-template.html</a>
+		</div>
+	</div>
+
+	<p>This sample privacy web page is suitable for including on websites that use <a href="setting-up-google-analytics.html">Google Analytics</a>.</p>
+
+</section>
+
+
+<section class="wrapper-content">
+	<div class="box-toc">
+		<h2>Contents</h2>
+		<p><a href="#about">About cookie privacy &#8216;pop-up&#8217; messages</a></p>
+		<p><a href="#sample-files">Downloading your sample privacy web page</a></p>
+		<p><a href="#pop-up">Generate the Privacy Pop-up Message</a></p>
+		<p><a href="#css-js">Adding the CSS link and JavaScript code to your privacy web page</a></p>
+		<p><a href="#github-upload">Uploading your Bootstrap folder to GitHub</a></p>
+	</div>
+</section>
+
+</section>
+
+
+<section id="about" class="wrapper-content bg-white">
+
+	<h2>About cookie privacy &#8216;pop-up&#8217; messages</h2>
+
+	<p>The EU General Data Protection Regulation (GDPR) requires that any website which uses cookies to notify users of this fact.</p>
+
+	<p>Typically, GDPR cookie compliance is achieved through cookie banners that enable website visitor to accept cookies before continuing to browse any pages on the site. See the example below.</p>
+
+	<img src="assets/img/intro-bootstrap-privacy/intro-privacy.png" alt="Working with Internal Hyperlinks">
+	<p>If your website uses <a href="setting-up-google-analytics.html">Google Analytics</a> or similar user-tracking software, you will need to add such a cookie notification to your web pages.</p>
+</section>
+
+
+<section id="sample-files" class="wrapper-content bg-white">
+
+	<h2>Downloading your sample privacy web page</h2>
+	<p>In this exercise, you will work with the following web page:</p>
+	
+	<ul>
+		<li><b><a href="final-bootstrap-privacy/bootstrap-privacy-template.html" target="_blank">bootstrap-privacy-template.html</a></b>: Click this link to open the web page in a new tab of your web browser.
+		<span class="inside-ol">&nbsp;</span>
+		Right-click anywhere in the web page and choose <b>Save as...</b> (Chrome) or <b>Save Page As...</b> (Firefox) from the context menu displayed.
+		<span class="inside-ol">&nbsp;</span>
+		Save the web page in the <b>bootstrap</b> sub-folder of your <b>websites</b> folder with the name <b>bootstrap-privacy-template.html</b>
+		<span class="inside-ol">&nbsp;</span>
+		Ensure the <b>Save as type:</b> dropdown list is set to <b>Webpage, HTML only (*.HTML, *.htm)</b>.
+		<img src="assets/img/intro-bootstrap-privacy/file-save-as-html.png" alt="Working with Internal Hyperlinks">
+		You can close the browser tab containing the <b>bootstrap-privacy-template.html</b> web page.
+		<span class="inside-ol">&nbsp;</span>
+		Your <b>websites/bootstrap</b> sub-folder shown now look as shown below.
+		<img src="assets/img/intro-bootstrap-privacy/file-explorer-html.png" alt="Working with Internal Hyperlinks"></li>
+	</ul>
+
+	<p>You have now saved the one file you need for this Tutorial. There are no sample stylesheets and images to download.</p>
+</section>
+
+
+
+<section id="pop-up" class="wrapper-content">
+
+	<h2>Generate the Privacy Pop-up Message</h2>
+	<p>Your next task is to generate the JavaScript code to create the 'pop-up' message that will display when users first visit your website. Follow these steps.</p>
+
+	<ol>
+		<li>Go to the Insites web page at this web address:
+		<span class="inside-ol">&nbsp;</span>
+		<a href="https://cookieconsent.insites.com/" target="_blank">https://cookieconsent.insites.com/</a>
+		<img src="assets/img/intro-bootstrap-privacy/cookie-download-new.png" alt="Project Privacy">
+		Click the link named <b>Download Open Source</b>.</li>
+		<li>Clicking this button does <i>not</i> actually download any files to your computer. It simply brings you to another web page named 'Download Cookie Consent'. See below.
+		<img src="assets/img/intro-bootstrap-privacy/cookie-start-coding.png" alt="Project Privacy">
+		At the lower-right of this screen is a button named <b>Start Coding</b>. Click on it.</li>
+
+		<li>You are now ready to work through the various <b>Configure</b> options displayed at the left of this screen. This will generate the pop-up message in the <b>Copy the code</b> section at the right of the screen.
+		<img src="assets/img/intro-bootstrap-privacy/cookie-options-screen.png" alt="Project Privacy"></li>
+
+		<li>On the left of the screen, under the <b>1: Position</b> heading, you can see that the <b>Banner bottom</b> option is selected by default, You need not change this.
+		<img src="assets/img/intro-bootstrap-privacy/cookie-1.png" alt="Project Privacy"></li>
+
+		<li>Next, click the <b>2: Layout</b> heading to view your options. Accept the default layout of <b>Block</b>.
+		<img src="assets/img/intro-bootstrap-privacy/cookie-2.png" alt="Project Privacy"></li>
+
+		<li>Click the <b>3: Palette</b> heading and accept the default first option. It shows a yellow button against a black background.
+		<img src="assets/img/intro-bootstrap-privacy/cookie-3.png" alt="Project Privacy"><span class="inside-ol">&nbsp;</span></li>
+
+		<li>Click the <b>4: Learn more link</b> heading and the then click the second option, named <b>Link to your own policy</b>. In the box displayed, enter a web address similar to the following, where <b>username</b> is the username you have chosen for your GitHub account:<span class="inside-ol">&nbsp;</span>
+	
+		<b>https://username.github.io/privacy.html</b>
+		
+		<img src="assets/img/intro-bootstrap-privacy/cookie-4.png" alt="Project Privacy"></li>
+
+		<li>Click the <b>5: Compliance type</b> heading and select the first option, <b>Just tell users that we use cookies</b>.
+		<img src="assets/img/intro-bootstrap-privacy/cookie-5.png" alt="Project Privacy"></li>
+
+		<li>Click the <b>6: Custom text</b> heading to view the message that will be displayed to the website visitor. You need not change this.
+		<img src="assets/img/intro-bootstrap-privacy/cookie-6.png" alt="Project Privacy"></li>
+
+		<li>On the right side of the screen, you can see two blocks of code that have been created for your pop-up privacy message.
+		<ul>
+			<li>The first is the link to the CSS stylesheet file that controls the appearance of the pop-up message.
+			<img src="assets/img/intro-bootstrap-privacy/cookie-copy-html.png" alt="Project Privacy"></li>
+			<li>The second is the JavaScript code that creates the pop-up message.
+			<img src="assets/img/intro-bootstrap-privacy/cookie-copy-js.png" alt="Project Privacy"></li>
+		</ul>
+	</ol>
+
+	<p>Leave the Insites cookie code generator screen open in your web browser.</p>
+</section>
+
+
+<section id="css-js" class="wrapper-content bg-white">
+
+	<h2>Adding the CSS link and JavaScript code to your privacy web page</h2>
+	<p>Before you copy the above two blocks of JavaScript code, you need an HTML file to paste them into. You will use the template privacy web page for this purpose.</p>
+
+	<ol>
+
+		<li>In VS Code, open the <b>bootstrap-privacy-template.html</b> file you downloaded earlier.
+		<span class="inside-ol">&nbsp;</span>
+		In the <span class="syn">head</span> of the web page you can see that the only CSS links are the Bootstrap stylesheet (on the Internet) and to the <b>bootstrap-custom.css</b> stylesheet in your <b>assets/css</b> sub-folder.
+		
+		<img src="assets/img/intro-bootstrap-privacy/head-css-links-1.png" alt="Project Privacy"></li>
+
+		<li>In your web browser, display to the Insites cookie code generator screen and click the <b>Copy HTML</b> button.</li>
+		
+		<li>Switch back to VS Code, and paste the Insites CSS link to just before the closing <span class="syn">&lt;/head&gt;</span> tag of your web page as shown below.
+		<span class="inside-ol">&nbsp;</span>
+		To make your web page easier to read, press the <b>ENTER</b> key to add a blank line before and after the pasted CSS link, and type a comment line such as the following just above it.
+
+		<pre class="language-html">
+<span class="token comment">&lt;!-- Insites CSS for popup privacy message --&gt;</span>
+</pre>
+
+		<img src="assets/img/intro-bootstrap-privacy/head-css-links-2.png" alt="Project Privacy"></li>
+
+		<li>Next, return to the Insites cookie code generator screen and click the <b>Copy code</b> button.</li>
+		
+		<li>Switch to Visual Studio, and paste the JavaScript code to just before the closing <span class="syn">&lt;/body&gt;</span> tag at the end of your web page as shown below.
+		<img src="assets/img/intro-bootstrap-privacy/vscode-pasted-js.png" alt="Project Privacy">
+		
+		You may wish to add the comment line such as the following to just above the pasted JavaScript code.
+
+<pre class="language-html">
+<span class="token comment">&lt;!-- JavaScript for Cookie Consent Popup Message --&gt;</span>
+</pre>
+		</li>
+		<li>In VS Code, save your <b>bootstrap-privacy-template.html</b> file.</li>
+		<li>In your web browser, you can now close the Insites online cookie generator tab.</li>
+
+	</ol>
+
+	<p>That's it. You now have a privacy web page you can include as a template on any web site that uses Google Analytics. To use this template:</p>
+
+	<ul>
+		<li>Copy the <b>bootstrap-privacy-template.html</b> file to the main folder of your website.</li>
+		<li>Rename the web page to <b>privacy.html</b>.</li>
+		<li>Add the website's menu and footer blocks to the web page, and also add a link in the <span class="syn">head</span> section to the website's main stylesheet file or files.</li>
+		<li>In the JavaScript code at the bottom of the file, ensure that the hyperlink points to the full web address of the privacy page on <i>your</i> website.
+		<img src="assets/img/intro-bootstrap-privacy/full-link.png" alt="Project Privacy"></li>
+		<li>On <i>every</i> web page of your website that uses Google Analytics, paste the privacy 'pop-up' CSS link at the end of the <span class="syn">head</span> section and paste the privacy 'pop-up' JavaScript code at the end of the <span class="syn">body</span> section.</li>
+	</ul>
+</section>
+
+
+<section id="github-upload" class="wrapper-content bg-white">
+	<h2>Uploading your Bootstrap folder to GitHub</h2>
+
+	<p>Follow these steps below to upload your <i>entire</i> Bootstrap folder to your website on GitHub.</p>
+
+	<ol>
+		<li>Open a new tab in your web browser and go to <a href="https://www.github.com" target="_blank">GitHub.com</a>. If you are not already signed in to your GitHub account, sign in now.
+		<img src="assets/img/intro-bootstrap-privacy/github-signin.png" alt="github-signin"></li>
+
+		<li>On your GitHub home page, click the name of the repository (&#8216;repo&#8217;) that holds your web pages. Its name will look as follows, where <b>username</b> is your chosen username on GitHub.
+		<span class="inside-ol">&nbsp;</span>
+		<b>username.github.io</b>
+
+		<img src="assets/img/intro-bootstrap-privacy/github-repo-select.png" alt="github-signin"></li>
+
+		<li>On the next GitHub screen displayed, click the Add file button near the right of the screen and choose <b>Upload files</b> from the dropdown list. 
+		<img src="assets/img/intro-bootstrap-privacy/github-btn-add-file-dropdown.png" alt="github-upload-portfolio"></li>
+
+		<li>In File/Windows Explorer, select your <b>bootstrap</b> folder, and drag-and-drop it to your repository on GitHub. 
+		
+		<img src="assets/img/intro-bootstrap-privacy/github-upload-drag-drop.png" alt="Introduction to Images"></li>
+
+		<li>Scroll down to the bottom of the GitHub screen, and accept or edit the short message (<span style="color:gray">Add files via upload</span>) in the <b>Commit changes</b> box.
+
+		<span class="inside-ol">&nbsp;</span>
+
+		Finally, click the green <b>Commit changes</b> button to upload your entire <b>bootstrap</b> folder and all the files it contains.</li>
+
+	</ol>
+
+	<p>Your uploaded web page is published on GitHub at a web address similar to the following, where <b>username</b> is the username you have chosen for your GitHub account:</p>
+
+	<p><b>https://username.github.io/bootstrap/bootstrap-privacy-template.html</b></p>
+
+	<p>It may take a few minutes for your uploaded files to appear on GitHub.</p>
+
+	<p><br><br>Return to <a href="../../index.html">Contents</a>.</p>
+
+</section>
+
+
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+	</script>
+
+</body>
+</html>
+
