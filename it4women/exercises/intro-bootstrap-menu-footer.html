@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Bootstrap Menu and Footer | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Introduction to the Box Model: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<meta property="og:site_name" content="https://www.munnelly.com/" />
+
+	<style>
+		.comment-html { color: #6da246 }
+		span.string { color: #fff }
+
+	</style>
+
+	<link href="../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<style>
+	/* =======INNER FLEXBOX COLUMNS: 3 COLUMNS ON DESKTOPS, 1 COLUMN ON MOBILES ===== */
+
+	.container-flexbox { 
+	   display: flex; 
+	   justify-content: space-between; 
+	   flex-wrap: wrap; 
+	}
+	/* Desktops - 3 columns */
+	@media all and (min-width:768px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 30% }
+		.container-flexbox .item-3 img { width: 100%; height: auto }
+	}
+
+	/* Mobiles - 1 column */
+	@media all and (max-width:767px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 100% }
+		.container-flexbox .item-3 { margin-bottom: 8% }
+		.container-flexbox .item-3 img { }
+	}
+	pre.language-css { color: rgb(128,128,128) }
+	pre.language-css .blue-dark { color: rgb(86,156,202 ) }
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+	</style>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N54G36T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="jumbotron tutorial">
+	<h3><a href="../index.html" title="All HTML projects">Contents&nbsp;&nbsp;&gt;</a></h3>
+	<h1>Bootstrap Menu and Footer</h1>
+</div>
+
+<section id="learning-goals" class="wrapper-content">
+	<h2>Learning Goals</h2>
+	<p>At the end of this Tutorial you will be able to:</p>
+	<ul>
+		<li>Use and customise the desktop/laptop and mobile menu system provided by Bootstrap.</li>
+		<li>Update a standard web page footer element with your own contact details and social media links.</li>
+	</ul>
+
+	<p>You can view a finished version of the Bootstrap menu and footer web page you will work in this Tutorial by clicking the link below. The finished web page will open in a new tab of your web browser.</p>
+
+	<a href="final-bootstrap-menu-footer/bootstrap-menu-footer.html" target="_blank"><img src="assets/img/intro-bootstrap-menus/final-menu-footer.png" alt="Sample image" style="max-width: 500px"></a>
+	<a href="final-bootstrap-menu-footer/bootstrap-menu-footer.html" class="link-exercise" target="_blank">bootstrap-menu-footer.html</a>
+
+
+
+</section>
+
+<section class="wrapper-content">
+	<div class="box-toc">
+		<h2>Contents</h2>
+		<p><a href="#menus-about">Overview of navigation menus</a></p>
+		<p><a href="#bs-menus-about">About the Bootstrap menu system</a></p>
+		<p><a href="#sample-files">Downloading your sample files</a></p>
+		<p><a href="#images">Downloading the placeholder logo image</a></p>
+		<p><a href="#inspect">Inspecting the Bootstrap navbar</a></p>
+		<p class="toc-indent"><a href="#bg-color">The navbar background colour</a></p>
+		<p class="toc-indent"><a href="#website-logo">The website logo</a></p>
+		<p class="toc-indent"><a href="#icon-hamburger">The hamburger icon</a></p>
+		<p class="toc-indent"><a href="#menu-links">Text menu links</a></p>
+		<p class="toc-indent"><a href="#cta">The &#8216;call-to-action&#8217; button</a></p>
+		<p><a href="#sticky">Making your menu &#8216;sticky&#8217;</a></p>
+
+		<p><a href="#bs-footer">About the Bootstrap footer</a></p>
+		<p><a href="#github-upload">Uploading your Bootstrap folder to GitHub</a></p>
+	</div>
+</section>
+
+
+<section id="menus-about" class="wrapper-content">
+	<h2>Overview of navigation menus</h2>
+	<p>On desktop/laptop screens, the main navigation menu is commonly a horizontal bar that stretches left-to-right across the top of the screen. It is referred to as a <i>menubar</i> or <i>navbar</i>. Typically:</p>
+	
+	<ul>
+		<li>The logo is positioned at the left.</li>
+		<li>Various menu options are positioned at the right. </li>
+		<li>One menu option &#8211; named the <i>Call-To-Action</i> (CTA) &#8211; is usually highlighted by being styled as a button.</li>
+	</ul>
+
+	<p>In terms of visual appearance, navigation menus can be regarded as of three main types:</p>
+	<ul>
+		<li><b>Light background, dark text</b>: Black or other dark-coloured text is displayed against a white or other light-coloured background.
+		<img src="assets/img/intro-bootstrap-menus/examples-menu-styles-1.png" alt="Project Navigation Menus">
+		</li>
+		<li><b>Dark background, light text</b>: White or other light-coloured text is displayed against a black or other dark-coloured background.
+		<img src="assets/img/intro-bootstrap-menus/examples-menu-styles-2.png" alt="Project Navigation Menus">
+		</li>
+		<li><b>Transparent background</b>: In this case, the background image appears directly behind the text of the menu options. The text may be dark or light &#8211; what is important is that the text is readable against the colours in background image.
+		<img src="assets/img/intro-bootstrap-menus/examples-menu-styles-3.png" alt="Project Navigation Menus">
+		</li>
+	</ul>
+</section>
+
+
+<section id="bs-menus-about" class="wrapper-content bg-white">
+	<h2>About the Bootstrap menu system</h2>
+	<p>The Bootstrap CSS and JavaScript files include features that make it easy to create and modify website menus.</p>
+
+	<p>One such feature is that Bootstrap automatically converts desktop/laptop menus to drop-down mobile menus automatically, depending on the width of the user's screen.</p>
+
+	<img src="assets/img/intro-bootstrap-menus/bs-navbar.png" alt="Project Navigation Menus">
+
+</section>
+
+
+<section id="sample-files" class="wrapper-content bg-white">
+
+	<h2>Downloading your sample files</h2>
+	<p>In this exercise, you will work with the following web page and stylesheet:</p>
+	
+	<ul>
+		<li><b><a href="final-bootstrap-menu-footer/before/bootstrap-menu-footer.html" target="_blank">bootstrap-menu-footer.html</a></b>: Click this link to open the web page in a new tab of your web browser.
+		<span class="inside-ol">&nbsp;</span>
+		Right-click anywhere in the web page and choose <b>Save as...</b> (Chrome) or <b>Save Page As...</b> (Firefox) from the context menu displayed.
+		<span class="inside-ol">&nbsp;</span>
+		Save the web page in the <b>bootstrap</b> sub-folder of your <b>websites</b> folder with the name <b>bootstrap-menu-footer.html</b>
+		<span class="inside-ol">&nbsp;</span>
+		Ensure the <b>Save as type:</b> dropdown list is set to <b>Webpage, HTML only (*.HTML, *.htm)</b>.
+		<img src="assets/img/intro-bootstrap-menus/file-save-as-html.png" alt="Working with Internal Hyperlinks">
+		You can close the browser tab containing the <b>bootstrap-menu-footer.html</b> web page.
+		<span class="inside-ol">&nbsp;</span>
+		Your <b>websites/bootstrap</b> sub-folder shown now look as shown below.
+		<img src="assets/img/intro-bootstrap-menus/file-explorer-html.png" alt="Working with Internal Hyperlinks"></li>
+
+		<li><b><a href="final-bootstrap-menu-footer/before/assets/css/bootstrap-menu-footer.css" target="_blank">bootstrap-menu-footer.css</a></b>: Click this link to open the stylesheet file in a new tab of your web browser.
+		<span class="inside-ol">&nbsp;</span>
+		Right-click anywhere in the browser window, and from the context menu, choose <b>Save as... (Chrome)</b> or <b>Save Page As...</b> (Firefox).
+		<span class="inside-ol">&nbsp;</span>
+		Save the <b>bootstap-form.css</b> stylesheet file to your <b>websites/bootstrap/assets/css</b> sub-folder.
+		<span class="inside-ol">&nbsp;</span>
+		Ensure the <b>Save as type:</b> dropdown list is set to the correct file type.
+		<img src="assets/img/intro-bootstrap-menus/file-form-save-as-css.png" alt="Working with Internal Hyperlinks" >
+		You can close the browser tab containing the <b>bootstrap-menu-footer.css</b> stylesheet.
+		<span class="inside-ol">&nbsp;</span>
+		Your <b>websites/bootstrap/assets/css</b> sub-folder shown now look as shown below.
+		<img src="assets/img/intro-bootstrap-menus/file-explorer-css.png" alt="Working with Internal Hyperlinks"></li>
+	</ul>
+
+	<p>You have now saved the web page and stylesheet you need for this Tutorial.</p>
+
+</section>
+
+
+<section id="images" class="wrapper-content">
+	<h2>Downloading the placeholder logo image</h2>
+
+	<p style="margin-bottom:0">A menu will typically include a logo image. Right-click on the placeholder logo below, choose <b>Save Image As</b> from the context menu, and download it to your <b>C:/websites/bootstrap/assets/img</b> sub-folder.</p>
+
+	<div class="container-flexbox">
+		<div class="item-3">
+			<img src="final-bootstrap-menu-footer/assets/img/website-logo.png"  alt="Project: Smooth Smoothies" style="margin-bottom:12px">
+			<a href="final-bootstrap-menu-footer/assets/img/website-logo.png" target="_blank">Link</a>
+		</div>
+		<div class="item-3">&nbsp;</div>
+		<div class="item-3">&nbsp;</div>
+	</div><!-- End parent flexbox container -->
+
+	<p><br>When you use this sample menu web page in a website, you will replace this image with the actual logo image of the website.</p>
+
+</section>
+
+
+
+<section id="inspect" class="wrapper-content">
+	<h2>Inspecting the Bootstrap navbar</h2>
+	
+	<p>In your web browser, display the <b>bootstrap-menu-footer.html</b> web page.</p>
+	
+	<p>In VS Code, open the <b>bootstrap-menu-footer.html</b> file and the <b>bootstrap-menu-footer.css</b> stylesheet.</p>
+
+	<p>Let's review some elements of the Bootstrap menu system.</p>
+
+	<h3 id="bg-color">The navbar background colour</h3>
+	<p>In the <span class="syn">navbar</span> block at the top of the <b>bootstrap-menu-footer.html</b> web page, you can see two classes <span class="syn">navbar-dark</span> and <span class="syn">bg-dark</span>. These, working together, control the background colour of the navbar.</p>
+
+	<img src="assets/img/intro-bootstrap-menus/navbar-1.png" alt="Introduction to HTML">
+
+	<p>If you prefer a navbar with a light background, replace these classes with <span class="syn">navbar-light</span> and <span class="syn">bg-light</span> as shown below.
+
+	<img src="assets/img/intro-bootstrap-menus/navbar-2.png" alt="Introduction to HTML">
+
+	<p>When you change the navbar background from dark to light, the colour of the hyperlinks in the navbar also changes accordingly. In this way, the text of the menu links is always visible against the navbar background.</p>
+
+	<p>You can edit the dark or light background colour of the navbar in the <b>bootstrap-menu-footer.css</b> stylesheet.</p>
+
+	<img src="assets/img/intro-bootstrap-menus/navbar-css-color.png" alt="Introduction to HTML">
+
+	<p>To apply a transparent background to a navbar, replace the two dark or light coloured background classes with a single class named <b>navbar-transparent</b>.</p>
+
+	<img src="assets/img/intro-bootstrap-menus/navbar-transparent.png" alt="Introduction to HTML">
+
+
+	<h3 id="website-logo">The website logo</h3>
+
+	<p>The first item within the navbar is the logo of the website. Your sample web page includes an image named <b>website-logo.png</b>. This sample logo is 200 pixels high and 40 pixels wide.</p>
+
+	<p>This logo image is one image you do <i>not</i> want the web browser to resize according to the width of the user's screen. For this reason, the logo's dimensions are set in the web page where they cannot be overwritten by a setting in a stylesheet.</p>
+	
+	<img src="assets/img/intro-bootstrap-menus/navbar-logo.png" alt="Introduction to HTML">
+
+
+	<h3 id="icon-hamburger">The hamburger icon</h3>
+
+	<p>The so-called <i> hamburger icon</i> that is displayed at the right of the Bootstrap menu on mobile screens is provided by the Font Awesome icon set. For this reason, a web page that includes a Bootstrap menu must include a link to Font Awesome stylesheet in the <span class="syn">head</span> of the web page.</p>
+
+	<img src="assets/img/intro-bootstrap-menus/navbar-hamburger.png" alt="Introduction to HTML">
+
+	<h3 id="menu-links">Text menu links</h3>
+
+	<p>Each of the text hyperlinks in the navbar is created as an item in a HTML bulleted list. You can edit the text displayed (Link 1, Link 2, ...) and also the link destination.</p>
+
+	<img src="assets/img/intro-bootstrap-menus/navbar-links.png" alt="Introduction to HTML">
+
+	<p>To add a new menu option, just add a further HTML list item. Conversely, to remove a menu option, just delete the bulleted item.</p>
+
+	<h3 id="cta">The &#8216;call-to-action&#8217; button</h3>
+	<p>The final menu option is typically styled as a button with an icon.</p>
+
+	<img src="assets/img/intro-bootstrap-menus/navbar-button.png" alt="Introduction to HTML">
+
+
+</section>
+
+
+
+<section id="sticky"  class="wrapper-content bg-white">
+
+	<h2>Making your menu &#8216;sticky&#8217;</h2>
+
+	<p>A so-called <i>sticky menu</i> is one that remains fixed at the top of the desktop/laptop or mobile screen, even as the user scrolls down through the web page. This makes it easier for the user to navigate to other pages on the website.</p>
+
+	<p>Let's make the menu on your sample web page sticky:</p>
+
+	<ol>
+		<li>In VS Code, display the <b>bootstrap-menu-footer.html</b> web page.</li>
+
+		<li>In the <span class="syn">navbar</span> block at the top of the web page, add the Bootstrap class of <b>sticky-top</b> as shown below.
+		
+		<img src="assets/img/intro-bootstrap-menus/bs-sticky.png" alt="Introduction to HTML"></li>
+	</ol>
+
+</section>
+
+
+
+
+<section id="bs-footer" class="wrapper-content">
+
+	<h2 id="add-row">About the Bootstrap footer</h2>
+	<p>The <b>bootstrap-menu-footer.html</b> file contains a sample web page footer that is styled by the <b>bootstrap-menu-footer.css</b> file.</p>
+
+	<p>You could create the footer block in the web page with a pair of opening and closing <span class="syn">&lt;div&gt;</span> ... <span class="syn">&lt;/div&gt;</span> tags. However, the more modern HTML5 way is to use the <span class="syn">&lt;footer&gt;</span> ...	<span class="syn">&lt;/footer&gt;</span> tags.</p>
+
+	<p>You can change the background colour of your footer so that it matches the rest of your  web page.</p>
+
+	<img src="assets/img/intro-bootstrap-menus/bs-footer.png" alt="Introduction to HTML">
+
+	<p>In the footer section are various contact details and social media hyperlinks you will need to update.</p>
+
+	<p>Change the name 'Mary Smith' and the various contact details to your own. You can add or remove different social media contact points, such as Twitter, Facebook, YouTube or Instagram, as required.</p>
+
+	<p>When finished, save your <b>bootstrap-menu-footer.html</b> file and the <b>bootstrap-menu-footer.css</b> stylesheet.</p>
+
+</section>
+
+
+
+
+<section id="github-upload" class="wrapper-content bg-white">
+	<h2>Uploading your Bootstrap folder to GitHub</h2>
+
+	<p>Follow these steps below to upload your <i>entire</i> Bootstrap folder to your website on GitHub.</p>
+
+	<ol>
+
+		<li>Open a new tab in your web browser and go to <a href="https://www.github.com" target="_blank">GitHub.com</a>. If you are not already signed in to your GitHub account, sign in now.
+		<img src="assets/img/intro-bootstrap-menus/github-signin.png" alt="github-signin"></li>
+
+		<li>On your GitHub home page, click the name of the repository (&#8216;repo&#8217;) that holds your web pages. Its name will look as follows, where <b>username</b> is your chosen username on GitHub.
+		<span class="inside-ol">&nbsp;</span>
+		<b>username.github.io</b>
+
+		<img src="assets/img/intro-bootstrap-menus/github-repo-select.png" alt="github-signin"></li>
+
+		<li>On the next GitHub screen displayed, click the Add file button near the right of the screen and choose <b>Upload files</b> from the dropdown list. 
+		<img src="assets/img/intro-bootstrap-menus/github-btn-add-file-dropdown.png" alt="github-upload-portfolio"></li>
+
+		<li>In File/Windows Explorer, select your <b>bootstrap</b> folder, and drag-and-drop it to your repository on GitHub. 
+		
+		<img src="assets/img/intro-bootstrap-menus/github-upload-drag-drop.png" alt="Introduction to Images"></li>
+
+		<li>Scroll down to the bottom of the GitHub screen, and accept or edit the short message (<span style="color:gray">Add files via upload</span>) in the <b>Commit changes</b> box.
+
+		<span class="inside-ol">&nbsp;</span>
+
+		Finally, click the green <b>Commit changes</b> button to upload your entire <b>bootstrap</b> folder and all the files it contains.</li>
+
+	</ol>
+
+	<p>Your uploaded web page is published on GitHub at a web address similar to the following, where <b>username</b> is the username you have chosen for your GitHub account:</p>
+
+	<p><b>https://username.github.io/bootstrap/bootstrap-menu-footer.html</b></p>
+
+	<p>It may take a few minutes for your uploaded files to appear on GitHub.</p>
+</section>
+
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+	</script>
+</body>
+</html>
