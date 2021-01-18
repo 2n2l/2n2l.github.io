@@ -97,4 +97,8 @@
 /* Mobiles - Space beneath main heading */
 @media (max-width:767px) { .hero-10 .background-video-content h1 { margin-bottom: 8% } }
 
-
+/* Desktop - button positioning  */
+@media (min-width:768px) { 
+    .hero-10 .col-md-6.col-xs-12:nth-child(1) { text-align: right }
+    .hero-10 .col-md-6.col-xs-12:nth-child(2) { text-align: left }
+}
