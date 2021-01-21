@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Personal Website | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Three sample home page templates: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<link href="../../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<style>
+
+	/* =======INNER FLEXBOX COLUMNS: 3 COLUMNS ON DESKTOPS, 1 COLUMN ON MOBILES ===== */
+
+	.container-flexbox { 
+	   display: flex; 
+	   justify-content: space-between; 
+	   flex-wrap: wrap; 
+	}
+	/* Desktops - 3 columns */
+	@media all and (min-width:768px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 30% }
+		.container-flexbox .item-3 img { width: 100%; height: auto }
+		.container-flexbox.sample-pages .item-3 { padding: 12px 0 }
+	}
+
+	/* Mobiles - 1 column */
+	@media all and (max-width:767px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 100% }
+		.container-flexbox .item-3 { margin-bottom: 8% }
+		.container-flexbox .item-3 img { }
+	}
+
+
+	</style>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+
+</head>
+
+<body>
+
+
+<div class="jumbotron tutorial">
+	<h3><a href="../../index.html" title="All HTML projects">Contents&nbsp;&nbsp;></a></h3>
+	<h1>Your Personal Website</h1>
+</div>
+
+
+<section id="introduction" class="wrapper-content bg-white">
+	<h2>Introduction</h2>
+
+	<p>In this project you will create your personal website, based on sample website templates. Yout website will have the following web pages:</p>
+	<ul>
+		<li><b>Home page</b> and <b>Privacy page</b> (in main folder)</li>
+		<li><b>Portfolio page</b> (in <b>/portfolio</b> sub-folder)</li>
+		<li><b>Contact page</b> (in <b>/contact</b> sub-folder)</li>
+		<li><b>Wordpress page</b> (in <b>/wordpress</b> sub-folder)</li>
+		<li><b>JavaScript page</b> (in <b>/javascript</b> sub-folder)</li>
+	</ul>
+	<p>The apperance of allweb pages will be control;ed by the <b>global-.css</b> stylesheet.</p>
+
+	<p>You can display a sample finished version of the websitee by clicking the link below.</p>
+
+	<p><b><a href="../final/project-home/index.html" target="_blank">index.html</a></b></p>
+</section> 
+
+
+<section id="sample-websites" class="wrapper-content bg-white">
+
+<h2>Sample personal websites</h2>
+	<div class="container-flexbox sample-pages">
+		<div class="item-3">
+			<a target="_blank" href="https://inakisoria.com/">https://inakisoria.com/</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://gerireid.com">https://gerireid.com</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://thierrychopain.com">https://thierrychopain.com</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://marisachentakul.co">https://marisachentakul.co</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://www.britnor.codes">https://www.britnor.codes</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://rebwill.github.io">https://rebwill.github.io</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://nikokoneko.com/">https://nikokoneko.com/</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://samanthaming.com">https://samanthaming.com</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://robbowen.digital">https://robbowen.digital</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://css-irl.info">https://css-irl.info</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="http://luciebajgart.com">https://luciebajgart.com</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://victorkaiwong.com">https://victorkaiwong.com</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://devinford.dev">https://devinford.dev</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://jason.af">https://jason.af</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://pierrickcalvez.com">https://pierrickcalvez.com</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://vanschneider.com">https://vanschneider.com</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://areoladaniel.com">https://areoladaniel.com</a>
+		</div>
+		<div class="item-3">
+			<a target="_blank" href="https://karriebriscoe.com/">https://karriebriscoe.com/</a>
+		</div>
+	</div>
+
+</section>s
+
+<section id="project-folders" class="wrapper-content bg-white">
+
+	<h2>Creating your website sub-folders</h2>
+	<p>Your first step is to create the sub-folders that will store the your web pages and other resources used by those various pages of your personal portfolio website.</p>
+	<ol>
+
+		<li>Inside your 'main' <b>websites</b> folder, create the following sub-folders, if they do not alrady exist:
+		<span class="inside-ol">&nbsp;</span>
+		websites/<b>assets</b><br>
+		websites/<b>contact</b><br>
+		websites/<b>javascript</b><br>
+		websites/<b>portfolio</b><br>
+		websites/<b>wordpress</b></li>
+
+		<li>Next, inside your <b>websites/assets</b> sub-folder, create the following sub-folders:
+		<span class="inside-ol">&nbsp;</span>
+		websites/<b>assets</b><br>
+		websites/<b>assets/css</b><br>
+		websites/<b>assets/img</b><br>
+		websites/<b>assets/pdfs</b><br>
+		websites/<b>assets/videos</b><br>
+
+	</ol>
+
+	<h3>Renaming your current home page</h3>
+	<p>Your <b>websites</b> folder currently contains a file named <b>index.html</b> that lists and links to the exercise files your created earlier in this course.</p>
+
+	<p>Rename this file to <b>exercises.html</b>.</p>
+	<p>If you have already done this, and then created a new <b>index.html</b> file, please rename this file to something else, such as <b>index-old.html</b>.</p>
+
+
+</section>
+
+
+<section id="download-portfolio" class="wrapper-content bg-white">
+
+	<h2>Downloading six web pages</h2>
+	
+	<p>Now you will download the following four web pages.</p>
+	
+	<ol>
+		<li>To your 'main' <b>websites</b> folder, download this <b><a href="../final/project-home/index.html" target="_blank">index.html</a></b> web page that will become your new 'home page'.</li>
+
+		<li>Also to your 'main' <b>websites</b> folder, download this <b><a href="../final/project-home/privacy.html" target="_blank">privacy.html</a></b> web page.</li>
+
+		<li>To your <b>websites/contact</b> sub-folder, download this <b><a href="../final/project-home/contact/index.html" target="_blank">contact.html</a></b> web page.</li>
+
+		<li>To your <b>websites/portfolio</b> sub-folder, download this <b><a href="../final/project-home/portfolio/index.html" target="_blank">index.html</a></b> web page.</li>
+
+		<li>To your <b>websites/javascript</b> sub-folder, download this <b><a href="../final/project-home/javascript/index.html" target="_blank">index.html</a></b> web page.</li>
+
+		<li>To your <b>websites/wordpress</b> sub-folder, download this <b><a href="../final/project-home/wordpress/index.html" target="_blank">index.html</a></b> web page.</li>
+	</ol>
+
+	<p>You now have all six web pages you need for your personal website.</p>
+
+</section>
+
+
+
+<section id="download-privacy" class="wrapper-content bg-white">
+
+	<h2>Downloading placeholder assets</h2>
+	<p>Next, you need to download some placeholder asset files for your web pages.</p>
+
+	<p>Right-click on each image below, choose <b>Save Image As</b> from the context menu, and download it to your <b>websites/assets/img</b> sub-folder.</p>
+
+	<div class="container-flexbox" style="margin-bottom:22px">
+		<div class="item-3">
+			<img src="assets/img/website-logo.png" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+			<a href="assets/img/website-logo.png" target="_blank">Link</a>
+		</div>
+
+		<div class="item-3">
+			<img src="assets/img/hero-home.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+			<a href="assets/img/hero-home.jpg" target="_blank">Link</a>
+		</div>
+
+		<div class="item-3">
+			<img src="assets/img/hero-portfolio.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+			<a href="assets/img/hero-portfolio.jpg" target="_blank">Link</a>
+		</div>
+
+		<div class="item-3">
+			<img src="assets/img/hero-wordpress.jpg" style="max-width: 300px; height: auto; margin-bottom:12px" alt="sample image">
+			<a href="assets/img/hero-wordpress.jpg" target="_blank">Link</a>
+		</div>
+	
+	</div><!-- End parent flexbox container -->
+
+	<p>Now, download the following background video file to your <b>websites/assets/videos</b> sub-folder.</p>
+
+	<p><a href="assets/img/home-video.mp4" target="_blank">home-video.mp4</a></p>
+
+	<p>Finally, download the following sample CV in Adobe Acrobat format to your <b>websites/assets/pdfs</b> sub-folder.</p>
+
+	<p><a href="assets/img/cv-sample.pdf" target="_blank">cv-sample.pdf</a></p>
+
+</section>
+
+
+
+
+<section id="download-portfolio" class="wrapper-content bg-white">
+
+	<h2>Downloading your global stylesheet file</h2>
+	
+	<p>Download the following stylesheet file to your <b>websites/assets/css</b> sub-folder.</p>
+	
+	<p><a href="assets/img/global.css" target="_blank">global.css</a></p>
+
+	<p>This stylsheet file controls the appearance of all the pages on your persoal website (except individual project web pages).</p>
+
+</section>
+
+
+<!--
+<section id="update-hyperlinks" class="wrapper-content bg-white">
+
+	<h2>Update the menu hyperlinks in your web pages</h2>
+
+	<p>Your next step is to update the hyperlinks in your web pages. Here are the steps.</p>
+
+	<ol>
+		<li>Ensure that the four web pages for your personal website are open in Visual Studio Code. Close any other open files.
+		<img src="assets/img/vscode-html-files-new.png"  ALT="Project Portfolio">
+
+
+		<li>Choose the <b>Edit | Replace in Files</b> command to open the multi-file search-and-replace option at the left of the Visual Studio Code screen.</li>
+
+		<li>In the Search box, enter <b>index-1.html</b> (or <b>index-2.html</b> or <b>index-3.html</b>, as appropriate).
+		<span class="inside-ol">&nbsp;</span>
+		In the Replace box, enter <b>index.html</b>.
+
+		<img src="assets/img/vscode-replace-index.png"  ALT="Project Portfolio"></li>
+
+		<li>At the right of the Replace box, click the <b>Replace All</b> icon. And then click the <b>Replace</b> button to confirm.
+
+		<img src="assets/img/vscode-replace-index-all.png"  ALT="Project Portfolio"></li>
+
+		<li>You need to perform two more search-and-replace operations.
+
+		<ul>
+			<li>In the Search box, enter <b>privacy-1.html</b> (or <b>privacy-1.html</b> or <b>privacy-1.html</b>, as appropriate).
+			<span class="inside-ol">&nbsp;</span>
+			In the Replace box, enter <b>privacy.html</b>, and confirm your replacement.</li>
+			<li>In the Search box, enter <b>global-1.css</b> (or <b>global-2.css</b> or <b>global-3.css</b>, as appropriate).
+			<span class="inside-ol">&nbsp;</span>
+			In the Replace box, enter <b>global.css</b>, and confirm your replacement.</li>
+
+		</ul>
+		</li>
+
+		<li>Open the stylesheet file you want to use for your personal website - named <b>global-1.css</b> or <b>global-2.css</b> or <b>global-3.css</b>.
+		<span class="inside-ol">&nbsp;</span>
+		Use the <b>File | Save As</b> command to save the stylesheet with the new name of <b>global.css</b>.</li>
+
+		<li>Finally, use the <b>File | Save All</b> command to save all your open files.</li>
+	</ol>
+
+
+	<p>That's all your search-and-replace operations complete.</p>
+
+	<p>Open your four web pages in your web browser and check that:</p>
+	
+	<ul>
+		<li>All four web pages use the correct file name for the stylesheet - <b>global.css</b>.</li>
+		<li>All hyperlinks between the web pages are to files named <b>index.html</b> or <b>privacy.html</b>.</li>
+	</ul>
+</section>
+
+<section id="meta-tags" class="wrapper-content">
+	<h2>Update the meta tags in the &lt;head&gt;</h2>
+	<p>In the <b>&lt;head&gt;</b> of your four web pages, within the <b>&lt;title&gt;</b> and <b>&lt;author&gt;</b> meta tags, you can see the name 'Mary Smith.'</p>
+	<p>Replace this with your own name. You may also wish to change the sample text in the <b>&lt;description&gt;</b> meta tags.<p>
+	<img src="assets/img/vscode-meta-tags.png" alt="vscode-meta-tags">
+	<p>When finished, save the four HTML files.</p>
+</section>
+
+
+<section id="google-analytics" class="wrapper-content">
+	<h2>Update the Google Analytics ID</h2>
+	<p>Near the top of your four HTML files, just before the closing &lt;/head&gt; tag, you can see a sample Google Analytics Tracking Code.</p>
+
+	<img src="assets/img/vscode-ga.png" alt="vscode-ga">
+
+	<p>Each Google Tracking Code has a unique ID in its first and last line. For each of your fur web pages, replace the sample Google Tracking ID with your own Google Tracking ID. The instructions for viewing your website&#8217;s unique Google Tracking ID are <a href="https://munnelly.com/webdev/setting-up-google-analytics.html#google-analytics-view">here</a>.</p>
+	
+	<p>When finished, save your four HTML files.</p>
+
+</section>
+
+
+
+<section id="privacy-message" class="wrapper-content">
+	<h2>Update the privacy pop-up code and message</h2>
+	<p>You need to edit the &#8216;pop-up&#8216; privacy code and message in all four of your web pages.</p>
+	
+	<ol>
+		<li>Within the &lt;head&gt; at the top of your HTML files, you can see a link to the stylesheet for the privacy pop-up message.
+		<img src="assets/img/vscode-privacy-head.png" alt="vscode-privacy-head">
+		<li>At the bottom of your web pages, just before the closing &lt;/body&gt; tag, you can see the JavaScript code for the privacy pop-up message.
+		<img src="assets/img/vscode-privacy-body.png" alt="vscode-privacy-body">
+		Near the end of the lines of the JavaScript code, you can see the web address of the privacy page. For all four web pages, change the <b>ibat-web-dev.github.io</b> username to your username on GitHub.</li>
+		<li>When finished, save your four HTML files.</li>
+	</ol>
+
+</section>
+
+
+<section id="update-contact-footer" class="wrapper-content">
+
+	<h2>Update your contact details in the footer</h2>
+
+	<p>In the footer section of the four web pages are various contact details and social media hyperlinks you will need to update.</p>
+
+	<img src="assets/img/contact-footer.png" alt="vscode-ga">
+
+	<p>Change the name 'Mary Smith' and the various contact details to your own. You can add or remove different social media contact points, such as Twitter, Facebook, YouTube or Instagram, as required.</p>
+
+	<p>When finished, save your four HTML files.</p>
+
+</section>
+
+
+<section id="update-contact-mobile" class="wrapper-content">
+
+	<h2>Update your contact details in the mobile menu</h2>
+
+	<p>For all four web pages, in the <b>flyout-menu</b> section of the mobile menu, are more details you will need to change.</p>
+
+	<img src="assets/img/contact-mobile-menu.png" alt="vscode-ga">
+
+	<p>Change the name 'Mary Smith', the profile image and the various contact details to your own. You can add or remove different social media contact points, such as Twitter, Facebook, YouTube or Instagram, as required.</p>
+
+	<p>When finished, save your four HTML files.</p>
+
+</section>
+
+<section id="update-endpoint" class="wrapper-content">
+
+	<h2>Update your contact form endpoint</h2>
+	<p>You need to update the form in your contact page so that details entered to the form by users are forwarded to your email address.</p>
+	<ol>
+		<li>In Visual Studio Code, open the <b>index.html</b> file in your <b>/contact</b> sub-folder.</li>
+
+		<li>Update the form&#8217;s <b>action</b> value by copying-and-pasting the endpoint value from <a href="../project-smoothies-form/index.html#formspree-forms">Formspree</a>. See the example shown below. 
+		<img src="../assets/img/project-web-agency-form/vscode-email-update.png" alt="fa-icons-copy"></li>
+		<li>Save your <b>index.html</b> file when finished.</li>
+
+	</ol>
+
+</section>
+
+
+<section id="customise-design" class="wrapper-content">
+
+	<h2>Customise the design elements</h2>
+
+	<p>Feel free to make any changes you require to content and design of the four web pages.</p>
+
+	<ul>
+		<li>To change one or more Google fonts, see the Tutorial on <a href="https://www.munnelly.com/webdev/exercises/working-with-google-fonts.html">Working with Google Fonts</a></li>
+
+		<li>To change one or more images, see the Tutorial on <a href="https://www.munnelly.com/webdev/exercises/working-with-images.html">Working with Images</a></li>
+
+	</ul>
+
+
+
+	<p>When finished, save your four HTML files and your stylesheet.</p>
+
+</section>
+
+
+
+
+
+
+<section id="publish-github" class="wrapper-content">
+	<h2>Upload your project to GitHub</h2>
+	<p>The final step is to upload your project to GitHub.</p>
+
+	<ol>
+		<li>If you are not already signed in to your GitHub account, sign in now.</li>
+
+		<li>On the left of your GitHub home page, click the name of the repository that holds your web pages.</li>
+
+		<li>With your main repository displayed on your GitHub screen, click the <b>Add file</b> button and, from the dropdown list displayed, choose the option <b>Upload files</b>.
+
+		<img src="assets/img/github-btn-add-file-dropdown.png" alt="Project Animation Google Fonts"></li>
+		
+
+		<li>In File/Windows Explorer on your computer, display your <b>websites</b> folder and then drag-and-drop the following files and sub-folders to the GitHub tab in your web browser.
+		<img src="assets/img/github-upload-drag-drop.png" alt="github-upload-drag-drop">
+		Do not include the <b>portfolio</b> sub-folder in the upload. Because the total number of files in this upload operation may exceed 100. This is the limit for any one upload to GitHub.</li>
+
+		<li>Scroll down to the bottom of the GitHub screen, enter a short message in the <b>Commit changes</b> box, click the <b>Commit changes</b> button, and wait for the upload to complete.</li>
+
+		<li>After this upload is complete, GitHub redisplays your main repository screen.
+		<span class="inside-ol">&nbsp;</span>
+		Click the folder named <b>portfolio</b>.
+		<img src="assets/img/github-btn-add-file.png" alt="github-upload-drag-drop"></li>
+		
+		<li>In File/Windows Explorer on your computer, display your <b>portfolio</b> folder and then drag-and-drop the <b>index.html</b> file to the GitHub tab in your web browser.</li>
+		<li>Scroll down to the bottom of the GitHub screen, enter a short message in the <b>Commit changes</b> box, click the <b>Commit changes</b> button, and wait for the upload to complete.</li>
+
+
+	</ol>
+
+	<p>Your web pages  are now published on GitHub. Your Home page has a web address similar to the following, where <b>username</b> is the username you have chosen for your GitHub account:</p>
+	
+	<p><b>https://username.github.io/index.html</b></p>
+	<p>or, simply:</p>
+	<p><b>https://username.github.io</b></p>
+
+	<p>It may take a few minutes for your uploaded files to appear on GitHub.</p>
+
+	
+	<p>&nbsp;</p>
+</section>
+-->
+
+<section id="download-portfolio" class="wrapper-content bg-white">
+
+<p><br><br>Return to <a href="../../index.html">Contents</a>.</p>
+
+</section>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+</script>
+
+</body>
+</html>
+
