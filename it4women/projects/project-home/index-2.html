@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Updating your Website Content | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Three sample home page templates: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<link href="../../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<style>
+
+	/* =======INNER FLEXBOX COLUMNS: 3 COLUMNS ON DESKTOPS, 1 COLUMN ON MOBILES ===== */
+
+	.container-flexbox { 
+	   display: flex; 
+	   justify-content: space-between; 
+	   flex-wrap: wrap; 
+	}
+	/* Desktops - 3 columns */
+	@media all and (min-width:768px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 30% }
+		.container-flexbox .item-3 img { width: 100%; height: auto }
+		.container-flexbox.sample-pages .item-3 { padding: 12px 0 }
+	}
+
+	/* Mobiles - 1 column */
+	@media all and (max-width:767px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 100% }
+		.container-flexbox .item-3 { margin-bottom: 8% }
+		.container-flexbox .item-3 img { }
+	}
+
+
+	</style>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+
+</head>
+
+<body>
+
+
+<div class="jumbotron tutorial">
+	<h3><a href="../../index.html" title="All HTML projects">Contents&nbsp;&nbsp;></a></h3>
+	<h1>Updating your Website Content</h1>
+</div>
+
+<section id="learning-goals" class="wrapper-content">
+	<h2>Learning Goals</h2>
+	<p>At the end of this Tutorial you will be able to:</p>
+	<ul>
+		<li>Update the content of a website template with your own text, contact details and CV.</li>
+		<li>Add your own website logo, background images and videos, and favicon.</li>
+		<li>Add your unique Google Analytics ID, cookie privacy and contact form details.</li>
+		<li>Add extra web pages to your site.</li>
+
+	</ul>
+
+	<div class="box-toc">
+		<h2>Contents</h2>
+		<p><a href="#meta-tags">Updating &#8216;Mary Smith&#8217; and the <span>meta</span> tags</a></p>
+		<p><a href="#social-media">Updating your social media contact points</a></p>
+		<p><a href="#adding-cv">Adding your CV</a></p>
+		<p><a href="#website-logo">Adding your website logo</a></p>
+		<p class="toc-indent"><a href="#website-logo-creating">Creating a website logo</a></p>
+		<p><a href="#ga-id">Adding your Google Analytics ID</a></p>
+		<p><a href="#privacy">Adding your cookie privacy code and message</a></p>
+		<p><a href="#update-endpoint">Updating your contact form endpoint</a></p>
+		<p><a href="#add-favicon">Adding a favicon</a></p>
+		<p><a href="#add-pages">Adding more web pages</a></p>
+		<p><a href="#github-upload">Uploading your files to GitHub</a></p>
+	</div>
+</section>
+
+
+<section id="introduction" class="wrapper-content bg-white">
+	<h2>Introduction</h2>
+
+	<p>In this project you will update your personal website, based on the material you covered in these previous Tutorials:</p>
+	<ul>
+		<li><a href="https://www.munnelly.com/webdesign/exercises/setting-up-google-analytics.html">Setting Up Google Analytics</a></li>
+		<li><a href="https://2n2l.com/it4women/exercises/intro-bootstrap-privacy.html">Bootstrap Privacy Page</a></li>
+		<li><a href="https://2n2l.com/it4women/exercises/intro-bootstrap-form.html">Bootstrap Contact Form</a></li>
+	</ul>
+
+</section> 
+
+
+
+<section id="meta-tags" class="wrapper-content bg-white">
+
+	<h2>Updating &#8216;Mary Smith&#8217; and the <span>meta</span> tags</h2>
+	<p>Here are the first steps you need to take:</p>
+
+	<ol>
+		<li>In VS Code, open all six web pages.</li>
+		<li>Replace the name &#8216;Mary Smith&#8217; with your own name, or the name of your organisation.</li>
+		<li>Are you happy with the content of the title and description tags (the so-called 'meta tags') in the <span class="syn">head</span> of each web page?
+		<img src="assets/img/meta-sample.png" alt="sample image">
+		If not, feel free to change the sample text within the tags in each web page.</li>
+	</ol>
+
+	<p>You may find the links below helpful:</p>
+	<ul>
+		<li><a href="https://www.wordstream.com/meta-tags" target="_blank">Meta Tags - How Google Meta Tags Impact SEO </a>.</li>
+		<li><a href="https://moz.com/blog/the-ultimate-guide-to-seo-meta-tags" target="_blank">The Ultimate Guide to SEO Meta Tags</a>.</li>
+		<li><a href="https://ahrefs.com/blog/seo-meta-tags/" target="_blank">Meta Tags for SEO: A Simple Guide for Beginners</a>.</li>
+	</ul>
+
+</section>
+
+
+
+<section id="social-media" class="wrapper-content bg-white">
+	
+	<h2>Updating your social media contact points</h2>
+	<p>In the footer of all six sample web pages are a number of social media contact points with icons.</p>
+
+	<ol>
+		<li>Delete the social media contact points and their icons you do not want to use.
+		<span class="inside-ol">&nbsp;</span>
+		To remove the Facebook link, for example, delete the relevant <span class="syn">&lt;li&gt;</span> ... <span class="syn">&lt;/li&gt;</span> tag pair and everything inside it.
+		<img src="assets/img/facebook-delete.png" alt="website customise"></li>
+		<li>For the contact points you want to use, replace the hyperlink destination of <b>"#"</b> with the actual hyperlink. See the example below for Linkedin.
+		<img src="assets/img/linkedin-example.png" alt="website customise"></li>
+
+		<li>For your GitHub account, enter your hyperlink in the format <b>https://github.com/mywebsite</b> as shown below.
+		<img src="assets/img/github-example.png" alt="website customise"></li>
+	</ol>
+
+</section>
+
+
+<section id="adding-cv" class="wrapper-content bg-white">
+	
+	<h2>Adding your CV</h2>
+	<p>In the website template there is sub-folder named <b>assets/pdfs</b>. This is intended for storing any Adobe Acrobat files you may want to link to on your website.</p>
+	
+	<p>In this folder is a file named <b>cv-sample.pdf</b>. There is a link to this file on your website 'home page'.</p>
+
+	<img src="assets/img/cv-link.png" alt="website customise">
+
+	<p>Replace this PDF fle with your own CV. You can name your CV file with the same <b>cv-sample.pdf</b> filename. If your want you CV file to have a different file name, you will need to change the link to your new file name, such as <b>mary-smith-cv.pdf</b>, for example.</p>
+
+	<p>Alternatively, if you don't want to include a CV on your website, delete both the text and link from the template 'home page.'</p>
+
+</section>
+
+
+
+
+<section id="website-logo" class="wrapper-content bg-white">
+
+	<h2>Adding your website logo</h2>
+	<p>The sample logo shown below is only a placeholder. Please replace it with your own logo.</p>
+	<img src="assets/img/website-logo.png" alt="website customise" style="max-width:200px; max-height:40px">
+
+	<p>Your logo should be about <b>200px</b> wide and about <b>40px</b> high. Anything much larger will not look good work on mobile screens.</p>
+
+	<p>Whatever the size of your own logo, ensure its <span class="syn">width</span> and <span class="syn">height</span> are set <i>exactly</i> in the HTML of all six web pages. See below.</p>
+
+	<img src="assets/img/website-logo-size.png" alt="website customise">
+	<p>Otherwise, your logo will be distorted.</p>
+
+
+	<h3 id="website-logo-creating">Creating a website logo</h3>
+	<p>If you do not have graphic or image editing software installed on your computer, here are two websites that will help you create a logo:</p>
+
+	<ol>
+		<li><a href="https://www.namecheap.com/logo-maker/" target="_blank">Free Logo Maker</a></li>
+		<li><a href="https://www.freelogodesign.org/" target="_blank">Free Logo Design</a></li>
+	</ol>
+
+	<p>Another option is to use the BeFunky free online image editor. Follow these steps.</p>
+
+
+	<ol>
+		<li>Go to the <a href="https://www.befunky.com/" target="_blank">BeFunky</a> website, choose <b>Create</b> and then <b>Graphic Designer</b>.
+		<img src="assets/img/befunky-1.png" alt="website customise"></li>
+
+		<li>On the next screen, choose <b>Blank Canvas</b>, enter a <b>Width</b> of 200px and a <b>Height</b> of 40px, and then click the <b>Create</b> button.
+		<img src="assets/img/befunky-2.png" alt="website customise"></li>
+
+		<li>On the next screen, at the very bottom, increase the view size to about  <b>400%</b>
+		<img src="assets/img/befunky-3.png" alt="website customise"></li>
+
+		<li>All the options you need to create your logo are in a menu at the left of the BeFunky screen.</li>
+
+		<li>When finished, click <b>Save</b> at the top of the screen, click <b>Computer</b>, save your logo in <b>png</b> format, and copy it to your <b>websites/assets/img</b> sub-folder.</li>
+
+	</ol>
+
+	<p>That's it. If you save your new logo with the same filename as the template one (<b>website-logo.png</b>), you won't need to change the image name in your six web pages.</p>
+
+
+</section>
+
+
+<section id="ga-id" class="wrapper-content bg-white">
+
+	<h2>Adding your Google Analytics ID</h2>
+
+	<p>In the <a href="https://www.munnelly.com/webdesign/exercises/setting-up-google-analytics.html">Setting Up Google Analytics</a> Tutorial, you obtained a unique Google Analytics ID just for your website.</p>
+
+	<p>On all six of the sample web pages, just before the closing <span class="syn">&lt;/head&gt;</span> tag, you can see the Google Analytics code with a placeholder ID inserted twice.</p>
+
+	<img src="assets/img/ga-fake.png" alt="sample image">
+
+	<p>You need to replace this with your own Google Analytics ID.</p>
+
+	<p>All the relevant steps for obtaining your Google Analytics iD are contained in the link below.</p>
+
+	<p><a href="https://www.munnelly.com/webdesign/exercises/setting-up-google-analytics.html#google-analytics-view">Viewing a Google Analytics Tracking Code</a></p>
+
+	<p>Without the correct ID, Google Analytics cannot track visits to your website.</p>
+
+</section>
+
+
+<section id="privacy" class="wrapper-content bg-white">
+
+	<h2>Adding your cookie privacy code and message</h2>
+	<p>In the <a href="https://2n2l.com/it4women/exercises/intro-bootstrap-privacy.html">Bootstrap Privacy Page</a> Tutorial, you used the online service from Insites to generate a privacy and cookie consent 'pop-up' message in JavaScript.</p>
+
+	<p>You copied-and-pasted the two items you need for this code to work to the <b>bootstrap-privacy-template.html</b> file in your <b>websites/bootstrap</b> sub-folder.</p>
+
+	<p>These two items are:</p>
+
+	<ul>
+		<li>A CSS stylesheet link that goes in the <span class="syn">&lt;head&gt;</span> of the web page.</li>
+		<li>Some JavaScript code that goes at just before the closing <span class="syn">&lt;/body&gt;</span> of the web page.</li>
+	</ul>
+
+	<p>You need to copy these two items from your <b>bootstrap-privacy-template.html</b> to all six of your web pages.</p>
+
+	<p>Follow these steps:</p>
+
+	<ol>
+		<li>In VS Code, in the <span class="syn">&lt;head&gt;</span> of your <b>bootstrap-privacy-template.html</b> page, copy the stylesheet link that controls the appearance of your cookie pop-up message - its colours and location on your web pages.
+		<span class="inside-ol">&nbsp;</span>
+		The stylesheet link will look as shown below.
+		<img src="assets/img/privacy-link-1.png" alt="sample image"></li>
+		<li>Paste this CSS link into all six of you web pages, just before the Google Analytics code.</li>
+		<li>Next, you need to copy the JavaScript code that creates the pop-up message.
+		<span class="inside-ol">&nbsp;</span>
+		In the <b>bootstrap-privacy-template.html</b> page, copy the JavaScript from the bottom of the page.
+		<span class="inside-ol">&nbsp;</span>
+		It will look as shown below.
+		<img src="assets/img/vscode-pasted-js.png" alt="sample image"></li>
+		<li>Paste the code in all six of your web pages.
+		<span class="inside-ol">&nbsp;</span>
+		Ensure that the last line of the JavaScript code links to the privacy web page on <i>your</i> website.</li>
+
+	</ol>
+
+	<p>Because your web pages use Google Analytics, you are legally required to add this cookie privacy message with its link to your privacy web page.</p>
+
+</section>
+
+
+<section id="update-endpoint" class="wrapper-content">
+
+	<h2>Updating your contact form endpoint</h2>
+	<p>In the <a href="https://2n2l.com/it4women/exercises/intro-bootstrap-form.html">Bootstrap Form</a> Tutorial, you created an account with the <a href="https://formspree.io" target="_blank">formspree.io</a> online service to process messages entered to a contact form.</p>
+	
+	<p>Formspree provided you with a so-called <i>endpoint</i> that is unique to your form and which ensures you receive any messages entered in the form at your email address.</p>
+
+	<p>You would have added this unique endpoint in your <b>bootstap-form.html</b> web page in your <b>websites/bootstrap</b> sub-folder.</p>
+	<img src="assets/img/formspree-endpoint.png" alt="sample image">
+	<p>You need to update the form in the contact page of your website template.</p>
+	<ol>
+		<li>In VS Code, open the <b>index.html</b> file in your <b>/contact</b> sub-folder.</li>
+
+		<li>Update the form&#8217;s <b>action</b> value by copying-and-pasting your unique endpoint code. See the example shown below. 
+		<img src="assets/img/update-endpoint.png" alt="fa-icons-copy"></li>
+
+	</ol>
+
+</section>
+
+<section id="add-favicon" class="wrapper-content">
+
+	<h2>Adding a favicon</h2>
+	<p>A favicon is a small icon (really a set of icons for different screens) that is displayed within the browser tabs and bookmarks bar of a web browser. See the examples below.</p>
+
+	<img src="assets/img/favicon-3.png" alt="fa-icons-copy">
+
+	<p>A favicon help users visually identify your web pages more easily within browser tabs, bookmarks, shortcuts, and address bars.</p>
+	<p>You need to update the form in the contact page of your website template.</p>
+
+	<ol>
+		<li>Create a square PNG image of at least 70x70. Your image should be 260x260 or more for best results.</li>
+
+		<li>Go to the free Fav Icon Generator website at the following web address:
+		<span class="inside-ol">&nbsp;</span>
+		<a href="https://favicon.io/" target="blank"><b>https://favicon.io/</b></a></li>
+
+		<li>Choose the <b>PNG -> ICO</b> option.
+		<img src="assets/img/favicon-2.png" alt="fa-icons-copy"></li>
+
+		<li>On the next screen, drag-and-drop the image you want to use as your favicon, and then click the <b>Download</b> button.</li>
+
+		<li>Copy your downloaded ZIP to the <b>assets/img</b> sub-folder of your 'main' <b>website</b> folder.</li>
+		
+		<li>Unzip the ZIP file to create the following files.
+		<ul>
+			<li>android-chrome-192x192.png</li>
+			<li>android-chrome-512x512.png</li>
+			<li>apple-touch-icon.png</li>
+			<li>favicon-16x16.png</li>
+			<li>favicon-32x32.png</li>
+			<li>favicon.ico</li>
+			<li>site.webmanifest</li>
+		</ul></li>
+
+		<li>Copy-and-paste the following code to your 'home page' and your privacy page, to just below the <span class="syn">description</span> meta tag in the <span class="syn">head</span>.
+		
+<pre class="language-html" style="color:#fff">
+&lt;link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png"&gt;    
+&lt;link rel="icon" type="image/png" sizes="32x32" href="assets/img//favicon-32x32.png"&gt;    
+&lt;link rel="icon" type="image/png" sizes="16x16" href="assets/img//favicon-16x16.png"&gt;    
+&lt;link rel="manifest" href="assets/img/site.webmanifest"&gt;
+</pre>
+		
+		For your other web pages, the links will be slightly different.
+<pre class="language-html" style="color:#fff">
+&lt;link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png"&gt;    
+&lt;link rel="icon" type="image/png" sizes="32x32" href="../assets/img//favicon-32x32.png"&gt;   
+&lt;link rel="icon" type="image/png" sizes="16x16" href="../assets/img//favicon-16x16.png"&gt;    
+&lt;link rel="manifest" href="../assets/img/site.webmanifest"&gt;
+</pre></li>
+
+	</ol>
+
+<p>View the favicon in your web browser to verify it works correctly.</p>
+</section>
+
+
+
+
+<section id="add-pages" class="wrapper-content">
+
+	<h2>Adding more web pages</h2>
+	<p>To add another web page to your website template, follow these steps.</p>
+
+	<ol>
+		<li>Create a new sub-folder to store your new web page. 
+		<span class="inside-ol">&nbsp;</span>
+		For example, to create an 'About Me' page, begin by creating an <b>about-me</b> sub-folder in your 'main' <b>websites</b> folder.</li>
+		<li>Use another web page on your site as a template for your new page.
+		<ul>
+			<li>For example, if you want your new page to have a hero block with a background image, open your <b>javascript/index.html</b> page in VS Code and save it as <b>index.html</b> in your new <b>about-me</b> sub-folder.</li>
+			
+			<li>If you don't want a hero block on your new page, open your <b>contact/index.html</b> page in VS Code and save it as <b>index.html</b> in your new <b>about-me</b> sub-folder.</li>
+		</ul>
+		Your new page will have now this web address when uploaded to GitHub:
+		<span class="inside-ol">&nbsp;</span>
+		<b>https://mywebsite.github.io/about-me</b></li>
+
+		<li>Update the content of the web page as required.
+		<span class="inside-ol">&nbsp;</span>
+		To use a multi-column layout, copy-and-paste from the <b>bootstrap-practical-layouts.html</b> file you created in the <a href="https://2n2l.com/it4women/exercises/intro-bootstrap-practical.html">Practical Bootstrap Layouts</a> Tutorial to help you get started.
+		</li>
+		<li>You will need to add a hyperlink to your new web page in the menu at the top of all your pages.
+		<ul>
+			<li>In your 'home' and privacy pages, located in your 'main' <b>websites</b> folder, the new menu link will look as follows.
+			
+			<img src="assets/img/navbar-new-1.png" alt="fa-icons-copy"></li>
+			<li>In all your other web pages, which are located in sub-folders of your 'main' <b>websites</b> folder, the new menu link will look as shown below.
+			<img src="assets/img/navbar-new-2.png" alt="fa-icons-copy"></li>
+		</ul></li>
+	</ol>
+
+
+</section>
+
+
+<section id="github-upload" class="wrapper-content">
+	<h2>Upload your website to GitHub</h2>
+	<p>The final step is to upload your website pages and folders to GitHub.</p>
+
+	<ol>
+		<li>Sign in to your GitHub account and, at the left of the screen, click the name of the repository that holds your web pages.</li>
+
+		<li>On the next screen, click the <b>Add file</b> button and then choose <b>Upload files</b> from the dropdown list.
+		<img src="assets/img/github-btn-add-file-dropdown.png" alt="Project Animation Google Fonts"></li>
+		
+
+		<li>In File/Windows Explorer on your computer, display your <b>websites</b> folder and then drag-and-drop the following files and sub-folders to the GitHub tab in your web browser.
+		<img src="assets/img/github-upload-drag-drop.png" alt="github-upload-drag-drop"></li>
+
+		<li>Scroll down to the bottom of the GitHub screen, and accept or edit the short message (<span style="color:gray">Add files via upload</span>) in the <b>Commit changes</b> box.
+
+		<span class="inside-ol">&nbsp;</span>
+
+		Finally, click the green <b>Commit changes</b> button to upload your files and folders.</li>
+
+	</ol>
+
+	<p>Your web pages  are now published on GitHub. Your Home page has a web address similar to the following, where <b>username</b> is the username you have chosen for your GitHub account:</p>
+	
+	<p><b>https://username.github.io/index.html</b></p>
+	<p>or, simply:</p>
+	<p><b>https://username.github.io</b></p>
+
+	<p>It may take a few minutes for your uploaded files to appear on GitHub.</p>
+
+	<p><br><br>Return to <a href="../../index.html">Contents</a>.</p>
+
+	<p>&nbsp;</p>
+		<p>&nbsp;</p>
+</section>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+</script>
+
+</body>
+</html>
+
