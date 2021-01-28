@@ -1,0 +1,186 @@
+<!doctype HTML>
+<HTML lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>2: WP Publishing | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Introduction to JavaScript: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<meta property="og:site_name" content="https://www.munnelly.com/" />
+
+	<link href="assets/css/web-design-js.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+
+	<!-- Styles for Cookie Consent Popup Message  -->
+	<link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="jumbotron tutorial">
+	<h3><a href="../index.html" title="All Web Tutorials">Contents</a>&nbsp;&nbsp;&gt;</h3>
+	<h1>2: WP Publishing</h1>
+</div>
+
+
+<section class="wrapper-content">
+
+	<h2>About publishing with WordPress</h2>
+
+	<p>Creating a website with WordPress starts with publishing content, whether text, images, audio or videos.</p>
+
+	<p>WordPress offers two choices for publishing website content:</p>
+
+	<ul>
+		<li><b>Posts</b>: These typically contain time-sensitive content. Posts can be categorised and tagged.</li>
+		<li><b>Pages</b>: These are mainly for static, dateless content. They don't have categories or tags. 'Contact us' or 'About' pages are good examples of pages.</li>
+	</ul>
+
+	<p>You create posts and page using a Microsoft Word-style editing screen.</p>
+
+	<h3>Creating a post</h3>
+	<p>To create a new WordPress post open the <strong>Add New</strong> section under <strong>Posts</strong> or choose <strong>New</strong> -&gt; <strong>Post</strong> option from the top toolbar.</p>
+
+	<p>The first thing you should do is enter a title for your post. </p>
+	
+	<img src="assets/img/wp-posts.png" alt="JavaScript">
+
+	<p>Secondly, enter the actual content of your post in the editing screen. This allows you to bold, italicize, set alignment, add links, etc. To insert images click <b>Add Media</b>. Once you have selected the image, you can place it where you want in the post. </p>
+		
+	<p>At the right-hand side of the screen, you can see the so-called meta-boxes. Each box has a particular function.</p>
+	
+	<ul>
+		<li><strong>Publish</strong>. Here you can change the status and visibility of your post, schedule it. By clicking the <strong>Publish</strong> button your post will go live. If you decide to delete the post, press the <strong>Move to Trash</strong> button.</li>
+		
+		<li><strong>Categories</strong>. On this box, you can assign your post to a specific category. You can even create a new one by pressing the <strong>+ Add New Category</strong> button.</li>
+		
+		<li><strong>Tags</strong> box allows to quickly add new tags.</li>
+		
+		<li><strong>Featured Image</strong>. Here you can assign a featured image to a post. It will be visible at the very top of the post (image location can be different depending on theme).</li>
+
+	</ul>
+
+	<p>Always preview how your page looks by click the <b>Preview</b> button in the Publish box. This will immediately create your post and you can view it live on your website.</p>
+
+
+	<h3>Creating a page</h3>
+	<p>To create a new WordPress page, open the <strong>Add New</strong> section under <strong>Pages</strong> menu or click <strong>New</strong> -&gt; <strong>Page</strong> button at the top toolbar.</p>
+	
+	<p><strong>Add New</strong> page section has the same MS Word-style editor as you use when creating posts. Thus, the process of text input and formatting is the same.</p>
+	
+	<p>You may also notice that Pages section does not have <strong>Tags</strong> and <strong>Categories</strong> meta-boxes. Instead, it has a box called <strong>Page Attributes</strong>. In this section, you can change the order of your pages and set parent pages. This is useful if you want to have several pages under one parent page.</p>
+	
+	<p>A with posts, preview how your page looks by click the <b>Preview</b> button in the Publish box. When you are happy with it, click <b>Publish</b>.</p>
+
+	<div class="video-container">
+		<iframe src="assets/videos/wordpress-tutorial-creating-page.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+	</div>
+	
+	<p>You can edit and delete previously published posts and pages.</p>
+</section>
+
+<section class="wrapper-content">
+	<h2>About Tags</h2>
+	<p>Tags are 'labels' for posts. Tags make navigation of your site easier and allow users to find similar content grouped together.</p>
+
+	<img src="assets/img/wp-tags-2.png" alt="JavaScript">
+
+
+	<p>You can create and edit your tags on the Tags page or you can simply enter them from inside your post editor. This is a quickest and easiest way to create tags.</p>
+
+	<p>Once you have added tags to a post, they will appear in the published post. The location of the tags will depend upon the theme you are using.</p>
+
+</section>
+
+<section class="wrapper-content">
+
+	<h2>About Categories</h2>
+
+	<p>Categories are a way or organsing your WordPress posts. Categories should be a select few (10 or less) broad topics into which all your website content could be sorted. For example, if I had a website about pets, I could use the following categories:</span></p>
+	<ul>
+	<li style="font-weight: 400"><span style="font-weight: 400">Cats</span></li>
+	<li style="font-weight: 400"><span style="font-weight: 400">Dogs</span></li>
+	<li style="font-weight: 400"><span style="font-weight: 400">Fish</span></li>
+	<li style="font-weight: 400"><span style="font-weight: 400">Rodents</span></li>
+	<li style="font-weight: 400"><span style="font-weight: 400">Reptiles</span></li>
+	</ul>
+
+	<p>Then when I publish a post, I can choose which type of pet the post is about. Every post should belong to one or two categories, never more. Choosing a category is required for all posts, so be sure to pick categories into which every post could be sorted. You can even create a hierarchical, parent-child relationship with categories. For instance, I could have "Short-haired cats" as a subcategory of "Cats." </p>
+	<p>It is best practice to capitalize your categories due to the structural data they supply to search engines.</p>
+
+	<p>First, let's take a look at the <b>Categories</b> page in WordPress. To get to this page, hover over <b>Posts</b> in the left main menu and then click Categories.</p>
+	
+	<p>To create a new category, begin by entering the name. This is something that you choose, such as news, articles, or anything else that is applicable to your site. The Slug is just the version that will appear in the URL. This needs to be unique.</p>
+	
+	<p>When you create Categories, you can also create Parent and Child categories. This is another way to organize your posts. You can choose whether the category you are creating is a sub-category.</p>
+	
+	<p>You can also create a description of your category, which is optional.</p>
+	
+	<p>Last, you just need to click <b>Add New Category</b>.</p>
+	
+	<p>As soon as your Category is created, it will appear on the right in your category list.</p>
+	
+	<p>Now, you need to know how to assign posts to a certain category. Go to one of your posts and open it up so you can edit it.</p>
+	
+	<p>On the right sidebar, there is a section for your Categories. All Categories that you have created will appear here. To assign your post to a category, simply select the checkbox next to each category that applies to this post.</p>
+	
+	<p>You can also create Categories from right inside your posts. In that same Categories section box, just click Add New Category. Enter the name, choose a parent category (remember, this is optional), and click <b>Add New Category</b>.</p>
+	
+	<p>Now you know how to create Categories and assign posts to those Categories. You can also add Categories to your custom menu as pages.</p>
+
+</section>
+
+<section class="wrapper-content">
+	<h2>Menus</h2>
+
+	
+	<p><br>Return to <a href="../index.html">Contents</a>.</p>
+	<p>&nbsp;</p>
+</section>
+
+
+    <!-- JavaScript for Cookie Consent Popup Message -->
+	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+	window.cookieconsent.initialise({
+	  	"palette": {
+			"popup": {
+				"background": "#000"
+			},
+			"button": {
+				"background": "#f1d600"
+			}
+		},
+	  	"content": {
+			"href": "https://www.munnelly.com/legal/index.html"
+		}
+	});
+    </script>
+<!-- Begin Inspectlet Asynchronous Code -->
+<script type="text/javascript">
+(function() {
+window.__insp = window.__insp || [];
+__insp.push(['wid', 210045812]);
+var ldinsp = function(){
+if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=210045812&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.
+(insp, x); };
+setTimeout(ldinsp, 0);
+})();
+</script>
+<!-- End Inspectlet Asynchronous Code -->
+</body>
+</html>
+
+
+
+
