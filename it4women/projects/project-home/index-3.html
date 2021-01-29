@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Updating your Website Styles | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<title>Updating your Website Colours | Web Design & Development Tutorials | Brendan Munnelly</title>
 	<meta name="description" content="Three sample home page templates: A Web Design and Development Tutorial from Brendan Munnelly">
 
 	<meta name="author" content="Brendan Munnelly">
@@ -67,115 +67,105 @@
 	<h2>Learning Goals</h2>
 	<p>At the end of this Tutorial you will be able to:</p>
 	<ul>
-		<li>Update the visual appearance of a website template with your images, videos and colours.</li>
+		<li>Update the visual appearance of a website template by the changing the colours of such web page elements as menus, buttons, footers and the main content area.</li>
 
 	</ul>
 
 	<div class="box-toc">
 		<h2>Contents</h2>
-		<p><a href="#introduction">Introduction</a></p>
-		<p><a href="#update-images">Updating hero block images</a></p>
-		<p class="toc-indent"><a href="#head-styles">Using the web page <span>style</span> tag to set background images</a></p>
-		<p><a href="#update-videos">Updating hero block videos</a></p>
-		<p><a href="#update-colours">Applying your website colour scheme</a></p>
-		<p class="toc-indent"><a href="#navbar">Menu navbar colours</a></p>
-		<p class="toc-indent"><a href="#buttons"">Button colours</a></p>
-		<p class="toc-indent"><a href="#footer">Footer colours</a></p>
-		<p class="toc-indent"><a href="#headings">Heading and sub-heading colours</a></p>
-		<p class="toc-indent"><a href="#para-text">Paragraph text colours</a></p>
+		<p><a href="#introduction">About website colours</a></p>
+		<p class="toc-indent"><a href="#colours-dominant">Choosing your dominant brand colour</a></p>
+		<p class="toc-indent"><a href="#colours-palette">Creating your colour palette</a></p>
+		<p class="toc-indent"><a href="#colours-contrast">Colour and contrast accessibility</a></p>
+		<p><a href="#colours-menu-bg">Menu background colour</a></p>
+		<p><a href="#colours-menu-links">Menu text hyperlinks colours</a></p>
+		<p class="toc-indent"><a href="#colours-two-states">About the two hyperlink &#8216;states&#8217;</a></p>
+		<p><a href="#colours-buttons"">Button colours</a></p>
+		<p><a href="#colours-footer">Footer colours</a></p>
+		<p><a href="#colours-content">Main content background and text colours</a></p>
+		<p class="toc-indent"><a href="#colours-content-1">Heading and sub-heading colours</a></p>
+		<p class="toc-indent"><a href="#colours-content-2">Paragraph text colours</a></p>
+		<p class="toc-indent"><a href="#colours-content-3">Content background colour</a></p>
 		<p><a href="#github-upload">Uploading your files to GitHub</a></p>
 	</div>
-</section>
-
-
-
-<section id="update-images" class="wrapper-content">
-
-	<h2>Updating hero block images</h2>
-	<p>In the <a href="https://2n2l.com/it4women/exercises/hero-blocks-two.html">Hero Blocks with Images</a> Tutorial, you learnt how to add a background image to a hero block, add a shadow effect to the hero text, and include a tinted overlay <i>behind</i> the hero text and <i>in front of</i> the background image.</p>
-
-	<p>Background images differ from regular images on a web page:</p>
-
-	<ul>
-		<li>As you learnt in the <a href="https://2n2l.com/it4women/exercises/intro-images.html">Working with Images</a> tutorial, regular images are added to a web page with the <span class="syn">&lt;img&gt;</span> tag.
-		<span class="inside-ol">&nbsp;</span>
-		The image link is in the HTML of the web page. See the example below.
-		<img src="assets/img/img-regular.png" alt="fa-icons-copy"></li>
-		<li>However, background images are <i>not</i> set in the HTML of the web page.
-		<span class="inside-ol">&nbsp;</span>
-		Background images are set in the CSS stylesheet file that is linked to the web page. See the example below.
-		<img src="assets/img/img-background.png" alt="fa-icons-copy"></li>
-		</li>
-	</ul>
-
-	<p>All web pages in the template website use the same stylesheet, named <b>global.css</b>.</p>
-	
-	<p>So: how can you add different background images to different pages?</p>
-
-
-	<h3 id="head-styles">Using the web page <span>style</span> tag to set background images</h3>
-
-	<p>Your Portfolio, JavaScript and Wordpres pages all use a background image in their hero blocks.</p>
-	
-	<p>In the example below, you can see how the sub-folder location and name of the background image for the WordPress page is set in the <span class="syn">head</span> of the page.</p>
-	<img src="assets/img/hero-wp.png" alt="fa-icons-copy">
-
-	<p>To use a different background image, link to the new file name of the new image as shown in the HTML above.</p>
-
-	<p>Background images are stored in your <b>assets/img/</b> sub-folder.</p>
-
-	<p>To make the hero text easier to read against the background image, there is an overlay in front of the image and behind the heading and sub-heading. Its value above is set to <b>0.3</b>. </p>
-	
-	<p>Depending on your chosen image, you may want to make the overlay:</p>
-	
-	<ul>
-		<li>Less opaque (more transparent) by reducing its value to <b>0.2</b> or <b>0.1</b>.</li>
-		<li>More opaque (less transparent) by increasing its value to <b>0.4</b> or <b>0.5</b>.</li>
-	</ul>
-
-	<p>Also in the WordPress web page example above, the overlay color is set to black (<b>0,0,0</b>). Alernatively, you could apply a colour tint to the overay by changing this to another RGB colour value. For example, to blue (<b>0,0,255</b>) or green (<b>0,255,0</b>).</p>
-
-	<img src="assets/img/hero-wp-2.png" alt="fa-icons-copy">
-
-	<p>The vertical (top-bottom) and horizontal (left-right) spacing within the edges of the hero block is set for all web pages by <b>padding</b> values in the <b>global.css</b> stylesheet.</p>
-
-	<img src="assets/img/hero-wp-3.png" alt="fa-icons-copy">
-
-	<p>However, depending on the amount of text within the <span class="syn">h1</span> and <span class="syn">h2</span> headings, you may want to change this slightly in the <span class="syn">head</span> of each web page &#8211; for large screens, on mobile screens or on both.</p>
-
-</section>
-
-<section id="update-videos" class="wrapper-content">
-
-	<h2>Updating hero block videos</h2>
-	<p>Unlike background-images, background videos are set directly in the HTML of a web page.</p>
-
-	<p>Below is the HTML of the template 'home page' which contains a background video and a 'poster' image which displays until the video is fully downloaded into the user's web browser.</p>
-
-	<img src="assets/img/hero-still.png" alt="fa-icons-copy">
-
-	<p>To use a different video and poster image, link to the new file names as shown in the HTML above.</p>
-
-	<p>Background videos and poster images are stored in your <b>assets/videos/</b> sub-folder.</p>
-
-	<p>As with background images, background videos can also have a tinted overlay. In the website template 'home page', the overlay has a slightly blue tint colour that is darker  at the top of the hero block than at the bottom. </p>
-	<img src="assets/img/hero-tint.png" alt="fa-icons-copy">
-
-	<p>Change the overlay tint colour and opacity according to your chosen colour scheme.</p>
 
 </section>
 
 
 
-<section id="update-colours" class="wrapper-content">
+<section id="introduction" class="wrapper-content">
 
-	<h2>Applying your website colour scheme</h2>
+	<h2>About website colours</h2>
+	<p>In deciding which colours to use with your web pages, you may find this <a href="https://2n2l.com/it4women/exercises/colours-and-web-design.html#further-resources">list of resources</a> in a previous <a href="https://2n2l.com/it4women/exercises/colours-and-web-design">Tutorial</a> helpful.</p>
 
-	<p>In deciding which colours to use with your web pages, you may find this <a href="https://2n2l.com/it4women/exercises/colours-and-web-design.html#further-resources">list of resources</a> in a previous Tutorial helpful.</p>
+	<p>Below is a colour psychology infographic from one of the above resources.</p>
 
-	<h3 id="navbar">Menu navbar colours</h3>
+	<img src="assets/img/colors.png" alt="Introduction to HTML">
 
-	<p>In the <span class="syn">navbar</span> block at the top of your six web pages, you can see two classes <span class="syn">navbar-dark</span> and <span class="syn">bg-dark</span>. These, working together, control the background colour of the navbar.</p>
+	<p>Keep in mind that website users are people. And people are complex. So the above chart will not hold true for every individual. However, this information is a good, research-based starting point for your website colour choices.</p>
+
+
+	<h3 id="colours-dominant">Choosing your dominant brand colour</h3>
+	<p>Your website will have one main or <i>dominant</i> colour that will also be the main colour of your 'brand'.</p>
+
+	<p>For <a href="https://www.buseireann.ie/" target="_blank">Bus Eireann</a>, for example, the main brand colour is red. For <a href="https://www.irishrail.ie/" target="_blank">Irish Rail</a>, it is green. And for <a href="https://www.ryanair.com" target="_blank">Ryanair</a>, it is blue.</p>
+
+	<img src="assets/img/colours-dominant.png" alt="Introduction to HTML">
+
+	<p>For choosing a modern-looking dominant colour for your website, check out the <a href="http://www.flatcolorsui.com/" target="_blank">Flat Colours UI</a> and <a href="http://bootflat.github.io/color-picker-blue.html" target="_blank">Bootflat</a> websites.</p>
+
+	<p>You can see some striking colour choices on the <a href="https://codyhouse.co/library" target="_blank">Experiments</a> section of the Cody House website.</p>
+
+	<p>If you are using the Firefox Mozilla web browser, you can quickly 'grab' the hex code of any colour on a displayed web page as follows:</p>
+
+	<ol>
+		<li>From the menubar at the top of the browser window, click <b>Tools</b> and then <b>Web Developer</b>.</li>
+		<li>From the sub-menu displayed, click the <b>Eyedropper</b> option.
+		<img src="assets/img/eyedropper1.png" alt="Introduction to HTML"></li>
+		
+		<li>With your mouse, hover over any part of the web page to see the relevant hex colour code.
+		<img src="assets/img/eyedropper2.png" alt="Introduction to HTML"></li>
+		<li>Next, click on the highlighted area to copy the hex colour code. You can now paste this code into your CSS stylesheet file.</li>
+	</ol>
+
+
+	<h3 id="colours-palette">Creating your colour palette</h3>
+
+	<p>In addition to your chosen dominant colour, you will need to select two or three other colours to create a colour combination or <i>palette</i> of colours that work together harmoniously.</p>
+
+	<p>Two good websites for helping you decide on a colour palette are <a href="colorhunt.co" target="_blank">Colour Hunt</a> and <a href="https://colors.muz.li/" target="_blank">Muzli Colours</a>.</p>
+
+	<img src="assets/img/muzli.png" alt="Introduction to HTML">
+
+	<h3 id="colours-contrast">Colour and contrast accessibility</h3>
+	<p>Some colour combinations that are easy for most people to read are difficult or impossible for others. It is estimated that about 20% of web users have some form of limited vision.</p>
+
+	<p>In particular, about 1 in 12 men and 1 in 200 women have some form of 'colour blindness'. That means about 5% of your website visitors will not experience your site the way you intended.</p>
+
+	<p>There is little point in creating great text content for your website if a large percentage of your website visitors struggle or cannot read what is on their screens.</p>
+
+	<p>An important factor is <i>colour contrast</i> &#8211; the difference between the foreground and background colours.</p>
+
+	<p>The <a href="https://webaim.org/standards/wcag/" target="_blank">WebAIM</a> guidelines recommend a minimum contrast ratio of <b>4.5:1</b> for text on web pages. For headings and other large text, a contrast ratio of <b>3:1</b> is sufficient.</p>
+	
+	
+	<p>Notice the difference in the contrast ratios shown below. The image is from Google's  <a href="https://web.dev/color-and-contrast-accessibility/" target="_blank">web.dev</a> website.</p>
+
+	<img src="assets/img/contrast-ratios.jpg" alt="Introduction to HTML">
+
+
+	<p>After you have chosen a colour palette, you are now ready to apply it to the website template.</p>
+
+</section>
+
+
+<section id="colours-menu-bg" class="wrapper-content">
+
+	<h2>Menu background colour</h2>
+	<p>With Bootstrap, all elements of the website menu, on all screen sizes, are located inside the <span class="syn">navbar</span> block at the top of each web page.</p>
+	
+
+	<p>In this block, you can see two classes <span class="syn">navbar-dark</span> and <span class="syn">bg-dark</span>. These, working together, control the background colour of the menu.</p>
 
 	<img src="assets/img/navbar-1.png" alt="Introduction to HTML">
 
@@ -183,25 +173,49 @@
 
 	<img src="assets/img/navbar-2.png" alt="Introduction to HTML">
 
-	<p>When you change the navbar background from dark to light, the colour of the hyperlinks in the navbar also changes accordingly. In this way, the text of the menu links is always visible against the navbar background.</p>
-
-	<p>You can edit the dark or light background colour of the navbar in the <b>global.css</b> stylesheet.</p>
+	<p>You can edit the dark or light background colour of the navbar in the <b>global.css</b> stylesheet. For mobile screens, you can also change the colour of the three bars on the hamburger icon.</p>
 
 	<img src="assets/img/navbar-css-color.png" alt="Introduction to HTML">
 
+	<p>When you set a different colour for <span class="syn">background-color</span>, you need to add the word <span class="syn">!important</span> after the colour value. This ensures your chosen colour will override the default colour set by Bootstrap.</p>
 
-	<p>For mobile screens, you can also change the colour of the three bars on the hamburger icon.</p>
+	<p>The  <span class="syn">!important</span> property means that all other CSS style rules for the selected HTML element are to be ignored, and that this style rule &#8216;wins&#8217;.</p>
 
-	<p>Another option for your navbar background is to use a <a href="https://2n2l.com/it4women/exercises/working-with-sections.html#sections-sample-3-linear">linear gradient</a>.</p>
+	<p>Here are three examples of menus with a dark coloured background.</p>
 
-	<p>Whichever background colour you choose, you can also change the text colour of the menu options.</p>
+	<img src="assets/img/bg-dark.png" alt="Introduction to HTML">
+
+	<p>And here are three examples of menus with a light coloured background.</p>
+
+	<img src="assets/img/bg-light.png" alt="Introduction to HTML">
+
+	<p>Another option for your menu background is to use a <a href="https://2n2l.com/it4women/exercises/working-with-sections.html#sections-sample-3-linear">linear gradient</a>. AIB Bank, for example, uses the following linear gradient for their dark coloured background.</p>
+
+<pre class="language-css">
+ <span class="token class">nav.navbar.navbar-dark.bg-dark</span> { <span class="token property">background-image</span>: <span class="token yellow">linear-gradient</span>(<span class="token number">90deg</span>,<span class="token value-text">#802b7b</span>,<span class="token value-text">#de0a85</span>); }   
+</pre>
+
+	<img src="assets/img/bg-aib.png" alt="Introduction to HTML">
+
+
+</section>
+
+
+<section id="colours-menu-links" class="wrapper-content">
+
+	<h2>Menu text hyperlinks colours</h2>
+
+	<p>When you change the menu background from dark to light, the colour of the hyperlinks in the menu also changes accordingly. In this way, the text of the menu links is always visible against the navbar background.</p>
+
+	<p>Whether you choose a dark or light background colour, you can change the text colour of the menu hyperlinks.</p>
 
 	<img src="assets/img/navbar-css-color-2.png" alt="Introduction to HTML">
 
 
-	<p>Unlike other web page elements such as headings or text paragraphs, hyperlinks are <i>interactive</i>. And their visual appearance can change depending on whether and how the user interacts with them.</p>
+	<h3 id="colours-two-states">About the two hyperlink &#8216;states&#8217;</h3>
+	<p>Unlike most other web page elements such as headings or text paragraphs, hyperlinks are <i>interactive</i>. And their visual appearance can change depending on whether and how the user interacts with them. The same is true of button elements.</p>
 	
-	<p>You can think of hyperlinks as having two main <i>states</i>:</p>
+	<p>You can think of hyperlinks and buttons as having two main <i>states</i>:</p>
 	
 	<ul>
 		<li><b>Passive state</b>: This is how a hyperlink looks when the user is not interacting with it.
@@ -215,47 +229,100 @@
 		<img src="assets/img/navbar-css-color-4.png" alt="Introduction to HTML"></li>
 	</ul>
 
+	<p>In the sample menu below, the links are coloured black in their passive state, and change to red when the user interacts with them.</p>
+	<img src="assets/img/menu-options-two-states.png" alt="Introduction to HTML">
+
 	<p>Update the colours of your menu links for both their passive and interactive states, as required.</p>
 
 
-	<h3 id="buttons">Button colours</h3>
-	<p>In the pages of the website template, all the buttons have a Bootstrap CSS class of <b>btn-primary</b> that gives them a blue background colour and white text.</p>
+</section>
+
+
+<section id="colours-buttons" class="wrapper-content">
+
+	<h2>Button colours</h2>
+	<p>In the pages of the website template, all the buttons have a Bootstrap CSS class of <span class="syn">btn-primary</span> that gives them a blue background colour and white text.</p>
 
 	<p>You can see a full list of Bootstrap button CSS classes on the <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_bland">official website</a>.</p>
 
-	<img src="assets/img/bs-buttons.png" alt="fa-icons-copy">
+	<img src="assets/img/bs-buttons.png" alt="fa-icons-copy" style="margin-bottom:4px">
 
-	<p>For example, to display a button in yellow with black text, replace the class of <b>btn-primary</b> with <b>btn-warning</b>.</p>
+	<p>For example, to display a button with black text against a yellow background, replace the class of <span class="syn">btn-primary</span> with <span class="syn">btn-warning</span> in the HTML of the web page.</p>
+
+	<img src="assets/img/menu-button.png" alt="fa-icons-copy">
+	<img src="assets/img/menu-button-warning.png" alt="fa-icons-copy">
+
+	<p>A button class of <span class="syn">btn-danger</span> will create a red button with white text.</p>
+
+	<img src="assets/img/menu-button-danger.png" alt="fa-icons-copy">
 
 
-	<h3 id="footer">Footer colours</h3>
+</section>
+
+
+<section id="colours-footer" class="wrapper-content">
+
+	<h2>Footer colours</h2>
+
 	<p>The background colour of the footer is set in the <b>global.css</b> file as shown below.</p>
 	<img src="assets/img/bg-footer.png" alt="fa-icons-copy">
 
-	<p>You can edit this, and also the colours of the text and hyperlinks in the footer.</p>
+	<p>You can edit this, and also the colours of the text, icons and hyperlinks in the footer.</p>
 
 	<p>Ensure there is sufficient contrast between the text and background colours.</p>
 
 	<p>Another option for your footer background is to use a <a href="https://2n2l.com/it4women/exercises/working-with-sections.html#sections-sample-3-linear">linear gradient</a>.</p>
 
-	<h3 id="headings">Heading and sub-heading colours</h3>
-	<p>By default, headings and sub-headings (other than those within hero blocks) are coloured black in the <b>global.css</b> file.</p>
+</section>
 
-	<p>To change these, enter different colour styles at the end of the stylesheet. For example:</p>
+
+<section id="colours-content" class="wrapper-content">
+
+	<h2>Main content background and text colours</h2>
+	<p>Below the menu and hero blocks, and above the footer, is the main content area of each web page. Below are guides on updating the website template colours in this area of your web pages.</p>
+
+	<h3 id="colours-content-1">Heading and sub-heading colours</h3>
+	<p>By default, Bootstrap headings and sub-headings are coloured black.</p>
+
+	<p>To change these, enter different colour styles at the end of the <b>global.css</b> stylesheet. For example:</p>
 
 <pre class="language-css">
 <span class="token class">h1, h2, h3</span> { <span class="token property">color</span>: <span class="token value-text">#76448a</span> }
 </pre>
 
-	<h3 id="para-text">Paragraph text colours</h3>
-	<p>By default, paragraph text and bullet text is coloured black in the <b>global.css</b> file.</p>
 
-	<p>To change these, enter a different but also darker colour style at the end of the stylesheet. For example:</p>
+
+	<h3 id="colours-content-2">Paragraph text colours</h3>
+	<p>By default, paragraph text and bullet text are also coloured black.</p>
+
+	<p>To change these, enter a different colour value at the end of <b>global.css</b>. For example:</p>
 
 <pre class="language-css">
 <span class="token class">p, li</span> { <span class="token property">color</span>: <span class="token value-text">#222222</span> }
 </pre>
 	
+	<h3 id="colours-content-3">Content background colour</h3>
+	<p>By default, each web page has a white-coloured background. You could change this another light colour by entering the following at the end of <b>global.css</b>.</p>
+
+<pre class="language-css">
+<span class="token class">body</span> { <span class="token property">background-color</span>: <span class="token value-text">#f7f7f7</span> }  </pre>
+
+	<p>Aim for a harmonious combination of text and background colours in the main content area of your web pages. Here are some examples:</p>
+
+
+	<ul>
+		<li><a href="https://www.its-your-heart.com/" target="_blank">World Diabetes Day</a>: Dark blue headings and text (<b>#003366</b>) with white (<b>#fff</b>) background.</li>
+		<li><a href="https://victorkaiwong.com/" target="_blank">Victor Kaiwong</a>: Dark green headings and text (<b>#483c0c</b>) with light green (<b>#cfe6ad</b>) background.</li>
+		<li><a href="https://miguellopez.dev/" target="_blank">Miguel Lopez</a>: Dark blue headings and text (<b>#142850</b>) with light blue (<b>#dce6ef</b>) background.</li>
+	</ul>
+
+	<p>Websites with &#8216;dark themes&#8217; are increasingly popular. Here are a few examples of light text against a dark background:</p>
+
+	<ul>
+		<li><a href="https://www.lauracharvey.dev/" target="_blank">Laura Harvey</a>: Dark blue background (<b>#222c3b</b>) with light yellow (<b>#ece4c1</b>) or white text.</li>
+		<li><a href="https://usmahm.github.io/" target="_blank">Ahmad Usman</a>: Almost black background (<b>#25262a</b>) with light green (<b>#64f4ac</b>) or white text.</li>
+		<li><a href="https://www.indiehackers.com/post/how-to-create-a-job-board-on-airtable-without-coding-5aa0996228" target="_blank">Indie Hackers</a>: Dark blue background (<b>#0e2439</b>) with light blue (<b>#a2b8cd</b>) or white text.</li>
+	</ul>
 
 
 </section>
