@@ -73,23 +73,25 @@
 
 	<div class="box-toc">
 		<h2>Contents</h2>
-		<p><a href="#introduction">Introduction</a></p>
+		<p><a href="#introduction">About hero block images</a></p>
 		<p><a href="#update-images">Updating hero block images</a></p>
-		<p class="toc-indent"><a href="#head-styles">Using the web page <span>style</span> tag to set background images</a></p>
+		<p class="toc-indent"><a href="#opacity">Overlay opacity</a></p>
+		<p class="toc-indent"><a href="#tint">Overlay tint colour</a></p>
+		<p class="toc-indent"><a href="#padding">Hero block padding</a></p>
+		<p class="toc-indent"><a href="#text">Hero text properties</a></p>
 		<p><a href="#update-videos">Updating hero block videos</a></p>
-		<p><a href="#update-colours">Applying your website colour scheme</a></p>
-		<p class="toc-indent"><a href="#navbar">Menu navbar colours</a></p>
-		<p class="toc-indent"><a href="#buttons"">Button colours</a></p>
-		<p class="toc-indent"><a href="#footer">Footer colours</a></p>
-		<p class="toc-indent"><a href="#headings">Heading and sub-heading colours</a></p>
-		<p class="toc-indent"><a href="#para-text">Paragraph text colours</a></p>
+		<p><a href="#poster-image">Creating a new poster image</a></p>
+		<p class="toc-indent"><a href="#first-frame">Displaying the first frame of the new video</a></p>
+		<p class="toc-indent"><a href="#screenshot">Capturing a screenshot image of the video's first frame</a></p>
+		<p class="toc-indent"><a href="#compression">Compressing the poster image's file size</a></p>
+		<p class="toc-indent"><a href="#poster-add">Adding the poster image to your hero block</a></p>
+		<p class="toc-indent"><a href="#preload">Preloading the poster image</a></p>
 		<p><a href="#github-upload">Uploading your files to GitHub</a></p>
 	</div>
 </section>
 
 
-
-<section id="update-images" class="wrapper-content">
+<section id="introduction" class="wrapper-content">
 
 	<h2>About hero block images</h2>
 	<p>In the <a href="https://2n2l.com/it4women/exercises/hero-blocks-two.html">Hero Blocks with Images</a> Tutorial, you learnt how to add a background image to a hero block, add a shadow effect to the hero text, and include a tinted overlay <i>behind</i> the hero text and <i>in front of</i> the background image.</p>
@@ -133,7 +135,7 @@
 		<li>In the <span class="syn">head</span> of the web page, within a pair of <span class="syn">&lt;style&gt;</span> ... <span class="syn">&lt;/style&gt;</span> tags, link to the new image file.</li>
 	</ul>
 
-	<h3>Overlay opacity</h3>
+	<h3 id="opacity">Overlay opacity</h3>
 	<p>To make the hero text easier to read against the background image, there is an overlay in front of the image and behind the heading and sub-heading. In the WordPress page example above, its value above is set to <b>0.3</b>.</p>
 
 	<img src="assets/img/bg-opacity-1.png" alt="fa-icons-copy" style="margin-bottom:14px">
@@ -148,7 +150,7 @@
 	<img src="assets/img/bg-opacity.png" alt="fa-icons-copy">
 
 
-	<h3>Overlay tint colour</h3>
+	<h3 id="tint">Overlay tint colour</h3>
 	<p style="margin-bottom:12px">Also in the WordPress web page example above, the overlay color is set to black (<b>0,0,0</b>).</p>
 	
 	<img src="assets/img/bg-opacity-2.png" alt="fa-icons-copy" style="margin-top:0">
@@ -157,7 +159,7 @@
 
 	<img src="assets/img/bg-overlay-tint.png" alt="fa-icons-copy" style="margin-top:0">
 
-	<h3>Hero block padding</h3>
+	<h3 id="padding">Hero block padding</h3>
 	<p>The vertical (top-bottom) and horizontal (left-right) spacing within the edges of the hero block is set for all web pages by <b>padding</b> values in the <b>global.css</b> stylesheet.</p>
 
 	<img src="assets/img/hero-wp-3.png" alt="fa-icons-copy">
@@ -165,7 +167,7 @@
 	<p>However, depending on the amount of text within the <span class="syn">h1</span> and <span class="syn">h2</span> headings, you may want to change this slightly in the <span class="syn">head</span> of each web page &#8211; for large screens, on mobile screens or on both.</p>
 
 
-	<h3>Hero text properties</h3>
+	<h3 id="text">Hero text properties</h3>
 	<p>All properties of the <span class="syn">h1</span> heading and <span class="syn">h2</span> sub-heading in each hero block are set in the <b>global.css</b> stylesheet.</p>
 	
 	<img src="assets/img/bg-hero-headings.png" alt="fa-icons-copy">
@@ -185,7 +187,7 @@
 
 <section id="update-videos" class="wrapper-content">
 
-	<h2>Updating hero block videos</h2>
+	<h2>Updating hero block vidoes</h2>
 	<p>Unlike background-images, background videos are set directly in the HTML of a web page.</p>
 
 	<p>Below is the HTML of the template 'home page' which contains a background video and a 'poster' image which displays until the video is fully downloaded into the user's web browser.</p>
@@ -218,7 +220,7 @@
 		<li>And finally, add the new image as the poster image for your web page.</li>
 	</ul>
 
-	<h3>Displaying the first frame of the new video</h3>
+	<h3 id="first-frame">Displaying the first frame of the new video</h3>
 	<p>Follow the steps below.</p>
 
 	<ol>
@@ -248,7 +250,7 @@
 	<p>You should see only the video, without any heading text or buttons in front of it. Also, because the video is not playing, your web browser displays only the first frame of the video.</p>
 	<img src="assets/img/hero-vid-3.png" alt="project in web browser"></li>
 
-	<h3>Capturing a screenshot image of the video's first frame</h3>
+	<h3 id="screenshot">Capturing a screenshot image of the video's first frame</h3>
 	<p>Your next task is to create the image you will use as the 'poster' for your new background video.</p>
 		<ol>
 			<li>Take a screenshot of your web browser window that shows the video's first frame.
@@ -263,7 +265,7 @@
 			<li>Save the image as a JPG file in your <b>assets/img</b> sub-folder.</li>
 		</ol>
 
-	<h3>Compressing the poster image's file size</h3>
+	<h3 id="compression">Compressing the poster image's file size</h3>
 	<p>You will want your poster image to have the smallest possible file size, so that it will load as quickly as possible on the user's screen.</p>
 	<ol>
 		<li>In a new browser tab, go to this website:
@@ -278,7 +280,7 @@
 		You no longer need this <b>tinified</b> sub-folder, so you can delete it.</li>
 	</ol>
 
-	<h3>Adding the poster image to your hero block</h3>
+	<h3 id="poster-add">Adding the poster image to your hero block</h3>
 
 	<p>Now that you have captured, edited and compressed an image of the new video's opening frame, you can link to it in the HTML of your hero block.</p>
 
@@ -292,7 +294,7 @@
 	<p>Save your web page, reload it in your web browser, and verify it displays correctly on both large and mobile screens.</p>
 
 
-	<h3>Preloading the poster image</h3>
+	<h3 id="preload">Preloading the poster image</h3>
 	<p>There is one further step you can take to ensure the poster image loads as quickly as possible on your users' device.</p>
 
 	<p>In VS Code, add the following line in the <span class="syn">head</span> section, just under the <span class="syn">description</span> meta tag.</p>
