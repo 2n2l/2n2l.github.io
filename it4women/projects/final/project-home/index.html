@@ -25,6 +25,12 @@
 	<!-- Styles for Cookie Consent Popup Message  -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
+    <script>
+        var bgvideo = document.getElementById("bg-video");
+        bgvideo.muted = true;
+        bgvideo.play();
+    </script>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=GGGGGG"></script>
 	<script>
@@ -32,8 +38,8 @@
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 		gtag('config', 'GGGGGG');
-    </script>
-        
+    </script>   
+
 </head>
 
 <body>
@@ -75,7 +81,7 @@
     <div class="container-fluid hero-block hero-10">
     
         <!-- Background video --->
-        <video loop muted autoplay playsinline poster="assets/videos/hero-video-poster.jpg" class="background-video">
+        <video loop muted autoplay playsinline poster="assets/videos/hero-video-poster.jpg" class="background-video" id="bg-video">
             <source src="assets/videos/home-video.mp4" type="video/mp4">
         </video>
     
