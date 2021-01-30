@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Updating your Website Images and Videos | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Three sample home page templates: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<link href="../../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<style>
+
+	/* =======INNER FLEXBOX COLUMNS: 3 COLUMNS ON DESKTOPS, 1 COLUMN ON MOBILES ===== */
+
+	.container-flexbox { 
+	   display: flex; 
+	   justify-content: space-between; 
+	   flex-wrap: wrap; 
+	}
+	/* Desktops - 3 columns */
+	@media all and (min-width:768px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 30% }
+		.container-flexbox .item-3 img { width: 100%; height: auto }
+		.container-flexbox.sample-pages .item-3 { padding: 12px 0 }
+	}
+
+	/* Mobiles - 1 column */
+	@media all and (max-width:767px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 100% }
+		.container-flexbox .item-3 { margin-bottom: 8% }
+		.container-flexbox .item-3 img { }
+	}
+
+
+	</style>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+
+</head>
+
+<body>
+
+
+<div class="jumbotron tutorial">
+	<h3><a href="../../index.html" title="All HTML projects">Contents&nbsp;&nbsp;></a></h3>
+	<h1>Updating your Website Images and Videos</h1>
+</div>
+
+<section id="learning-goals" class="wrapper-content">
+	<h2>Learning Goals</h2>
+	<p>At the end of this Tutorial you will be able to:</p>
+	<ul>
+		<li>Update the visual appearance of a website template with your chosen background images and videosss.</li>
+
+	</ul>
+
+	<div class="box-toc">
+		<h2>Contents</h2>
+		<p><a href="#introduction">Introduction</a></p>
+		<p><a href="#update-images">Updating hero block images</a></p>
+		<p class="toc-indent"><a href="#head-styles">Using the web page <span>style</span> tag to set background images</a></p>
+		<p><a href="#update-videos">Updating hero block videos</a></p>
+		<p><a href="#update-colours">Applying your website colour scheme</a></p>
+		<p class="toc-indent"><a href="#navbar">Menu navbar colours</a></p>
+		<p class="toc-indent"><a href="#buttons"">Button colours</a></p>
+		<p class="toc-indent"><a href="#footer">Footer colours</a></p>
+		<p class="toc-indent"><a href="#headings">Heading and sub-heading colours</a></p>
+		<p class="toc-indent"><a href="#para-text">Paragraph text colours</a></p>
+		<p><a href="#github-upload">Uploading your files to GitHub</a></p>
+	</div>
+</section>
+
+
+
+<section id="update-images" class="wrapper-content">
+
+	<h2>About hero block images</h2>
+	<p>In the <a href="https://2n2l.com/it4women/exercises/hero-blocks-two.html">Hero Blocks with Images</a> Tutorial, you learnt how to add a background image to a hero block, add a shadow effect to the hero text, and include a tinted overlay <i>behind</i> the hero text and <i>in front of</i> the background image.</p>
+
+	<p>Background images differ from regular images on a web page:</p>
+
+	<ul>
+		<li>As you learnt in the <a href="https://2n2l.com/it4women/exercises/intro-images.html">Working with Images</a> tutorial, regular images are added to a web page with the <span class="syn">&lt;img&gt;</span> tag.
+		<span class="inside-ol">&nbsp;</span>
+		The image link is in the HTML of the web page. See the example below.
+		<img src="assets/img/img-regular.png" alt="fa-icons-copy" style="margin-top:12px;margin-bottom:12px"></li>
+		<li>However, background images are <i>not</i> set in the HTML of the web page.
+		<span class="inside-ol">&nbsp;</span>
+		Background images are set in the CSS stylesheet file that is linked to the web page. See the example below.
+		<img src="assets/img/img-background.png" alt="fa-icons-copy" style="margin-top:12px;margin-bottom:12px"></li>
+		</li>
+	</ul>
+
+	<p>But what if you want to set <i>different background images</i> on different web pages &#8211; when all the web pages <i>use the same styesheet?</i> How can that be done?</p>
+
+</section>
+
+
+
+<section id="update-images" class="wrapper-content">
+
+	<h2>Updating hero block images</h2>
+
+	<p>In the six-page website template, three web pages &#8211; your Portfolio, JavaScript and WordPress pages  &#8211; all use a background image in their hero blocks.</p>
+	
+	<p>For each page, however, the background image is different. Yet all three pages are controlled by the same <b>global.css</b> stylesheet file.</p>
+
+	<p>The solution is to set the background image within a <span class="syn">&lt;style&gt;</span> ... <span class="syn">&lt;/style&gt;</span> tag pair in the <span class="syn">head</span> section of each web page.</p>
+
+	<p>Below you can see the example from the <span class="syn">head</span> section of the WordPress page.</p>
+	<img src="assets/img/hero-wp.png" alt="fa-icons-copy">
+
+	<p>In summary, to set a different background image on an individual web page:</p>
+	<ul>
+		<li>Place the new background image in the <b>assets/img</b> sub-folder.</li>
+		<li>In the <span class="syn">head</span> of the web page, within a pair of <span class="syn">&lt;style&gt;</span> ... <span class="syn">&lt;/style&gt;</span> tags, link to the new image file.</li>
+	</ul>
+
+	<h3>Overlay opacity</h3>
+	<p>To make the hero text easier to read against the background image, there is an overlay in front of the image and behind the heading and sub-heading. In the WordPress page example above, its value above is set to <b>0.3</b>.</p>
+
+	<img src="assets/img/bg-opacity-1.png" alt="fa-icons-copy" style="margin-bottom:14px">
+	
+	<p>Depending on your chosen image, you may want to make the overlay:</p>
+
+	<ul>
+		<li>Less opaque (more transparent and lighter) by reducing its value to <b>0.2</b> or <b>0.1</b>.</li>
+		<li>More opaque (less transparent and darker) by increasing its value to <b>0.4</b> or <b>0.6</b>.</li>
+	</ul>
+
+	<img src="assets/img/bg-opacity.png" alt="fa-icons-copy">
+
+
+	<h3>Overlay tint colour</h3>
+	<p style="margin-bottom:12px">Also in the WordPress web page example above, the overlay color is set to black (<b>0,0,0</b>).</p>
+	
+	<img src="assets/img/bg-opacity-2.png" alt="fa-icons-copy" style="margin-top:0">
+
+	<p>Alternatively, you could apply a colour tint to the overlay by changing this to another RGB colour value. For example, to red (<b>255,0,0</b>) or blue (<b>0,0,255</b>).</p>
+
+	<img src="assets/img/bg-overlay-tint.png" alt="fa-icons-copy" style="margin-top:0">
+
+	<h3>Hero block padding</h3>
+	<p>The vertical (top-bottom) and horizontal (left-right) spacing within the edges of the hero block is set for all web pages by <b>padding</b> values in the <b>global.css</b> stylesheet.</p>
+
+	<img src="assets/img/hero-wp-3.png" alt="fa-icons-copy">
+
+	<p>However, depending on the amount of text within the <span class="syn">h1</span> and <span class="syn">h2</span> headings, you may want to change this slightly in the <span class="syn">head</span> of each web page &#8211; for large screens, on mobile screens or on both.</p>
+
+
+	<h3>Hero text properties</h3>
+	<p>All properties of the <span class="syn">h1</span> heading and <span class="syn">h2</span> sub-heading in each hero block are set in the <b>global.css</b> stylesheet.</p>
+	
+	<img src="assets/img/bg-hero-headings.png" alt="fa-icons-copy">
+
+	<p>Depending on the amount of text within the heading and sub-heading, you may want to increase or decrease their font sizes on large and/or mobile screens.</p>
+	
+	<p>You can also change the font colour and weight (<b>normal</B> or <b>bold</b>).<?p>
+	
+	<ul>
+		<li>To apply your changes to <i>all web pages</i>, change the values in the <b>global.css</b> stylesheet.</li>
+		<li>To apply changes only to an <i>individual web page</i>, add the new values within a pair of <span class="syn">&lt;style&gt;</span> ... <span class="syn">&lt;/style&gt;</span> tags in the page's <span class="syn">head</span> section.</li>
+	</ul>
+
+</section>
+
+
+
+<section id="update-videos" class="wrapper-content">
+
+	<h2>Updating hero block videos</h2>
+	<p>Unlike background-images, background videos are set directly in the HTML of a web page.</p>
+
+	<p>Below is the HTML of the template 'home page' which contains a background video and a 'poster' image which displays until the video is fully downloaded into the user's web browser.</p>
+
+	<img src="assets/img/hero-still.png" alt="fa-icons-copy">
+
+	<p>To use a different video and poster image, link to the new file names as shown in the HTML above.</p>
+
+	<p>Both the background video and poster image files are stored in your <b>assets/videos</b> sub-folder.</p>
+
+	<p>As with background images, background videos can also have a tinted overlay. In the website template 'home page', the overlay has a slightly blue tint colour that is darker  at the top of the hero block than at the bottom. </p>
+	<img src="assets/img/hero-tint.png" alt="fa-icons-copy">
+
+	<p>Change the overlay tint colour and opacity according to your chosen colour scheme.</p>
+
+</section>
+
+<section id="poster-image" class="wrapper-content">
+
+	<h2>Creating a new poster image</h2>
+	<p>If you want to use a different background video, you will need to create a new 'poster' image for it. This is the image that will display until the video has finished downloading and is ready to play.</p>
+
+	<p>There are the main steps involved:</p>
+
+	<ul>
+		<li>Add a link to new video file in your web page.</li>
+		<li>In your web browser, display only the first frame of the new video.</li>
+		<li>Capture a screenshot of the video's first frame, and edit the image as required.</li>
+		<li>Compress the file size of the new image.</li>
+		<li>And finally, add the new image as the poster image for your web page.</li>
+	</ul>
+
+	<h3>Displaying the first frame of the new video</h3>
+	<p>Follow the steps below.</p>
+
+	<ol>
+		<li>Place your new background video in the <b>assets/videos</b> sub-folder.</li>
+		<li>In VS Code, open your <b>index.html</b> 'home' web page.</li>
+		<li>In the <span class="syn">head</span> section, enter a link to your new video file. In this example, the file is named <b>home-video-new.mp4</b>.
+
+		<img src="assets/img/hero-vid-1.png" alt="project in web browser"></li>
+
+		<li>In the hero area, delete the two comment lines at the beginning and end of the buttons block as shown below.
+		<img src="assets/img/video-comments-delete.png" alt="project in web browser"></li>
+		<li>Add a new comment that will completely hide the heading, sub-heading and buttons from displaying in the web browser.
+		<ul>
+			<li>The new comment <i>begins</i> on a line above the <span class="syn">h1</span> heading.</li>
+			<li>The new comment <i>ends</i> just after the closing <span class="syn">&lt;/div&gt;</span> tag that ends the <span class="syn">row</span> block.</li>
+		</ul>
+		See the image below.
+		<img src="assets/img/video-comments-new.png" alt="project in web browser"></li>
+		<li>Next, at the top of the hero block, remove the file name of the old poster image from within the pair of double quotes (""). Also, remove the attribute <b>autoplay</b> from the <span class="syn">video</span> tag.
+		<span class="inside-ol">&nbsp;</span>
+		The top of your hero block should now look as follows.
+		<img src="assets/img/hero-vid-2.png" alt="project in web browser"></li>
+
+		<li>Save your web page and reload it in your web browser.</li>
+	</ol>
+	
+	<p>You should see only the video, without any heading text or buttons in front of it. Also, because the video is not playing, your web browser displays only the first frame of the video.</p>
+	<img src="assets/img/hero-vid-3.png" alt="project in web browser"></li>
+
+	<h3>Capturing a screenshot image of the video's first frame</h3>
+	<p>Your next task is to create the image you will use as the 'poster' for your new background video.</p>
+		<ol>
+			<li>Take a screenshot of your web browser window that shows the video's first frame.
+			<ul>
+				<li>On Windows, press the <b>Alt</b> and <b>PrtScn</b> keys</b> together.</li>
+				<li>On Apple Mac, press and hold these three keys together: <b>Shift</b>, <b>Command</b>, and <b>3</b>.
+			</ul><li>
+			
+			<li>Open any image editing software program and paste the screenshot image into it.</li>
+			<li>Edit the image to remove everything except the opening video frame.
+			<img src="assets/img/hero-vid-4.png" alt="project in web browser"></li>
+			<li>Save the image as a JPG file in your <b>assets/img</b> sub-folder.</li>
+		</ol>
+
+	<h3>Compressing the poster image's file size</h3>
+	<p>You will want your poster image to have the smallest possible file size, so that it will load as quickly as possible on the user's screen.</p>
+	<ol>
+		<li>In a new browser tab, go to this website:
+		<span class="inside-ol">&nbsp;</span>
+		<a href="https://tinyjpg.com/" target="_blank">https://tinyjpg.com/</a></li>
+		<li>Drag-and-drop your new poster image file to the website</li>
+		<li>When the image compression is finished, click the <b>Download All</b> button.
+		<img src="assets/img/hero-vid-5.png" alt="project in web browser"></li>
+		<li>Copy the downloaded file named <b>tinified.zip</b> from your <b>Downloads</b> folder to your <b>assets/img</b> sub-folder, and unzip it.</li>
+		<li>Copy the unzipped file from the <b>tinified</b> sub-folder back up to your <b>assets/img</b> sub-folder.
+		<span class="inside-ol">&nbsp;</span>
+		You no longer need this <b>tinified</b> sub-folder, so you can delete it.</li>
+	</ol>
+
+	<h3>Adding the poster image to your hero block</h3>
+
+	<p>Now that you have captured, edited and compressed an image of the new video's opening frame, you can link to it in the HTML of your hero block.</p>
+
+	<p>In the example below, the poster image is named <b>hero-video-poster-new.jpg</b></p>
+
+	<img src="assets/img/hero-vid-6.png" alt="project in web browser">
+	<p>Also, add the <b>autoplay</b> attribute back to the <span class="syn">video</span> tag.</p>
+	
+	<p>And remove the comment tag pair that surrounds your heading, sub-heading and buttons.</p>
+
+	<p>Save your web page, reload it in your web browser, and verify it displays correctly on both large and mobile screens.</p>
+
+
+	<h3>Preloading the poster image</h3>
+	<p>There is one further step you can take to ensure the poster image loads as quickly as possible on your users' device.</p>
+
+	<p>In VS Code, add the following line in the <span class="syn">head</span> section, just under the <span class="syn">description</span> meta tag.</p>
+
+<pre class="language-html">&lt;<span class="blue-dark">link</span> <span class="blue-light">rel</span>=<span class="brown">"preload"</span> <span class="blue-light">href</span>=<span class="brown">"assets/videos/hero-video-poster.jpg"</span> <span class="blue-light">as</span>=<span class="brown">"image"</span>&gt;  
+</pre>
+
+	<p>This line will load the poster image before any other elements of the web page.</p>
+
+	<img src="assets/img/hero-vid-7.png" alt="project in web browser">
+
+	<p>Replace the file name <b>hero-video-poster.jpg</b> with whatever is the name of the poster image on your 'home' page.</p>
+</section>
+
+<section id="github-upload" class="wrapper-content">
+	<h2>Upload your website to GitHub</h2>
+	<p>The final step is to upload your website pages and folders to GitHub.</p>
+
+	<ol>
+		<li>Sign in to your GitHub account and, at the left of the screen, click the name of the repository that holds your web pages.</li>
+
+		<li>On the next screen, click the <b>Add file</b> button and then choose <b>Upload files</b> from the dropdown list.
+		<img src="assets/img/github-btn-add-file-dropdown.png" alt="Project Animation Google Fonts"></li>
+		
+
+		<li>In File/Windows Explorer on your computer, display your <b>websites</b> folder and then drag-and-drop the following files and sub-folders to the GitHub tab in your web browser.
+		<img src="assets/img/github-upload-drag-drop.png" alt="github-upload-drag-drop"></li>
+
+		<li>Scroll down to the bottom of the GitHub screen, and accept or edit the short message (<span style="color:gray">Add files via upload</span>) in the <b>Commit changes</b> box.
+
+		<span class="inside-ol">&nbsp;</span>
+
+		Finally, click the green <b>Commit changes</b> button to upload your files and folders.</li>
+
+	</ol>
+
+	<p>Your web pages  are now published on GitHub. Your Home page has a web address similar to the following, where <b>username</b> is the username you have chosen for your GitHub account:</p>
+	
+	<p><b>https://username.github.io/index.html</b></p>
+	<p>or, simply:</p>
+	<p><b>https://username.github.io</b></p>
+
+	<p>It may take a few minutes for your uploaded files to appear on GitHub.</p>
+
+	<p><br><br>Return to <a href="../../index.html">Contents</a>.</p>
+
+	<p>&nbsp;</p>
+		<p>&nbsp;</p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+</script>
+
+</body>
+</html>
+
