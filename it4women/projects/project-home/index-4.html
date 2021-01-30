@@ -67,7 +67,7 @@
 	<h2>Learning Goals</h2>
 	<p>At the end of this Tutorial you will be able to:</p>
 	<ul>
-		<li>Update the visual appearance of a website template with your chosen background images and videosss.</li>
+		<li>Update the visual appearance of a website template with your chosen background images and videos.</li>
 
 	</ul>
 
@@ -86,6 +86,7 @@
 		<p class="toc-indent"><a href="#compression">Compressing the poster image's file size</a></p>
 		<p class="toc-indent"><a href="#poster-add">Adding the poster image to your hero block</a></p>
 		<p class="toc-indent"><a href="#preload">Preloading the poster image</a></p>
+		<p><a href="#apple">Playing a background video on Apple iPhones and iPads</a></p>
 		<p><a href="#github-upload">Uploading your files to GitHub</a></p>
 	</div>
 </section>
@@ -308,6 +309,40 @@
 
 	<p>Replace the file name <b>hero-video-poster.jpg</b> with whatever is the name of the poster image on your 'home' page.</p>
 </section>
+
+
+</section>
+
+<section id="apple" class="wrapper-content">
+
+	<h2>Playing a background video on Apple iPhones and iPads</h2>
+	<p>To get your background video to play on Apple mobile and tablet devices, you will need to add a few more attributes to the opening <span class="syn">video</span> tag in the hero block of your web page.</p>
+
+	<p>Without these extra attributes, your opening <span class="syn">video</span> tag looks like this:</p>
+
+<pre class="language-html">&lt;<span class="blue-dark">video</span> <span class="blue-light">loop muted autoplay poster</span>=<span class="brown">"assets/videos/hero-still.jpg"</span> <span class="blue-light">class</span>=<span class="brown">"background-video"</span>&gt;  
+</pre>
+
+	<p>In the example above, the file name of the poster image is <b>hero-still.jpg</b>. And the file is in located in the <b>assets/videos</b> sub-folder.</p>
+
+	<p>For Apple devices ,you need to add some new attributes as follows:</p>
+
+<pre class="language-html">&lt;<span class="blue-dark">video</span> <span class="blue-light">loop playinline muted autoplay poster</span>=<span class="brown">"assets/videos/hero-still.jpg"</span> <span class="blue-light">class</span>=<span class="brown">"background-video"</span> <span class="blue-light">disablepictureinpicture</span> <span class="blue-light">preload</span>=<span class="brown">"auto"</span>&gt;  
+</pre>
+
+<p>As you can see, the new attributes of the opening <span class="syn">video</span> tag are: <b>playinline</b>, <b>disablepictureinpicture</b> and <b>preload="auto"</b>.</p>
+
+<p>You can copy-and-paste the above into your <b>index.html</b> web page, to replace the code already there.</p>
+
+<p>See the example below.</p>
+
+<img src="assets/img/hero-vid-8.png" alt="project in web browser">
+
+<p>Ensure that both the poster <i>file name</i> and poster <i>sub-folder file location</i> are correct for <i>your</i> website.</p>
+
+
+</section>
+
 
 <section id="github-upload" class="wrapper-content">
 	<h2>Upload your website to GitHub</h2>
