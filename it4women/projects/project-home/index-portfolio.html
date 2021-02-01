@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Updating your Portfolio Page | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Three sample home page templates: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<link href="../../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<style>
+
+	/* =======INNER FLEXBOX COLUMNS: 3 COLUMNS ON DESKTOPS, 1 COLUMN ON MOBILES ===== */
+
+	.container-flexbox { 
+	   display: flex; 
+	   justify-content: space-between; 
+	   flex-wrap: wrap; 
+	}
+	/* Desktops - 3 columns */
+	@media all and (min-width:768px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 30% }
+		.container-flexbox .item-3 img { width: 100%; height: auto }
+		.container-flexbox.sample-pages .item-3 { padding: 12px 0 }
+	}
+
+	/* Mobiles - 1 column */
+	@media all and (max-width:767px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 100% }
+		.container-flexbox .item-3 { margin-bottom: 8% }
+		.container-flexbox .item-3 img { }
+	}
+
+
+	</style>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+
+</head>
+
+<body>
+
+
+<div class="jumbotron tutorial">
+	<h3><a href="../../index.html" title="All HTML projects">Contents&nbsp;&nbsp;></a></h3>
+	<h1>Updating your Portfolio Page</h1>
+</div>
+
+
+<section class="wrapper-content bg-white">
+	<div class="box-toc">
+		<h2>Contents</h2>
+		<p><a href="#introduction">Introduction</a></p>
+		<p><a href="#portfolio-download">Downloading the project ZIP file</a></p>
+		<p><a href="#portfolio-project">Updating the two project web pages</a></p>
+		<p><a href="#portfolio-page">Updating your Portfolio web page</a></p>
+		<p><a href="#portfolio-home">Updating your Home web page</a></p>
+		<p><a href="#github-upload">Uploading your website to GitHub</a></p>
+	</div>
+</section>
+
+
+<section id="introduction" class="wrapper-content bg-white">
+	<h2>Introduction</h2>
+
+	<p>In this Tutorial you will add two completed projects to your website, and update your Portfolio web page accordingly.</p>
+
+</section>
+
+
+
+<section id="portfolio-download" class="wrapper-content bg-white">
+
+	<h2>Downloading the project ZIP file</h2>
+	<p>Your first step is to download the files you need for your two projects.</p>
+
+	<ol>
+		<li>Download the following compressed file to your computer:
+		<span class="inside-ol">&nbsp;</span>
+		<a href="two-projects.zip">two-projects.zip</a></li>
+
+		<li>Copy the ZIP file into your <b>websites/portfolio</b> folder.</li>
+
+		<li>Begin uncompressing the ZIP file - <i>but change the location into where the project files will be unzipped</i>.
+		<span class="inside-ol">&nbsp;</span>
+		The ZIP file will suggest unzipping the files into a new sub-folder named <b>two-projects.zip</b> of your <b>websites/portfolio</b>.
+		<span class="inside-ol">&nbsp;</span>
+		In the unzipping dialog box, edit this location to the <b>websites/portfolio</b> sub-folder.
+		<img src="assets/img/extract-files.png" alt="file-explorer-unzip-files"></li>
+
+		<li>This will create two new project sub-folders in your <b>portfolio</b> folder:
+		<span class="inside-ol">&nbsp;</span>
+		<b>/vincent-van-gogh</b> and<br>
+		<b>/hero-showcase</b>
+		<span class="inside-ol">&nbsp;</span>
+		Each of these two project folders has its own sub-folders for storing the images and stylesheet it needs.</li>
+	</ol>
+	<p>That's it. No more further downloads are required.</p>
+
+</section>
+
+
+<section id="portfolio-project" class="wrapper-content bg-white">
+
+	<h2>Updating the two project web pages</h2>
+	
+	<p>You will need to make a few updates to the <span class="syn">head</span> and <span class="syn">footer</span> sections your two project web pages. Follow these steps.</p>
+
+	<ol>
+		<li>In VS Code, open the <b>index.html</b> files in the <b>portfolio/hero-showcase</b> and <b>portfolio/vincent-van-gogh</b> sub-folders.</li>
+
+		<li>For each of the two web pages, make the following updates:
+		
+		<ul>
+			<li>In the two <span class="syn">head</span> sections, replace "Mary Smith" with your own name, and enter your unique Google Analytics ID in the two locations instead of "GGGGGG".</li>
+			<li>In the two <span class="syn">footer</span> sections, again replace "Mary Smith" with your own name. Also, update or remove the social media contact points</li>
+			<li>At the very bottom of the web page, in the JavaScript code for the privacy pop-up message, replace the fake website address with your own.</li>
+			<li>When finished, save the two <b>index.html</b> files.</li>
+		</ul></li>
+		</ol>
+		
+
+	<p>View the two web pages in your browser and verify they are working correctly. You can close these two files when finished.</p>
+	
+</section>
+
+
+<section id="portfolio-page" class="wrapper-content bg-white">
+
+	<h2>Updating your Portfolio web page</h2>
+	
+	<p>Now that you have added two portfolio projects to your website, you can showcase them on your Portfolio web page.</p>
+
+	<ol>
+		<li>In VS Code, open the <b>index.html</b> file in the <b>portfolio</b> sub-folder of your 'main' <b>assets</b> folder.</li>
+
+		<li>Under the hero block section you can see a <span class="syn">&lt;div&gt;</span> block with the two class names of <span class="syn">container text-center</span>.</li>
+
+		<li>Directly <i>under</i> this introduction block, and <i>above</i> the footer section, click and press the <b>Enter</b> key a few times to open up some blank lines.</li>
+
+		<li>In this empty space, copy-and-paste the following.
+		
+<pre class="language-html" style="color:#fff">
+&lt;div class="container"&gt;
+   &lt;div class="row"&gt;
+      &lt;div class="col-md-10 offset-md-1"&gt;
+         &lt;div class="row"&gt;
+            &lt;div class="col-md-6 text-center"&gt;
+                &lt;a href="vincent-van-gogh/index.html"&gt;&lt;img src="vincent-van-gogh/assets/img/van-gogh.png" alt="Vincent van Gogh" class="img-fluid"&gt;&lt;/a&gt;
+                &lt;p&gt;A &lt;a href="vincent-van-gogh/index.html" class="fancy-link"&gt;tribute&lt;/a&gt; to the Dutch post-impressionist painter with an embedded YouTube video and set in the Google Merriweather font.&lt;/p&gt;
+             &lt;/div&gt;
+             &lt;div class="col-md-6 text-center"&gt;
+                 &lt;a href="hero-showcase/index.html"&gt;&lt;img src="hero-showcase/assets/img/hero-showcase.png" alt="Vincent van Gogh" class="img-fluid"&gt;&lt;/a&gt;
+                 &lt;p&gt;A &lt;a href="hero-showcase/index.html" class="fancy-link"&gt;gallery&lt;/a&gt; of web page hero blocks with animated text, background images and videos, and tinted ovelays.&lt;/p&gt;
+             &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<li>Save your <b>index.html</b> file.</li>
+
+</ol>
+
+	<p>In your web browser, verify that the two project images display, and that the links to your two project web pages work corrrectly. You can close the file when finished.</p>
+	
+</section>
+
+
+
+
+<section id="portfolio-home" class="wrapper-content bg-white">
+
+	<h2>Updating your Home web page</h2>
+	<p>Finally: a few changes to the Home page of your website.</p>
+
+	<ol>
+		<li>In VS Code, open the <b>index.html</b> file that is the Home page of your personal website.</li>
+
+		<li>Under the hero block section you can see a <span class="syn">&lt;div&gt;</span> block with the two class names of <span class="syn">container introduction-text</span>.</li>
+
+		<li>Replace the content of this <span class="syn">&lt;div&gt;</span> with the following text or similar.
+<pre class="language-html" style="color:#fff">
+&lt;h1&gt;Welcome&lt;/h1&gt;
+&lt;p&gt;My name is Mary Smith. I&#8217;m a web designer who loves to build human-friendly interfaces and digital experiences.&lt;/p&gt;    
+</pre></li>
+		<li>Replace the name "Mary Smith" with your own. Enter whatever text you feel is appropriate for your website.</li>
+		<li>Save your <b>index.html</b> file.</li>
+</ol>
+
+	<p>In your web browser, verify that your Home page looks correct on large and mobile screen sizes. You can close the file when finshed.</p>
+
+</section>
+
+
+
+
+<section id="github-upload" class="wrapper-content">
+	<h2>Uploading your website to GitHub</h2>
+	<p>The final step is to upload your website pages and folders to GitHub.</p>
+
+	<ol>
+		<li>Sign in to your GitHub account and, at the left of the screen, click the name of the repository that holds your web pages.</li>
+
+		<li>On the next screen, click the <b>Add file</b> button and then choose <b>Upload files</b> from the dropdown list.
+		<img src="assets/img/github-btn-add-file-dropdown.png" alt="Project Animation Google Fonts"></li>
+		
+
+		<li>In File/Windows Explorer on your computer, display your <b>websites</b> folder and then drag-and-drop the following files and sub-folders to the GitHub tab in your web browser.
+		<img src="assets/img/github-upload-drag-drop.png" alt="github-upload-drag-drop"></li>
+
+		<li>Scroll down to the bottom of the GitHub screen, and accept or edit the short message (<span style="color:gray">Add files via upload</span>) in the <b>Commit changes</b> box.
+
+		<span class="inside-ol">&nbsp;</span>
+
+		Finally, click the green <b>Commit changes</b> button to upload your files and folders.</li>
+
+	</ol>
+
+	<p>Your Portfolio web page is now published on GitHub, at an web address similar to the following, where <b>username</b> is the username you have chosen for your GitHub account:</p>
+	
+	<p><b>https://username.github.io/portfolio</b></p>
+
+
+	<p>It may take a few minutes for your uploaded files to appear on GitHub.</p>
+
+	<p><br><br>Return to <a href="../../index.html">Contents</a>.</p>
+
+	<p>&nbsp;</p>
+		<p>&nbsp;</p>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+</script>
+
+</body>
+</html>
+
