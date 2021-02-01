@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Updating your JavaScript Page | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Three sample home page templates: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<link href="../../assets/css/web-design-exercises.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+	<style>
+
+	/* =======INNER FLEXBOX COLUMNS: 3 COLUMNS ON DESKTOPS, 1 COLUMN ON MOBILES ===== */
+
+	.container-flexbox { 
+	   display: flex; 
+	   justify-content: space-between; 
+	   flex-wrap: wrap; 
+	}
+	/* Desktops - 3 columns */
+	@media all and (min-width:768px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 30% }
+		.container-flexbox .item-3 img { width: 100%; height: auto }
+		.container-flexbox.sample-pages .item-3 { padding: 12px 0 }
+	}
+
+	/* Mobiles - 1 column */
+	@media all and (max-width:767px) { 
+		.container-flexbox { width:100%; padding:0 }
+		.container-flexbox .item-3 { width: 100% }
+		.container-flexbox .item-3 { margin-bottom: 8% }
+		.container-flexbox .item-3 img { }
+	}
+
+
+	</style>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N54G36T');</script>
+	<!-- End Google Tag Manager -->
+
+
+</head>
+
+<body>
+
+
+<div class="jumbotron tutorial">
+	<h3><a href="../../index.html" title="All HTML projects">Contents&nbsp;&nbsp;></a></h3>
+	<h1>Updating your JavaScript Page</h1>
+</div>
+
+
+<section class="wrapper-content bg-white">
+	<div class="box-toc">
+		<h2>Contents</h2>
+		<p><a href="#introduction">Introduction</a></p>
+		<p><a href="#js-folder">Creating an <span>assets/js</span> sub-folder</a></p>
+		<p><a href="#js-file">Downloading the <span>scripts.js</span> JavaScript file</a></p>
+		<p><a href="#js-css">Downloading the <span>javascript-page.css</span> stylesheet</a></p>
+		<p><a href="#js-links">Updating your JavaScript web page links</a></p>
+		<p><a href="#js-content">Updating your JavaScript web page content</a></p>
+		<p><a href="#github-upload">Uploading your website to GitHub</a></p>
+	</div>
+</section>
+
+
+<section id="introduction" class="wrapper-content bg-white">
+	<h2>Introduction</h2>
+
+	<p>In this Tutorial you will update the JavaScript web page of your personal website.	</p>
+
+</section>
+
+
+
+<section id="js-folder" class="wrapper-content bg-white">
+
+	<h2>Creating an <span>assets/js</span> sub-folder</h2>
+	<p>Smaller blocks of JavaScript code are typically added to a web page directly, and entered within a pair of opening and closing tags <span class="syn">&lt;script&gt;</span> ... <span class="syn">&lt;/script&gt;</span>.</p>
+
+	<p>However, longer Javascriptt code blocks are usually entered in a separate file, with the file name ending in <b>.js</b>, and then linked to by the web page.</p>
+
+	<p>When the page displays in the user's browser, the page loads this external JavaScript file, in the same way that it loads CSS files, image files and video files.</p>
+
+	<p>Your first step is to create a sub-folder for holding JavaScript files:</p>
+
+	<ol>
+		<li>In Windows/File Explorer, inside your <b>websites/assets</b> sub-folder, create the following new sub-folder:
+		<span class="inside-ol">&nbsp;</span>
+		websites/assets/<b>js</b></li>
+	</ol>
+
+	<p>The <b>assets</b> sub-folder of your 'main' websites folder should now contain the sub-folders shown below.</p>
+
+	<img src="assets/img/file-explorer-js-1.png" alt="sample image">
+
+	<p>An alternative name used by some web developers for the sub-folder that holds JavaScript files is "scripts".</p>
+
+</section>
+
+
+<section id="js-file" class="wrapper-content bg-white">
+
+	<h2>Downloading the <span>scripts.js</span> JavaScript file</h2>
+	
+	<p>Now that you have created a sub-folder for storing JavsScript files, you are ready to download the file you need for your personal website.</p>
+
+	<ol>
+		<li>Click the link below to open the JavaScript file in a new tab of your web browser.
+		<span class="inside-ol">&nbsp;</span>
+		<b><a href="scripts.js" target="_blank">scripts.js</a></b></li>
+
+
+		<li>Next, right-click anywhere on the JavaScript file and choose <b>Save as...</b> (Chrome) or <b>Save Page As...</b> (Firefox) from the context menu displayed.</li>
+
+		<li>Save the JavaScript file in the <b>assets/js</b> sub-folder of your 'main' <b>websites</b> folder with the name <b>scripts.js</b>.
+		<span class="inside-ol">&nbsp;</span>
+		<img src="assets/img/file-save-as-js.png" alt="sample image">
+		Ensure the <b>Save as type:</b> dropdown list is set to <b>JavaScript File (*.js)</b> as shown above.</li>
+	</ol>
+		
+	<p>You can now close the tab in your web browser showing the JavaScript file. All done.</p>
+	
+</section>
+
+
+<section id="js-css" class="wrapper-content bg-white">
+
+	<h2>Downloading the <span>javascript-page.css</span> stylesheet</h2>
+	
+	<p>There is a special stylesheet file just for the JavaScript web page of your personal website. Follow these steps to download it.</p>
+
+	<ol>
+		<li>Click the link below to open the CSS file in a new tab of your web browser.
+		<span class="inside-ol">&nbsp;</span>
+		<b><a href="javascript-page.css" target="_blank">javascript-page.css</a></b></li>
+
+
+		<li>Next, right-click anywhere on the stylesheet file and choose <b>Save as...</b> (Chrome) or <b>Save Page As...</b> (Firefox) from the context menu displayed.</li>
+
+		<li>Save the stylesheet file in the <b>assets/css</b> sub-folder of your 'main' <b>websites</b> folder with the name <b>javascript-page.css</b>.
+		<span class="inside-ol">&nbsp;</span>
+		<img src="assets/img/file-save-as-css.png" alt="sample image">
+		Ensure the <b>Save as type:</b> dropdown list is set to the correct file type as shown above.</li>
+	</ol>
+		
+	<p>You can now close the tab in your web browser showing the stylesheet for the JavaScript web page. Task completed.</p>
+	
+</section>
+
+
+
+
+<section id="js-links" class="wrapper-content bg-white">
+
+	<h2>Updating your JavaScript web page links</h2>
+	<p>Next, you will open the JavaScript page of your personal website and add some CSS and JavaScript links to it.</p>
+
+	<ol>
+		<li>In VS Code, open the JavaScript page of your personal website.
+		<span class="inside-ol">&nbsp;</span>
+		Its file name is <b>index.html</b> and it is located in the <b>javascript</b> sub-folder of your 'main' <b>websites</b> folder.</li>
+		
+		<li>To the <span class="syn">head</span> section of your web page, copy-and-paste the following new CSS link.
+
+<pre class="language-html">
+&lt;<span class="token comment">!-- Customise Bootstrap for practical grid layouts --</span>&gt;
+&lt;<span class="blue-dark">link</span> <span class="blue-light">rel</span>=<span class="brown">"stylesheet"</span> <span class="blue-light">href</span>=<span class="brown">"assets/css/javascript-page.css"</span>&gt;   
+</pre>
+
+	Position it just after all the other CSS links as shown below.
+
+	<img src="assets/img/js-add-css-links.png" alt="sample image">
+
+</li>
+		
+		<li>Scroll down to the bottom of your JavaScript web page.</li>
+		
+		
+		<li>Copy-and-paste the following two JavaScript file links, to just before the closing  <span class="syn">&lt;/body&gt;</span> tag.
+		
+<pre class="language-html">
+<span class="token comment">&lt;!-- JavaScript for this page --&gt;</span>
+&lt;<span class="blue-dark">script</span> <span class="blue-light">src</span>=<span class="brown">"../assets/js/scripts.js"</span>&gt;&lt;<span class="blue-dark">/script</span>&gt;  
+
+<span class="token comment">&lt;!-- JavaScript for this page --&gt;</span>
+&lt;<span class="blue-dark">script</span> <span class="blue-light">src</span>=<span class="brown">"https://cdn.rawgit.com/bestiejs/platform.js/master/platform.js"</span>&gt;&lt;<span class="blue-dark">/script</span>&gt;  
+</pre>
+		The last lines of your web page should now look as shown below.
+		<img src="assets/img/js-last-lines.png" alt="sample image"></li>
+
+		<li>Save your <b>index.html</b> file, but do not close. You will next need to update its content.</li>
+</ol>
+
+</section>
+
+
+
+
+<section id="js-content" class="wrapper-content bg-white">
+
+	<h2>Updating your JavaScript web page content</h2>
+	
+	<p>One final task remains: to update the content of your JavaScript page. Here are the steps.</p>
+	
+	<ol>
+		<li>In the hero block section, update the <span class="syn">&lt;h2&gt;</span> sub-heading from just "JavaScript" to "JavaScript Coding".</li>
+		
+		<li>Directly under the hero block section is a <span class="syn">&lt;div&gt;</span> block with the two class names of <span class="syn">container introduction-text</span>.
+		<span class="inside-ol">&nbsp;</span>
+		Replace its content with the following heading and text.
+<pre class="language-html" style="color:#fff">
+&lt;div class="wrapper-yellow"&gt;
+   &lt;div class="container col-md-8 offset-md-2"&gt;
+      &lt;h3&gt;To get started, please introduce yourself&lt;/h3&gt;
+      &lt;div class="row js-box"&gt;
+
+         &lt;div class="col-md-3"&gt;
+            &lt;p&gt;Your First Name:&lt;/p&gt;
+         &lt;/div&gt;
+
+         &lt;div class="col-md-5"&gt;
+            &lt;input type="text" id="fName"&gt;
+            &lt;div id="error-msg" class="hidden"&gt;&lt;p&gt;&lt;i class="fas fa-exclamation-triangle"&gt;&lt;/i&gt; &nbsp;At least two characters, please.&lt;/p&gt;&lt;/div&gt;
+            &lt;div id="resultfName" class="hidden"&gt;&lt;/div&gt;
+         &lt;/div&gt;
+
+         &lt;div class="col-md-4"&gt;
+           &lt;button onclick="checkInput()" class="btn btn-primary"&gt;Go &nbsp;&lt;i class="fas fa-arrow-circle-right"&gt;&lt;/i&gt;&lt;/button&gt; &nbsp;&nbsp;&nbsp;&nbsp;
+           &lt;button onclick="resetUser()" class="btn btn-light"&gt;Reset &nbsp;&lt;i class="fas fa-minus-circle"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+
+   &lt;div id="content-area" class="hidden"&gt;
+
+      &lt;div class="container col-md-8 offset-md-2"&gt;
+         &lt;div class="row js-box" style="margin-top:0"&gt;
+            &lt;div class="col-md-9 offset-md-3" style="margin-bottom: 12px"&gt;
+               &lt;div id="userOutput"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="col-md-9 offset-md-3"&gt;
+               &lt;div id="browserOutput"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="container col-md-8 offset-md-2"&gt;
+          &lt;h3&gt;Show your location&lt;/h3&gt;
+          &lt;div class="row js-box" style="padding-bottom:40px"&gt;
+             &lt;div class="col-md-4"&gt;
+                &lt;p id="msgFoundYou"&gt;&lt;/p&gt;
+              &lt;/div&gt;
+
+             &lt;div class="col-md-8"&gt;
+                &lt;button id="btn-find-me" class="btn btn-primary"&gt;Where am I? &nbsp;&lt;i class="fas fa-question-circle"&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;p id="allowPersmission"&gt;( Please allow location access when prompted.)&lt;/p&gt;
+                &lt;p id = "positionStatus"&gt;&lt;/p&gt;
+                &lt;p id = "lat"&gt;&lt;/p&gt;
+                &lt;p id = "lng" style="margin-bottom:28px"&gt;&lt;/p&gt;
+                &lt;p id="map-block"&gt;&lt;/p&gt;
+             &lt;/div&gt;
+          &lt;/div&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<li>Save your <b>index.html</b> file.</li>
+
+</ol>
+
+	<p>In your web browser, verify that the JavaScript code in your web page works correctly on large and mobile screen sizes.</p>
+
+</section>
+
+
+
+
+
+<section id="github-upload" class="wrapper-content">
+	<h2>Uploading your website to GitHub</h2>
+	<p>The final step is to upload your website pages and folders to GitHub.</p>
+
+	<ol>
+		<li>Sign in to your GitHub account and, at the left of the screen, click the name of the repository that holds your web pages.</li>
+
+		<li>On the next screen, click the <b>Add file</b> button and then choose <b>Upload files</b> from the dropdown list.
+		<img src="assets/img/github-btn-add-file-dropdown.png" alt="Project Animation Google Fonts"></li>
+		
+
+		<li>In File/Windows Explorer on your computer, display your <b>websites</b> folder and then drag-and-drop the following files and sub-folders to the GitHub tab in your web browser.
+		<img src="assets/img/github-upload-drag-drop.png" alt="github-upload-drag-drop"></li>
+
+		<li>Scroll down to the bottom of the GitHub screen, and accept or edit the short message (<span style="color:gray">Add files via upload</span>) in the <b>Commit changes</b> box.
+
+		<span class="inside-ol">&nbsp;</span>
+
+		Finally, click the green <b>Commit changes</b> button to upload your files and folders.</li>
+
+	</ol>
+
+	<p>Your JavaScript web page is now published on GitHub, at an web address similar to the following, where <b>username</b> is the username you have chosen for your GitHub account:</p>
+	
+	<p><b>https://username.github.io/javascript</b></p>
+
+
+	<p>It may take a few minutes for your uploaded files to appear on GitHub.</p>
+
+	<p><br><br>Return to <a href="../../index.html">Contents</a>.</p>
+
+	<p>&nbsp;</p>
+		<p>&nbsp;</p>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#000"
+		},
+		"button": {
+		  "background": "#f1d600"
+		}
+	  },
+	  "content": {
+		"href": "https://www.munnelly.com/legal/"
+	  }
+	});
+</script>
+
+</body>
+</html>
+
