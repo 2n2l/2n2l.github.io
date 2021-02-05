@@ -1,0 +1,415 @@
+<!doctype HTML>
+<HTML lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>2: Database Queries | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="JavaScript Objects, Properties and Methods: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<meta property="og:site_name" content="https://www.munnelly.com/" />
+
+	<title>2: Database Queries</title>
+
+	<link href="assets/css/web-design-js.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+
+	<style>
+		.w3 {
+			background-color: #d3deff;
+			border: solid 1px #4d4dff;
+			padding: 20px 30px;
+			margin: 12px 0 32px 0;
+		}
+
+		.w3 p { margin-bottom: 0 }
+		.table-gray.table-operators tbody tr td p { margin-top: -4px; margin-bottom: 0 }
+		.table-gray.table-operators tbody tr td p b { font-size: 28px; scolor: red }
+		.table-gray.table-operators tbody tr td pre { padding: 6px 16px 6px 16px }
+
+		pre.language-html { background-color: #273c75 }
+
+	</style>
+	
+</head>
+
+<body>
+
+<div class="jumbotron tutorial">
+	<h3><a href="../index.html" title="All Web Tutorials">Contents</a>&nbsp;&nbsp;&gt;</h3>
+	<h1>2: Database Queries</h1>
+</div>
+
+
+<section id="learning-goals" class="wrapper-content">
+	<h2>Learning Goals</h2>
+	<p>At the end of this Tutorial you will be able to:</p>
+	<ul>
+		<li>Use <span class="syn">SELECT</span> statements with the <span class="syn">WHERE</span> clause and various operators to retrieve information from a table in an SQL database.</li>
+	</ul>
+
+
+</section>
+
+<section class="wrapper-content">
+
+	<div class="box-toc">
+		<h2>Contents</h2>
+		<p><a href="#intro">About CRUD database operations</a></p>
+		<p><a href="#select">SQL queries and the SELECT keyword</a></p>
+		<p><a href="#columns">Selecting only certain columns</a></p>
+		<p><a href="#rows">Selecting only certain rows (records)</a></p>
+		<p><a href="#where">The WHERE clause with operators</a></p>
+		<p><a href="#operators">The SQL AND, OR and NOT Operators</a></p>
+		<p><a href="#functions">The built-in SQL functions</a></p>
+	</div>
+</section>
+
+<section class="wrapper-content" id="intro">
+
+	<h2>About CRUD database operations</h2>
+
+	<p>So-called CRUD operations are the basis of working with databases. CRUD is an acronym that stands for the following:</p>
+	
+	
+	<ul>
+		<li><b>Create</b>: This refers to adding a new record to a table in a database. For example, a college could add a new student, a company a new staff member and an online service such as Instagram a new user.</li>
+		<li><b>Read</b>: Reading one or more tables means retrfieving some information from them, typically for display on-screen. Of the four CRUD tasks, this is the only one that does not change the tables or the data they contain.</li>
+		<li><b>Update</b>: When performing an update, you are not adding or deleting records, but changing their content in some way. If you change your login password, for example, your old password in a table that holds user information is updated by your new one.</li>
+		<li><b>Delete</b>: This means removing one or more records from a table. It does not delete the table or the database in which the table is stored.</li>
+	</ul>
+
+</section>
+
+
+
+
+<section class="wrapper-content" id="select">
+
+
+	<h2>SQL queries and the SELECT keyword</h2>
+
+	<p>In relational databases, the four CRUD tasks are performed using SQL statements. The most-commonly used SQL statement contains the <span class="syn">SELECT</span> keyword for reading (the &#8216;R&#8217; in CRUD) information from tables.</p>
+
+	<p>Statements that contain the <span class="syn">SELECT</span> keyword are often called <i>queries</i>, as they allow you to ask questions of your database tables:</p>
+
+	<ul>
+		<li>Show me all customers who live in County Wexford.</li>
+		<li>Show me all students who achieved a final grade of 80% or more.</li>
+		<li>Show me the top ten best-selling products on my e-commerce website.</li>
+		<li>Show me a list of my customers&#8217; email addresses.</li>
+	</ul>
+
+	<p>The simplest form a query in SQL is a <i>wildcard</i> query, which retrieves all information from all records in a table.</p>
+<pre class="language-html">
+SELECT * FROM Customers;
+</pre>
+
+	<p>As you can see, an SQL statement ends with a semi-colon.</p>
+
+	<div class="w3">
+		<p><b>W3 SCHOOLS EXERCISE</b>: <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_SELECT_all" target="_blank">A sample SELECT wildcard (*) query.</a></p>
+	</div>
+
+
+	<p>Note that SQL is <i>not</i> a case sensitive language. Both the following statements work fine and produce the same output.</p>
+
+<pre class="language-html">
+SELECT * FROM Customers;
+</pre>
+
+<pre class="language-html">
+SELECT * from customers;
+</pre>
+
+	<p>In summary, the general form of a wildcard <span class="syn">SELECT</span> statement in SQL looks as follows:</p>
+<pre class="language-html">
+>SELECT * FROM table_name;
+</pre>
+
+</section>
+
+
+
+
+<section class="wrapper-content" id="columns">
+
+	<h2>Selecting only certain columns</h2>
+	<p>When you query a table with the <span class="syn">SELECT</span> statement, you will not always want to see every item of information from the records. For example: </p>
+
+	<ul>
+		<li><b>Customers table</b>: You might want to list only your customers' first names, last names and email addresses &#8211; and no other customer-related information.
+		<span class="inside-ol">&nbsp;</span>
+		In this query, you are not interested in other details such as your customers' dates of birth and postal addresses.</li>
+		<li><b>Products table</b>: A retail business might want to list only those products it stocks from a certain supplier.
+		<span class="inside-ol">&nbsp;</span>
+		In this query, you are not interested in any other details about the products you sell &#8211; such as their colour or price.</li>
+	</ul>
+
+	<p>In database tables, different types of information is stored in different columns. These columns will have names (without spaces) such as ProductID, EmailAddess, SalePrice, StudentNumber and so on. </p>
+
+	<p>Here is an example of a query that will show, for all customers in the Customers table, only the data stored in two of their columns: the Name column and the City column.</p>
+
+<pre class="language-html">
+SELECT CustomerName, City FROM Customers;
+</pre>
+
+
+	<div class="w3">
+		<p><b>W3 SCHOOLS EXERCISE</b>: <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_columns" target="_blank">A sample SELECT query for specific columns.</a></p>
+	</div>
+
+	<p>In summary, the general form of this type of <span class="syn">SELECT</span> statement in SQL looks as follows:</p>
+
+<pre class="language-html">
+SELECT column_name1, column_name2, column_name3 FROM table_name;
+</pre>
+
+	<p>With such queries, you can include one, two or more columns. You must separate column names from each other by a comma (,).</p>
+
+	<p>You could even include <i>all</i> columns of the table you are querying. That would give you the same output as using a wildcard (*) query.</p>
+
+
+</section>
+
+
+
+
+<section class="wrapper-content" id="rows">
+
+	<h2>Selecting only certain rows (records)</h2>
+	<p>As database tables grow larger, it becomes practical to query data on all records in a single operation. For example:</p>
+	
+	<ul>
+		<li><b>Irish state</b>: The Department of Social Protection has a table of many millions of Personal Public Service Numbers (PPSNs). Everyone born in Ireland or who has worked or received a Social Welfare payment in Ireland is assigned one.</li>
+		<li><b>Amazon</b>: This online retailer offers a catalogue of more than 12 million products.</li>
+		<li><b>Netflix</b>: This content service has over 200 million paying subscribers worldwide.</li>
+
+	</ul>
+
+	<p>You can use a <span class="syn">WHERE</span> clause in a <span class="syn">SELECT</span> query to retrieve only those records that meet a specific condition.</p>
+
+	<p>For example, the following SQL query selects <i>only</i> those customers in the Customers table located in the country of Mexico:</p>
+
+<pre class="language-html">
+SELECT * FROM Customers WHERE Country='Mexico';
+</pre>
+
+	<div class="w3">
+		<p><b>W3 SCHOOLS EXERCISE</b>: <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where" target="_blank">A sample SELECT query with a <span class="syn">WHERE</span> clause.</a></p>
+	</div>
+
+
+<p>In the above example, you were working with a string (text) value, so you needed to enclose the value with single or double quotes.</p>
+
+<p>However, numeric fields should not be enclosed in quotes. See the sample query below.</p>
+
+<pre class="language-html">
+SELECT * FROM Customers WHERE CustomerID=1; 
+</pre>
+
+
+	<div class="w3">
+		<p><b>W3 SCHOOLS EXERCISE</b>: <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where_number" target="_blank">A SELECT query with a <span class="syn">WHERE</span> clause and a numeric value.</a></p>
+	</div>
+
+</section>
+
+
+
+
+<section class="wrapper-content" id="where">
+
+
+
+	<h2>The WHERE clause with operators</h2>
+	<p>The following operators can be used in the <span class="syn">WHERE</span> clause of a <span class="syn">SELECT</span> query.:</p>
+	<table class="table-gray table-operators">
+		<thead>
+			<tr>
+				<th style="width:20%"><p>Operator</p></th>
+				<th style="width:70%"><p>Description and example</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><p><b>=</b></p></td>
+				<td><p>Equal</p>
+				<pre class="language-html">SELECT * FROM Customers WHERE CustomerID=1; </pre></td>
+			</tr>
+			<tr>
+				<td><p><b>&gt;</b></p></td>
+				<td><p>Greater than</p>
+				<pre class="language-html">SELECT * FROM Products WHERE Price &gt; 30; </pre></td>
+			</tr>
+			<tr>
+				<td><p><b>&lt;</b></p></td>
+				<td><p>Less than</p>
+				<pre class="language-html">SELECT * FROM Products WHERE Price &lt; 30; </pre></td>
+			</tr>
+			<tr>
+				<td><p><b>&gt;=</b></p></td>
+				<td><p>Greater than or equal</p><pre class="language-html">SELECT * FROM Products WHERE Price &gt;= 30; </pre></td>
+			</tr>
+			<tr>
+				<td><p><b>&lt;=</b></p></td>
+				<td><p>Less than or equal</p><pre class="language-html">SELECT * FROM Products WHERE Price &lt;= 30; </pre></td>
+			</tr>
+			<tr>
+				<td><p><b>&lt;&gt;</b></p></td>
+				<td><p>Not equal</p><pre class="language-html">SELECT * FROM Products WHERE Price &lt;&gt; 18; </pre></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<p>In summary, the general form of a <span class="syn">SELECT</span> statement with a WHERE clause looks as follows:</p>
+
+<pre class="language-html">
+SELECT column1, column2 FROM table_name WHERE condition; 
+</pre>
+
+</section>
+
+
+
+
+<section class="wrapper-content" id="operators">
+	<h2>The SQL AND, OR and NOT Operators</h2>
+	<p>You can combine the <span class="syn">WHERE</span> clause with <span class="syn">AND</span>, <span class="syn">OR</span>, and <span class="syn">NOT</span> operators.</p>
+
+	<p>The <span class="syn">AND</span> and <span class="syn">OR</span> operators are used to retrieve records based on more than one condition:</p>
+	
+	<ul>
+	  <li>The AND operator displays a record only if <i>all</i> the conditions joined by <span class="syn">AND</span> are TRUE.</li>
+	  <li>The OR operator displays a record if <i>any</i> of the conditions separated by <span class="syn">OR</span> is TRUE.</li>
+	
+	</ul>
+
+	<p>Here is an example of the <span class="syn">AND</span> operator in use in a SQL query.</p>
+
+<pre class="language-html">
+SELECT * FROM Customers WHERE Country='Germany' AND City='Berlin';
+</pre>
+
+	<div class="w3">
+		<p><b>W3 SCHOOLS EXERCISE</b>: <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where_and" target="_blank">A SELECT query with an AND operator.</a></p>
+	</div>
+
+
+<p>In summary, the general form of a <span class="syn">SELECT</span> statement with a <span class="syn">WHERE</span> clause and an <span class="syn">AND</span> operator looks as follows:</p>
+
+<pre class="language-html">
+SELECT column1, column2 FROM table_name WHERE condition1 AND condition2; 
+</pre>
+
+
+	<p>Next, here is an example of an SQL query with the <span class="syn">OR</span> operator.</p>
+
+<pre class="language-html">
+SELECT * FROM Customers WHERE City='Berlin' OR City='M&#252;nchen';
+</pre>
+
+	<div class="w3">
+		<p><b>W3 SCHOOLS EXERCISE</b>: <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where_or" target="_blank">A SELECT query with an OR operator.</a></p>
+	</div>
+
+	<p>In summary, the general form of a <span class="syn">SELECT</span> statement with a <span class="syn">WHERE</span> clause and an <span class="syn">OR</span> operator looks as follows:</p>
+
+<pre class="language-html">
+SELECT column1, column2 FROM table_name WHERE condition1 OR condition2; 
+</pre>
+
+
+	<p>The following SQL statement selects all fields from the "Customers" table where country is <span class="syn">NOT</span> "Germany":</p>
+
+<pre class="language-html">
+SELECT * FROM Customers WHERE NOT Country='Germany';
+</pre>
+
+	<div class="w3">
+		<p><b>W3 SCHOOLS EXERCISE</b>: <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where_not" target="_blank">A SELECT query with a NOT operator.</a></p>
+	</div>
+
+<p>You can also combine the <span class="syn">AND</span>, <span class="syn">OR</span> and <span class="syn">NOT</span> operators. The following SQL statement selects all fields from "Customers" where country is "Germany" <span class="syn">AND</span> city must be "Berlin" <span class="syn">OR</span> "M&#252;nchen" (use parenthesis to form complex expressions):</p>
+
+<pre class="language-html">
+SELECT * FROM Customers WHERE Country='Germany' AND (City='Berlin' OR City='M&#252;nchen'); 
+</pre>
+
+<p>The following SQL statement selects all fields from the "Customers" table where the country is <span class="syn">NOT</span> "Germany" <span class="syn">and</span> <span class="syn">NOT</span> "USA":</p>
+
+<pre class="language-html">
+SELECT * FROM Customers WHERE NOT Country='Germany' AND NOT Country='USA'; 
+</pre>
+
+
+	<p>In summary, the general form of a <span class="syn">SELECT</span> statement with a <span class="syn">WHERE</span> and a <span class="syn">NOT</span> operator looks as follows:</p>
+
+<pre class="language-html">
+SELECT column1, column2 FROM table_name WHERE NOT condition; 
+</pre>
+
+
+</section>
+
+
+
+<section class="wrapper-content" id="functions">
+	<h2>The built-in SQL functions</h2>
+
+	<p>Most SQL databases offer a range of built-in functions for performing common tasks, such as finding average or maximum and minimum values.</p>
+
+
+	<p>The <span class="syn">MIN()</span> function returns the smallest value of the selected column.</p>
+
+<pre class="language-html">
+SELECT MIN(column_name) FROM table_name WHERE condition; 
+</pre>
+
+	<div class="w3">
+		<p><b>W3 SCHOOLS EXERCISE</b>: <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_min" target="_blank">A SELECT query with a MIN() function.</a></p>
+	</div>
+
+	<p>The <span class="syn">MAX()</span> function returns the largest value of the selected column.</p>
+
+<pre class="language-html">
+SELECT MAX(column_name) FROM table_name WHERE condition; 
+</pre>
+
+	<div class="w3">
+		<p><b>W3 SCHOOLS EXERCISE</b>: <a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_max" target="_blank">A SELECT query with a MAX() function.</a></p>
+	</div>
+
+
+
+
+
+
+
+
+		<p><br>Return to <a href="../index.html">Contents</a>.</p>
+
+
+</section>
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</section>
+
+
+ </BODY>
+</HTML>
+

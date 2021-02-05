@@ -1,0 +1,185 @@
+<!doctype HTML>
+<HTML lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>1: Introduction to SQL | Web Design & Development Tutorials | Brendan Munnelly</title>
+	<meta name="description" content="Introduction to JavaScript: A Web Design and Development Tutorial from Brendan Munnelly">
+
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+
+	<meta name="author" content="Brendan Munnelly">
+
+	<meta property="og:site_name" content="https://www.munnelly.com/" />
+
+	<title>1: Introduction to SQL</title>
+
+	<link href="assets/css/web-design-js.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+
+</head>
+
+<body>
+
+<div class="jumbotron tutorial">
+	<h3><a href="../index.html" title="All Web Tutorials">Contents</a>&nbsp;&nbsp;&gt;</h3>
+	<h1>1: Introduction to SQL</h1>
+</div>
+
+
+<section id="learning-goals" class="wrapper-content">
+	<h2>Learning Goals</h2>
+	<p>In this Tutorial you will learn that:</p>
+	<ul>
+		<li>A relational database consists of one or more tables.</li>
+		<li>A table consists of a grid of vertical columns and horizontal rows (records).</li>
+		<li>Each row must have a primary key that identifies it uniquely from all other rows in the table.</li>
+		<li>Relationships can be created between different tables in a database that store different types of information.</li>
+		<li>SQL (Structured Query Language) is the language for interacting with tables in a relational database.</li>
+		<li>Modern websites typically use databases as a <i>back end</i> for storing data. And web developers use SQL language for interacting with that data.</li>
+	</ul>
+
+
+</section>
+
+<section class="wrapper-content">
+	<div class="box-toc">
+		<h2>Contents</h2>
+		<p><a href="#about">About relational databases and SQL</a></p>
+		<p class="toc-indent"><a href="#software">Relational database software</a></p>
+		<p class="toc-indent"><a href="#no-sql">SQL and No-SQL databases</h3>
+		<p><a href="#web">Relational databases and web pages</a></p>
+		<p><a href="#tables">Tables, columns, rows, records and fields</a></p>
+		<p class="toc-indent"><a href="#primary">Primary keys</a></p>
+		<p class="toc-indent"><a href="#relationships">Relationships between tables</a></p>
+
+	</div>
+</section>
+
+
+<section class="wrapper-content" id="about">
+
+	<h2>About relational databases and SQL </h2>
+	
+	<p>A relational database management system (RDBMS) is just another software program &#8211; like Microsoft Word, Mozilla Firefox or Abobe Photoshop.</p>
+	
+	<p>Whereas Photoshop is for creating and working with images, an RDBMS is for creating and working with databases.</p>
+
+	<p>A database is simply an organised collection of data. Here are some examples of databases:</p>
+	<ul>
+		<li>A list of the customers of a business</li>
+		<li>A list of the products sold by a business</li>
+		<li>A list of students attending a college</li>
+		<li>A list of courses offered by a college</li>
+	</ul>
+
+	<p>Relational database management systems are generally referred to more simply as just &#8216;relational databases&#8217;.</p>
+
+	<p>The language used to interact with an RDBMS is called SQL (and pronounced sequel).</p>
+	
+	<p>For this reason, the terms &#8216;relational database&#8217; and &#8216;SQL database&#8217; are used interchangeably. The two terms mean the same thing. </p>
+
+
+	<h3 id="software">Relational database software</h3>
+	<p>Here are some popular relational database products:</p>
+
+	<ul>
+		<li><b>MySQL</b>: This is an open-source, free-to-use database. It is used by Netflix, Linkedin, GitHub and also by the WordPress Content Management System (CMS). A newer, also open-source version of MySQL is mariaDB.</li>
+		<li><b>Microsoft SQL Server</b>: This is a commercial product available in a range of versions for different sizes of organisations. Newer versions of Microsoft Access can also be considered as relational databases.</li>
+		<li><b>Oracle</b>: A database used by large corporations, government agencies and financial institutions.</li>
+	</ul>
+	
+	<h3 id="no-sql">SQL and No-SQL databases</h3>
+	<p>Not all databases are relational databases. So-called No-SQL databases such as MongoDB and Google's Firebase are becoming increasingly popular.</P>
+	
+	<p>One reason for their popularity is that web developers can interact with No-SQL databases using only JavaScript. No server-side programming language such as PHP is required.</p>
+
+</section>
+
+
+
+
+
+
+<section class="wrapper-content" id="web">
+
+	<h2>Relational databases and web pages</h2>
+
+	<p>Modern websites typically use databases as a <i>back end</i> for storing data. And where the database is a relational one, web developers use the SQL language to interact with that data.</p>
+
+	<p>While websites visitors don&#8217;t directly interact with the database, their activities &#8211; such as signing up or signing in, selecting which products to display, and making purchases &#8211; are translated into SQL commands that update the information stored in the database.</p>
+
+	<p>In WordPress, for example, SQL databases are used &#8216;behind-the-scenes&#8216; to store posts, author information, comments and other details. Only WordPress developers actually interact with SQL, and then only to create a plugin or debug some issue.</p>
+
+	<p>For some reason, databases are typically shown in diagrams in the shape of a cylinder.</p>
+
+	<img src="assets/img/db1.png" alt="databases">
+
+	<p>Source: <a href="https://www.educative.io/edpresso/web-server-vs-application-server" target="_blank">educative.io</a></p>
+
+
+
+</section>
+
+
+
+<section class="wrapper-content" id="tables">
+
+
+	<h2>Tables, columns, rows, records and fields</h2>
+
+	<p>In an SQL database, the content is organised in the form of tables.</p>
+	
+	<p>Each table contains horizontal (left-to-right) rows and vertical (top-to-bottom) columns of data in a grid layout.</p>
+
+	<p>You can think of tables are similar to spreadsheets in Microsoft Excel or Google Sheets.</p>
+
+	<img src="assets/img/db-2.png" alt="databases">
+
+	<p>The example above is from the Customers table of Northwind Traders, a free sample database provided by Microsoft with their Access product.</p>
+
+	<ul>
+		<li><b>Columns</b>: Each column stores a different type of information about the company's customers. Columns in a table can store strings (text) or numeric values (numbers).
+		<span class="inside-ol">&nbsp;</span>
+		Note that there are no spaces within the names of columns. Also, to make them easier to read, column names often contain a mix of upper and lower case letters.</li>
+
+		<li><b>Rows</b>: Each customer has a row of their own. Rows are often referred to as <i>records</i>. </li>
+	</ul>
+
+	<p>The intersection of any column and row is known as a <i>field</i>.</p>
+
+
+	<h3 id="primary">Primary keys</h3>
+	<p>In a relational database, each record in a table must contain a so-called <i>primary key</i>. This uniquely identifies each record in the table. Examples of primary keys would CustomerID or ProductID.</p>
+
+	<h3 id="relationships">Relationships between tables</h3>
+
+	<p>Organisations use separate tables within a common database for storing different types of information. An e-commerce company, for example, might have separate tables for the following: customers, products and orders.</p>
+
+	<p>The &#8216;relational&#8217; in relational databases comes from designing the layout of the individual tables in such a way that the information they contain can be linked together in an efficient manner.</p>
+
+
+
+
+		<p><br>Return to <a href="../index.html">Contents</a>.</p>
+
+
+</section>
+
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+ </BODY>
+</HTML>
+
